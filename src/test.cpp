@@ -15,23 +15,43 @@ using _it_map = map<string,shared_ptr<Objet>>::iterator;
 //Fonction pour tester le code du projet
 
 
+void afficher_elements_de_map_ligne_par_ligne(_map grille, int nb_lignes, int nb_objets_a_creer_par_ligne)
+{
+	/*
+	int numero_ligne = 1;
+	
+	
+	cout << "----------------------------------------------------------------------------------------------"
+	
+	
+	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	{
+		cout << "----------------------------------------------" << endl;
+		cout << "numero de ligne "<<numero_ligne << endl;
+		
+		
+    	cout << it->first << endl;
+	}*/
+}
+
+
 void tester_qu_il_a_bien_3_elements_par_ligne()
 {
 	
 	/*
 		Parametres de test
-	*/
+	
 	
 	int nb_lignes = 2;
 	int nb_cases_par_ligne = 15;
 	
-	
+	*/
 	
 	/*
 	
 		_map construire_map(int nb_lignes, int nb_cases_par_ligne)
 		void generer_objet_aleatoirement( _map grille, int nb_lignes, int nb_cases_par_ligne)
-	*/
+	
 	
 	
 	string numero_ligne_string = "0";
@@ -46,6 +66,8 @@ void tester_qu_il_a_bien_3_elements_par_ligne()
 	
 	cout << " verification de 3 elements par ligne " << endl;
 	
+	*/
+	/*
 	int numero_ligne_nombre = 1;
 	int numero_colonne_nombre = 1;
 	
@@ -54,7 +76,7 @@ void tester_qu_il_a_bien_3_elements_par_ligne()
 	
 	
 	afficher_map(grille);
-	
+	*/
 	
 	
 	/*
@@ -68,7 +90,7 @@ void tester_qu_il_a_bien_3_elements_par_ligne()
 		numero_ligne_string = to_string(numero_ligne_nombre);
 		
 		comptage_elements_par_ligne = 0;
-		
+		*/
 		/*
 		for(int j = 1 ;  j <= nb_cases_par_ligne ; j++)
 		{
@@ -100,6 +122,7 @@ void tester_qu_il_a_bien_3_elements_par_ligne()
 	/*
 		Il y a 3 elements par ligne souvent et une fois il y a seulement 2 elements par ligne. 
 	*/
+	
 }
 
 /*

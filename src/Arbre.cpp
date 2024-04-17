@@ -17,8 +17,8 @@ Arbre::Arbre(int pNumero_ligne, int pNumero_colonne) : Objet("Arbre")
 
 string Arbre::toString()
 {
-	return "Nom: "+nom+
+	return " "+nom/*+
 	" || numero_ligne: "+to_string(numero_ligne)+
-	" || numero_colonne: "+to_string(numero_colonne)
+	" || numero_colonne: "+to_string(numero_colonne)*/
 	; 
 }
