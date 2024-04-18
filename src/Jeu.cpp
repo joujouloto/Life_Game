@@ -22,6 +22,8 @@
 
 #include <stdlib.h>
 
+#include <set>
+
 //-----------------------------------------------------------------------------------------------
 
 
@@ -73,6 +75,8 @@ Jeu::Jeu(int p_nb_lignes, int p_nb_colonnes, int p_nb_elements_a_mettre_par_lign
 
 void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a_creer_par_ligne)
 {
+	
+	//On crée un pointeur intelligent de map qui a pour clé une chaîne de caracteres
 	grille = make_shared<map<string,shared_ptr<Objet>>>();	
 	
 	random_device rd;
@@ -92,7 +96,9 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 	string numero_ligne_string = "0";
 	string numero_colonne_string = "0";
 	
-	
+	set<int> liste_numeros_colonne_deja_tombes;
+	set<int>::iterator it;
+	pair<set<int>::iterator,bool> ret;
 	
 	
 	for(int i = 1 ; i <= nb_lignes ; i++)
@@ -100,13 +106,33 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 		
 		for (int n = 1; n <= nb_objets_a_creer_par_ligne ; ++n) 
 		{
-			numero_colonne_nombre = dis(gen);
+			
+			/*
+				Boucle necessaire pour ne pas avoir le même numero de colonne
+				quand on reboucle sur la même ligne. On boucle nb_objets_a_creer_par_ligne fois
+				sur la même ligne
+			*/
+			do
+			{
+				numero_colonne_nombre = dis(gen);
+				ret = liste_numeros_colonne_deja_tombes.insert(numero_colonne_nombre);
+				
+				//cout << numero_colonne_nombre << endl;
+				
+				
+			}while(ret.second==false);
+			
+			
+			
+			
 			objet_genere = dis2(gen2);
+			
 			
 			numero_ligne_nombre = i ;
 			
 			numero_ligne_string = to_string(numero_ligne_nombre);
 			numero_colonne_string = to_string(numero_colonne_nombre);
+			
 			
 			if(objet_genere==type_Arbre)
 			{
@@ -126,6 +152,9 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 			
 			
 		}
+		
+		//On efface le contenu de la liste avant d'entrer une nouvelle ligne
+		liste_numeros_colonne_deja_tombes.clear();
 	}
 }
 
@@ -225,4 +254,7 @@ void Jeu::afficher_nb_elements_par_colonne()
 		cout << "numero de colonne " << j << " :"<< this->get_nb_elements_par_colonne(j) << endl;
 	}	
 }
+
+
+
 
