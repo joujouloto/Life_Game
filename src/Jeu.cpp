@@ -104,7 +104,7 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 	for(int i = 1 ; i <= nb_lignes ; i++)
 	{
 		
-		for (int n = 1; n <= nb_objets_a_creer_par_ligne ; ++n) 
+		for (int n = 1; n <= nb_objets_a_creer_par_ligne ; n++) 
 		{
 			
 			/*
@@ -117,7 +117,7 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 				numero_colonne_nombre = dis(gen);
 				ret = liste_numeros_colonne_deja_tombes.insert(numero_colonne_nombre);
 				
-				//cout << numero_colonne_nombre << endl;
+				cout << numero_colonne_nombre << endl;
 				
 				
 			}while(ret.second==false);

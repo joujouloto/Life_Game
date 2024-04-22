@@ -32,6 +32,9 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(int NB_LIGNES,int NB_CO
 		cout << "NOK" << endl;
 	}
 	
+	
+	jeu.afficher_nb_elements_par_ligne();
+	
 	cout << "----Fin-Test-----: "<< endl; 
 }
 
@@ -41,8 +44,9 @@ void tester()
 	cout << " Tester qu'il y ait bien tel nombre d'elements total dans la grille" << endl;
 	
 	
-	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(10,12,4);
-		
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(3,10,4);
+	
+
 		
 }
 	
