@@ -37,6 +37,9 @@ class Jeu
 	int get_nb_elements_par_ligne(int numero_ligne);
 	int get_nb_elements_par_colonne(int numero_colonne);
 	
+	//Avoir le nombre total d'elements dans la grille
+	int get_nb_total_elements_presents_dans_la_grille();
+	
 	
 	//Attributs
 	protected:

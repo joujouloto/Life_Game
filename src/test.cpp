@@ -2,9 +2,7 @@
 
 #include "fonctions.h"
 
-#define NB_LIGNES 14
-#define NB_COLONNES 18
-
+#include "Jeu.h"
 
 
 using namespace std;
@@ -12,31 +10,43 @@ using namespace std;
 using _it_map = map<string,shared_ptr<Objet>>::iterator;
 
 
-//Fonction pour tester le code du projet
+//Fonctions pour tester le code du projet
 
-
-void afficher_elements_de_map_ligne_par_ligne(_map grille, int nb_lignes, int nb_objets_a_creer_par_ligne)
+void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(int NB_LIGNES,int NB_COLONNES, int NB_ELEMENTS_INITIAUX_PAR_LIGNE )
 {
-	/*
-	int numero_ligne = 1;
+	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
 	
-	cout << "----------------------------------------------------------------------------------------------"
-	
-	
-	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	cout << "----Test-----: "<< endl 
+	<<  NB_LIGNES << " lignes "  << endl
+	<< NB_COLONNES << " colonnes " << endl
+	<< NB_ELEMENTS_INITIAUX_PAR_LIGNE << " elements_initiaux " << endl
+	<< jeu.get_nb_total_elements_presents_dans_la_grille() << " nombre total d'elements " << endl;
+		
+	if(jeu.get_nb_total_elements_presents_dans_la_grille()== NB_LIGNES*NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 	{
-		cout << "----------------------------------------------" << endl;
-		cout << "numero de ligne "<<numero_ligne << endl;
-		
-		
-    	cout << it->first << endl;
-	}*/
+		cout << "OK" << endl;
+			
+	}else
+	{
+		cout << "NOK" << endl;
+	}
+	
+	cout << "----Fin-Test-----: "<< endl; 
 }
 
 
-void tester_qu_il_a_bien_3_elements_par_ligne()
+void tester()
 {
+	cout << " Tester qu'il y ait bien tel nombre d'elements total dans la grille" << endl;
+	
+	
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(10,12,4);
+		
+		
+}
+	
+	
 	
 	/*
 		Parametres de test
@@ -123,7 +133,7 @@ void tester_qu_il_a_bien_3_elements_par_ligne()
 		Il y a 3 elements par ligne souvent et une fois il y a seulement 2 elements par ligne. 
 	*/
 	
-}
+
 
 /*
 
@@ -147,6 +157,8 @@ void tester_qu_il_a_bien_3_elements_par_ligne()
 
 void affichage()
 {
+	/*
+	
 	shared_ptr<map<string,shared_ptr<Objet>>> grille = construire_map(NB_LIGNES,NB_COLONNES);
 	
 	shared_ptr<multimap<string,shared_ptr<Objet>>> multimap_contenant_que_les_elements_en_collision ;
@@ -211,6 +223,8 @@ void affichage()
 	afficher_multimap(multimap_contenant_que_des_elements_non_en_collision);
 	
 	cout << " -------------------------------------------------------------------------" << endl;
+	
+	*/
 	
 }
 

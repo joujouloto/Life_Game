@@ -256,5 +256,11 @@ void Jeu::afficher_nb_elements_par_colonne()
 }
 
 
+int Jeu::get_nb_total_elements_presents_dans_la_grille()
+{
+	return nb_total_d_elements_presents_dans_la_grille;
+}
+
+
 
 
