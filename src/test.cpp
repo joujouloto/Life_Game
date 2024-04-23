@@ -21,7 +21,8 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(int NB_LIGNES,int NB_CO
 	<<  NB_LIGNES << " lignes "  << endl
 	<< NB_COLONNES << " colonnes " << endl
 	<< NB_ELEMENTS_INITIAUX_PAR_LIGNE << " elements_initiaux " << endl
-	<< jeu.get_nb_total_elements_presents_dans_la_grille() << " nombre total d'elements " << endl;
+	<< jeu.get_nb_total_elements_presents_dans_la_grille() << " nombre total d'elements " << endl
+	<< NB_LIGNES*NB_ELEMENTS_INITIAUX_PAR_LIGNE << " nombre total qui est cense y avoir " << endl;
 		
 	if(jeu.get_nb_total_elements_presents_dans_la_grille()== NB_LIGNES*NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 	{
@@ -35,6 +36,8 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(int NB_LIGNES,int NB_CO
 	
 	jeu.afficher_nb_elements_par_ligne();
 	
+	jeu.afficher_contenu_de_la_grille();
+	
 	cout << "----Fin-Test-----: "<< endl; 
 }
 
@@ -45,7 +48,9 @@ void tester()
 	
 	
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(3,10,4);
-	
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,5);
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,9);
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);
 
 		
 }

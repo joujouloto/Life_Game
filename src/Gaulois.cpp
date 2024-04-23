@@ -73,9 +73,9 @@ void Gaulois::seDeplacerA_Droite()
 //Retourne une description textuelle de gaulois
 string Gaulois::toString()
 {
-	return " "+nom/*+
+	return " "+nom+
 	" || nligne: "+to_string(numero_ligne)+
-	" || ncolonne: "+to_string(numero_colonne)+
+	" || ncolonne: "+to_string(numero_colonne)/*+
 	" || age: "+to_string(age)+
 	" || sexe: "+sexe+
 	" || ancien nligne: "+to_string(ancienNumLigne)+

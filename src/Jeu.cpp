@@ -77,7 +77,11 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 {
 	
 	//On crée un pointeur intelligent de map qui a pour clé une chaîne de caracteres
-	grille = make_shared<map<string,shared_ptr<Objet>>>();	
+	grille = make_shared<map<string,shared_ptr<Objet>>>();
+	
+	
+	
+	
 	
 	random_device rd;
 	mt19937 gen(rd());
@@ -87,7 +91,7 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 	
 	
 	uniform_int_distribution<> dis(1, nb_cases_par_ligne);//uniform distribution between 1 and 18
-	uniform_int_distribution<> dis2(1, nb_objets_a_creer_par_ligne);//uniform distribution between 1 and 3
+	uniform_int_distribution<> dis2(1, 3);//uniform distribution between 1 and 3
 	
 	int numero_ligne_nombre = 0;
 	int numero_colonne_nombre = 0;
@@ -98,7 +102,12 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 	
 	set<int> liste_numeros_colonne_deja_tombes;
 	set<int>::iterator it;
-	pair<set<int>::iterator,bool> ret;
+	pair<set<int>::iterator,bool> ret_set;
+	pair< map<string,shared_ptr<Objet>>::iterator , bool >  ret_map;
+	
+	shared_ptr<Arbre> arbre;
+	shared_ptr<Gaulois> gaulois;
+	shared_ptr<Gaulois> gauloise;
 	
 	
 	for(int i = 1 ; i <= nb_lignes ; i++)
@@ -115,13 +124,18 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 			do
 			{
 				numero_colonne_nombre = dis(gen);
-				ret = liste_numeros_colonne_deja_tombes.insert(numero_colonne_nombre);
+				numero_colonne_string = to_string(numero_colonne_nombre);
+				ret_set = liste_numeros_colonne_deja_tombes.insert(numero_colonne_nombre);
 				
-				cout << numero_colonne_nombre << endl;
+				//cout << numero_colonne_nombre << endl;
 				
 				
-			}while(ret.second==false);
+			}while(ret_set.second==false);
 			
+			/*if(ret_set.second==true)
+			{
+				cout << numero_colonne_nombre << endl;
+			}*/
 			
 			
 			
@@ -131,24 +145,35 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 			numero_ligne_nombre = i ;
 			
 			numero_ligne_string = to_string(numero_ligne_nombre);
-			numero_colonne_string = to_string(numero_colonne_nombre);
+			
 			
 			
 			if(objet_genere==type_Arbre)
 			{
-				shared_ptr<Arbre> arbre = make_shared<Arbre>(numero_ligne_nombre,numero_colonne_nombre);	
-				grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,arbre));
+				arbre = make_shared<Arbre>(numero_ligne_nombre,numero_colonne_nombre);	
+				ret_map = grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,arbre));
 			}
 			else if(objet_genere==type_Gaulois)
 			{
-				shared_ptr<Gaulois> gaulois = make_shared<Gaulois>('M',numero_ligne_nombre,numero_colonne_nombre);	
-				grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,gaulois));
+				gaulois = make_shared<Gaulois>('M',numero_ligne_nombre,numero_colonne_nombre);	
+				ret_map = grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,gaulois));
 			}
 			else if(objet_genere==type_Gauloise)
 			{
-				shared_ptr<Gaulois> gauloise = make_shared<Gaulois>('F',numero_ligne_nombre, numero_colonne_nombre);
-				grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,gauloise));
+				gauloise = make_shared<Gaulois>('F',numero_ligne_nombre, numero_colonne_nombre);
+				ret_map = grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,gauloise));
 			}
+			else
+			{
+				cout << "else " << endl;
+			}
+			
+			/*
+			if(ret_map.second==true)
+			{
+				cout << "Element ajoute " << ret_map.first->second->toString() << endl;
+			}*/
+			
 			
 			
 		}
@@ -171,25 +196,11 @@ void Jeu::afficher_infos_de_base_du_jeu()
 
 void Jeu::afficher_contenu_de_la_grille()
 {
-	int compteur = 1 ;
-	int compteur_nb_lignes = 1;
-	
 	
 	cout << "-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------" << endl;
-	cout << "------------------Numero_de_ligne----------"<<compteur_nb_lignes<<endl;
-	
 	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
 	{	
-		if(compteur>nb_elements_a_mettre_par_ligne_au_debut)
-		{
-			compteur_nb_lignes++;
-			cout << "------------------Numero_de_ligne----------"<<compteur_nb_lignes<<endl;
-			compteur=1;
-		}
-
-
 		cout << it->first << it->second->toString()<< endl;
-		compteur++;
 	}
 	
 	
