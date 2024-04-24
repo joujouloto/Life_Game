@@ -39,6 +39,9 @@
 
 #include "Jeu.h"
 
+#include "constantes.h"
+
+
 
 //-----------------------------------------------------------------------------------------------
 
@@ -58,12 +61,41 @@ enum type_Deplacement { gauche = 1, droite = 2, haut = 3, bas = 4};
 
 
 
-Jeu::Jeu(int p_nb_lignes, int p_nb_colonnes, int p_nb_elements_a_mettre_par_ligne)
+
+
+
+
+/*
+	Nom de la fonction: Jeu()
+	
+	Description: instancie un jeu avec des parametres
+	
+	Paramètres d'entrée: 	p_nb_lignes qui est de type entier qui est le nombre de lignes de la grille(map), 
+							p_nb_colonnes qui est le nombre de colonnes de la grille ( une map est un tableau à 2 dimensions avec une clé qui identifie une 
+							valeur ici un objet qui peut être un arbre, un gaulois ou une gauloise)
+							p_nb_elements_a_mettre_par_ligne
+	
+	Paramètres de sortie: 	-
+	
+	Préconditions: 			nb_lignes et nb_cases_par_ligne doivent être positifs 
+							nb_objets_a_creer_par_ligne doit être positif et nb_lignes doit être supérieur à nb_objets_a_creer_par_ligne
+	
+	Postconditions: rien
+
+*/
+
+//-------------------------------------------------------------
+
+Jeu::Jeu(unsigned p_nb_lignes, unsigned p_nb_colonnes, unsigned p_nb_elements_a_mettre_par_ligne)
 {
 	
 	nb_lignes = p_nb_lignes;
 	nb_colonnes = p_nb_colonnes;
 	nb_elements_a_mettre_par_ligne_au_debut = p_nb_elements_a_mettre_par_ligne;
+	
+	grille_de_transition = make_shared<multimap<string,shared_ptr<Objet>>>();
+	
+	multimap_contenant_que_les_elements_en_collision = make_shared<multimap<string,shared_ptr<Objet>>>();
 	
 	
 	initialiser_map(nb_lignes, nb_colonnes, nb_elements_a_mettre_par_ligne_au_debut);
@@ -72,8 +104,10 @@ Jeu::Jeu(int p_nb_lignes, int p_nb_colonnes, int p_nb_elements_a_mettre_par_lign
 	nb_total_d_elements_presents_dans_la_grille = grille->size();
 }
 
+/*
 
-void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a_creer_par_ligne)
+*/
+void Jeu::initialiser_map(unsigned nb_lignes, unsigned nb_cases_par_ligne, unsigned nb_objets_a_creer_par_ligne)
 {
 	
 	//On crée un pointeur intelligent de map qui a pour clé une chaîne de caracteres
@@ -93,16 +127,16 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 	uniform_int_distribution<> dis(1, nb_cases_par_ligne);//uniform distribution between 1 and 18
 	uniform_int_distribution<> dis2(1, 3);//uniform distribution between 1 and 3
 	
-	int numero_ligne_nombre = 0;
-	int numero_colonne_nombre = 0;
-	int objet_genere = 0;
+	unsigned numero_ligne_nombre = 0;
+	unsigned numero_colonne_nombre = 0;
+	unsigned objet_genere = 0;
 	
 	string numero_ligne_string = "0";
 	string numero_colonne_string = "0";
 	
-	set<int> liste_numeros_colonne_deja_tombes;
-	set<int>::iterator it;
-	pair<set<int>::iterator,bool> ret_set;
+	set<unsigned> liste_numeros_colonne_deja_tombes;
+	set<unsigned>::iterator it;
+	pair<set<unsigned>::iterator,bool> ret_set;
 	pair< map<string,shared_ptr<Objet>>::iterator , bool >  ret_map;
 	
 	shared_ptr<Arbre> arbre;
@@ -110,10 +144,10 @@ void Jeu::initialiser_map(int nb_lignes, int nb_cases_par_ligne, int nb_objets_a
 	shared_ptr<Gaulois> gauloise;
 	
 	
-	for(int i = 1 ; i <= nb_lignes ; i++)
+	for(unsigned i = 1 ; i <= nb_lignes ; i++)
 	{
 		
-		for (int n = 1; n <= nb_objets_a_creer_par_ligne ; n++) 
+		for (unsigned n = 1; n <= nb_objets_a_creer_par_ligne ; n++) 
 		{
 			
 			/*
@@ -208,9 +242,9 @@ void Jeu::afficher_contenu_de_la_grille()
 }
 
 
-int Jeu::get_nb_elements_par_ligne(int numero_ligne)
+unsigned Jeu::get_nb_elements_par_ligne(unsigned numero_ligne)
 {
-	int nb_elements_par_la_ligne = 0;
+	unsigned nb_elements_par_la_ligne = 0;
 	
 	
 	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
@@ -226,9 +260,9 @@ int Jeu::get_nb_elements_par_ligne(int numero_ligne)
 	
 }
 
-int Jeu::get_nb_elements_par_colonne(int numero_colonne)
+unsigned Jeu::get_nb_elements_par_colonne(unsigned numero_colonne)
 {
-	int nb_elements_par_la_colonne = 0;
+	unsigned nb_elements_par_la_colonne = 0;
 	
 	
 	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
@@ -247,7 +281,7 @@ void Jeu::afficher_nb_elements_par_ligne()
 {
 	
 	
-	for(int i = 1 ; i <= this->nb_lignes ; i++)
+	for(unsigned i = 1 ; i <= this->nb_lignes ; i++)
 	{
 		cout << "numero de ligne "<< i<< " :" << this->get_nb_elements_par_ligne(i) << endl;
 	}
@@ -260,17 +294,251 @@ void Jeu::afficher_nb_elements_par_colonne()
 {
 	
 	
-	for(int j = 1 ; j <= this->nb_colonnes ; j++)
+	for(unsigned j = 1 ; j <= this->nb_colonnes ; j++)
 	{
 		cout << "numero de colonne " << j << " :"<< this->get_nb_elements_par_colonne(j) << endl;
 	}	
 }
 
 
-int Jeu::get_nb_total_elements_presents_dans_la_grille()
+unsigned Jeu::get_nb_total_elements_presents_dans_la_grille()
 {
 	return nb_total_d_elements_presents_dans_la_grille;
 }
+
+
+void Jeu::afficher_grille_de_transition()
+{
+	for ( _it_multimap it=grille_de_transition->begin(); it!=grille_de_transition->end(); ++it) 
+	{
+    	cout << it->first << " => " << it->second->toString() << endl;
+	}
+}
+
+
+void Jeu::faire_deplacer_objets_dans_grille_de_transition()
+{
+	//Déclaration des variables
+	_it_map it;
+	
+	shared_ptr<Arbre> arbre;
+	
+	shared_ptr<Objet> objet ;
+	
+	string numero_ligne_string = "0";
+	
+	string numero_colonne_string = "0";
+	
+	string cle = "0x0";
+	
+	
+	
+	//bool si_un_objet_est_deja_dans_la_case = false;
+	
+	
+		
+	
+
+	for (_it_map it=grille->begin(); it!=grille->end(); ++it)
+	{
+		objet = it->second;
+		
+		if(objet->getNom()=="Arbre")
+		{
+			arbre = dynamic_pointer_cast<Arbre> (objet);
+			
+			numero_ligne_string = to_string(arbre->getNumeroLigne());
+			numero_colonne_string = to_string(arbre->getNumeroColonne());
+			
+			cle = numero_ligne_string + "x" + numero_colonne_string;
+			//nouvelle_grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,arbre));
+			
+			grille_de_transition->insert(pair<string,shared_ptr<Objet>>(cle,arbre));
+			
+		}
+		else if(objet->getNom()=="Gaulois"||objet->getNom()=="Gauloise")
+		{
+			
+			objet = faire_deplacer_un_gaulois_e_dans_grille(objet);
+			
+			
+			numero_ligne_string = to_string(objet->getNumeroLigne());
+			numero_colonne_string = to_string(objet->getNumeroColonne());
+			
+			cle = numero_ligne_string + "x" + numero_colonne_string;
+			
+			grille_de_transition->insert(
+			pair<string,shared_ptr<Objet>>(cle,objet));
+			
+		}
+	}
+}
+
+shared_ptr<Objet> Jeu::faire_deplacer_un_gaulois_e_dans_grille(shared_ptr<Objet> objet)
+{
+	random_device rd;
+	
+	mt19937 gen(rd());
+	
+	int deplacement = 0 ;
+	
+	shared_ptr<Gaulois> gaulois_ou_gauloise;
+	 
+	uniform_int_distribution<> dis(1, 4);//uniform distribution between 1 and 4 
+	 
+	gaulois_ou_gauloise = dynamic_pointer_cast<Gaulois> (objet);
+	deplacement = dis(gen);
+			
+			
+			
+	if(deplacement==gauche)
+	{
+		
+		
+		if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise))
+		{
+			gaulois_ou_gauloise->seDeplacerA_Gauche();
+		}
+		else if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise))
+		{
+			gaulois_ou_gauloise->seDeplacerA_Droite();
+			
+		}
+		else if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
+			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise))
+		{
+			gaulois_ou_gauloise->seDeplacerEnBas();
+		}
+		
+		
+		
+		
+	}else if(deplacement==droite)
+	{
+		
+		if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise)  )
+		{
+			gaulois_ou_gauloise->seDeplacerA_Droite();
+			
+		} 
+		else if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise)	)	
+		{
+			gaulois_ou_gauloise->seDeplacerA_Gauche();
+		}
+		
+		else if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
+			 && case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise)	 	)			
+		{
+			gaulois_ou_gauloise->seDeplacerEnBas();
+		}
+		
+	}else if(deplacement==haut)
+	{
+		if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
+			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerEnBas();
+		}
+		else if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerA_Droite();
+			
+		} 
+		else if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )			
+		{
+			gaulois_ou_gauloise->seDeplacerA_Gauche();
+		}
+		
+	}else if(deplacement==bas)
+	{
+		if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
+			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerEnBas();
+		}
+		else if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )
+		{
+			gaulois_ou_gauloise->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise))
+		{
+			gaulois_ou_gauloise->seDeplacerA_Gauche();
+		}
+		else if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise)  )
+		{
+			gaulois_ou_gauloise->seDeplacerA_Droite();
+			
+		} 
+	}
+	
+	return objet;
+}
+
+void Jeu::mettre_objets_en_collision_dans_une_multimap()
+{
+	string numero_ligne_string = "0";
+	string numero_colonne_string = "0";
+	string cle = "0x0";
+	
+	_objet objet ;
+	
+	for (int i = 1 ; i <= nb_lignes ; i++)
+	{
+		
+		for(int j = 1 ; j <= nb_colonnes ; j++)
+		{
+			numero_ligne_string = to_string(i);
+			numero_colonne_string = to_string(j);
+			
+			cle = numero_ligne_string+"x"+numero_colonne_string;
+			 
+			for (_it_multimap it=grille_de_transition->equal_range(cle).first;
+			it!=grille_de_transition->equal_range(cle).second; ++it)
+			{
+				if( grille_de_transition->count(cle) > 1)
+				{
+					objet = it->second;
+					
+					
+					multimap_contenant_que_les_elements_en_collision
+					->insert(pair<string,shared_ptr<Objet>>(cle,objet));
+				}
+				
+				
+				
+			}
+		}
+	}
+}
+
 
 
 

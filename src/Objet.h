@@ -16,14 +16,14 @@ class Objet
 	//Constructeurs
 	Objet();
 	Objet(string pNom);
-	Objet(int pNumero_ligne, int pNumero_colonne);
-	Objet(string pNom, int pNumero_ligne, int pNumero_colonne);
+	Objet(unsigned pNumero_ligne, unsigned pNumero_colonne);
+	Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne);
 	
 	
 	//Méthodes d'accès aux atrributs
 	string getNom();
-	int getNumeroLigne();
-	int getNumeroColonne();
+	unsigned getNumeroLigne();
+	unsigned getNumeroColonne();
 	
 	//Set
 	void setNom(string pNom);
@@ -40,8 +40,8 @@ class Objet
 	protected:
 	
 	string nom;
-	int numero_ligne;
-	int numero_colonne;
+	unsigned numero_ligne;
+	unsigned numero_colonne;
 	
 };
 

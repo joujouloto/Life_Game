@@ -16,10 +16,10 @@ class Gaulois : public Objet
 	//Contructeurs
 	Gaulois();
 	Gaulois(char pSexe);
-	Gaulois(char pSexe, int pNumero_ligne, int pNumero_colonne);
+	Gaulois(char pSexe, unsigned pNumero_ligne, unsigned pNumero_colonne);
 	
 	//Setters
-	void setPosition(int pNumero_ligne, int pNumero_colonne);
+	void setPosition(unsigned pNumero_ligne, unsigned pNumero_colonne);
 	
 	
 	
@@ -33,16 +33,18 @@ class Gaulois : public Objet
 	void retournerAsonAnciennePosition();
 	
 	
+	
+	
 	void vieillir();
 	
 	
 	
 	protected:
 	
-	int age;
+	unsigned age;
 	char sexe;
-	int ancienNumLigne;
-	int ancienNumColonne;
+	unsigned ancienNumLigne;
+	unsigned ancienNumColonne;
 	
 	
 };

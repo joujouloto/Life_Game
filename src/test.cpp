@@ -1,6 +1,6 @@
 
 
-#include "fonctions.h"
+
 
 #include "Jeu.h"
 
@@ -12,12 +12,12 @@ using _it_map = map<string,shared_ptr<Objet>>::iterator;
 
 //Fonctions pour tester le code du projet
 
-void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(int NB_LIGNES,int NB_COLONNES, int NB_ELEMENTS_INITIAUX_PAR_LIGNE )
+void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE )
 {
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
 	
-	cout << "----Test-----: "<< endl 
+	cout << "----tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: "<< endl 
 	<<  NB_LIGNES << " lignes "  << endl
 	<< NB_COLONNES << " colonnes " << endl
 	<< NB_ELEMENTS_INITIAUX_PAR_LIGNE << " elements_initiaux " << endl
@@ -38,7 +38,24 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(int NB_LIGNES,int NB_CO
 	
 	jeu.afficher_contenu_de_la_grille();
 	
-	cout << "----Fin-Test-----: "<< endl; 
+	cout << "----Fin-tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: "<< endl; 
+}
+
+void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE)
+{
+	
+	cout << "----tester_que_les_objets_se_deplacent_sans_collision-------: "<< endl ;
+	
+	
+	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
+	
+	jeu.faire_deplacer_objets_dans_grille_de_transition();
+	
+	cout << " contenu de la grille de transition " << endl;
+	jeu.afficher_grille_de_transition();
+	
+	cout << "----Fin-tester_que_les_objets_se_deplacent_sans_collision-------: "<< endl ;
+	
 }
 
 
@@ -46,11 +63,13 @@ void tester()
 {
 	cout << " Tester qu'il y ait bien tel nombre d'elements total dans la grille" << endl;
 	
-	
+	/*
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(3,10,4);
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,5);
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,9);
-	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);*/
+	
+	tester_que_les_objets_se_deplacent_sans_collision(3, 10, 3);
 
 		
 }

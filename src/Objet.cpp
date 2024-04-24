@@ -18,14 +18,14 @@ Objet::Objet(string pNom)
 	numero_colonne = 0;
 }
 
-Objet::Objet(int pNumero_ligne, int pNumero_colonne)
+Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
 	nom = "Objet";
 	numero_ligne = pNumero_ligne;
 	numero_colonne = pNumero_colonne;
 }
 
-Objet::Objet(string pNom, int pNumero_ligne, int pNumero_colonne)
+Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
 	nom = pNom;
 	numero_ligne = pNumero_ligne;
@@ -39,12 +39,12 @@ string Objet::getNom()
 	return nom;
 }
 
-int Objet::getNumeroLigne()
+unsigned Objet::getNumeroLigne()
 {
 	return numero_ligne;
 }
 
-int Objet::getNumeroColonne()
+unsigned Objet::getNumeroColonne()
 {
 	return numero_colonne;
 }

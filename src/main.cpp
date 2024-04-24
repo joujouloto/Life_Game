@@ -3,10 +3,6 @@
 #include <SDL2/SDL.h>
 
 
-
-
-
-#include "fonctions.h"
 #include "test.h"
 #include "Jeu.h"
 

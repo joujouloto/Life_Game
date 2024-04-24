@@ -24,7 +24,7 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 }
 
 
-Gaulois::Gaulois(char pSexe, int pNumero_ligne, int pNumero_colonne) : 
+Gaulois::Gaulois(char pSexe, unsigned pNumero_ligne, unsigned pNumero_colonne) : 
 Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 {
 	age = 1 ;
@@ -38,7 +38,7 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 
 
 //Setters
-void Gaulois::setPosition(int pNumero_ligne, int pNumero_colonne)
+void Gaulois::setPosition(unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
 	ancienNumLigne = numero_ligne;
 	ancienNumColonne = numero_colonne;
