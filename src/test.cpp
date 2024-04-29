@@ -49,10 +49,34 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
+	cout << " ---grille initialisee--- " << endl;
+	jeu.afficher_contenu_de_la_grille();
+	
+	
+	
 	jeu.faire_deplacer_objets_dans_grille_de_transition();
 	
 	cout << " contenu de la grille de transition " << endl;
 	jeu.afficher_grille_de_transition();
+	
+	cout << " contenu de la multimap qui contient que les elements en collision " << endl;
+	
+	jeu.mettre_objets_en_collision_dans_une_multimap();
+	jeu.afficher_multimap_qui_contient_que_les_elements_en_collision();
+	
+	
+	cout << " contenu de la map qui contient que les elements qui etaient en collision sont priorises " << endl;
+	
+	jeu.appliquer_les_regles_de_priorite_sur_les_collisions();
+	jeu.afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
+	
+	
+	cout << " ---la nouvelle grille--- " << endl;
+	
+	jeu.regrouper_tous_les_elements();
+	jeu.afficher_contenu_de_la_grille();
+	
+	
 	
 	cout << "----Fin-tester_que_les_objets_se_deplacent_sans_collision-------: "<< endl ;
 	
@@ -61,7 +85,7 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 
 void tester()
 {
-	cout << " Tester qu'il y ait bien tel nombre d'elements total dans la grille" << endl;
+	cout << " Tests " << endl;
 	
 	/*
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(3,10,4);
@@ -69,7 +93,7 @@ void tester()
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,9);
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);*/
 	
-	tester_que_les_objets_se_deplacent_sans_collision(3, 10, 3);
+	tester_que_les_objets_se_deplacent_sans_collision(3, 5, 2);
 
 		
 }

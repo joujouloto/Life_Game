@@ -97,6 +97,8 @@ Jeu::Jeu(unsigned p_nb_lignes, unsigned p_nb_colonnes, unsigned p_nb_elements_a_
 	
 	multimap_contenant_que_les_elements_en_collision = make_shared<multimap<string,shared_ptr<Objet>>>();
 	
+	map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite = make_shared<map<string,shared_ptr<Objet>>>();
+	
 	
 	initialiser_map(nb_lignes, nb_colonnes, nb_elements_a_mettre_par_ligne_au_debut);
 	
@@ -315,6 +317,24 @@ void Jeu::afficher_grille_de_transition()
 	}
 }
 
+void Jeu::afficher_multimap_qui_contient_que_les_elements_en_collision()
+{
+	for ( _it_multimap it=multimap_contenant_que_les_elements_en_collision->begin(); it!=multimap_contenant_que_les_elements_en_collision->end(); ++it) 
+	{
+    	cout << it->first << " => " << it->second->toString() << endl;
+	}
+}
+
+void Jeu::afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()
+{
+	for ( _it_map it=map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->begin(); 
+	it!=map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->end(); 
+	++it) 
+	{
+    	cout << it->first << " => " << it->second->toString() << endl;
+	}
+}
+
 
 void Jeu::faire_deplacer_objets_dans_grille_de_transition()
 {
@@ -510,10 +530,10 @@ void Jeu::mettre_objets_en_collision_dans_une_multimap()
 	
 	_objet objet ;
 	
-	for (int i = 1 ; i <= nb_lignes ; i++)
+	for (unsigned i = 1 ; i <= nb_lignes ; i++)
 	{
 		
-		for(int j = 1 ; j <= nb_colonnes ; j++)
+		for(unsigned j = 1 ; j <= nb_colonnes ; j++)
 		{
 			numero_ligne_string = to_string(i);
 			numero_colonne_string = to_string(j);
@@ -537,6 +557,138 @@ void Jeu::mettre_objets_en_collision_dans_une_multimap()
 			}
 		}
 	}
+}
+
+void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
+{
+	
+	 unsigned compteur = 1 ;
+	 
+	 string cle_comparaison = "0x0";
+	 string cle_objet_parcouru = "0x0";
+	 string cle_objets_qui_ne_gardent_pas_la_priorite = "0x0";
+	 string cle_objet_qui_garde_sa_priorite = "0x0";
+	 
+	 string numero_ligne_string = "0";
+	 string numero_colonne_string = "0";
+	 
+	 shared_ptr<Objet> objet ;
+	 shared_ptr<Gaulois> gaulois_e ;
+	 
+	 string numero_ligne_objet_qui_ne_garde_pas_sa_priorite_string = "0";
+	 string numero_colonne_objet_qui_ne_garde_pas_sa_priorite_string = "0";
+	 
+	
+	for (_it_multimap it=multimap_contenant_que_les_elements_en_collision->begin();
+			it!=multimap_contenant_que_les_elements_en_collision->end(); ++it)
+	{
+		
+		
+		objet = it->second;
+		
+		
+		
+		numero_ligne_string = to_string(objet->getNumeroLigne());
+		numero_colonne_string = to_string(objet->getNumeroColonne());
+		
+		cle_objet_parcouru = numero_ligne_string + "x" + numero_colonne_string;
+		
+		
+		
+		if(cle_comparaison!=cle_objet_parcouru)
+		{
+			cle_comparaison = cle_objet_parcouru ;
+			compteur = 1 ;
+			
+			cle_objet_qui_garde_sa_priorite = cle_objet_parcouru;
+			
+			map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(
+			cle_objet_qui_garde_sa_priorite,objet));
+			
+		}
+		else
+		{
+			compteur++;
+			
+			if(compteur>1)
+			{
+				gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
+				
+				gaulois_e->retournerAsonAnciennePosition();
+				
+				objet = gaulois_e ;
+				
+				numero_ligne_objet_qui_ne_garde_pas_sa_priorite_string = to_string(objet->getNumeroLigne());
+				numero_colonne_objet_qui_ne_garde_pas_sa_priorite_string = to_string(objet->getNumeroColonne());
+				
+				
+				cle_objets_qui_ne_gardent_pas_la_priorite = numero_ligne_objet_qui_ne_garde_pas_sa_priorite_string 
+				+ "x" + numero_colonne_objet_qui_ne_garde_pas_sa_priorite_string;
+				
+				map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(
+				pair<string,shared_ptr<Objet>>(cle_objets_qui_ne_gardent_pas_la_priorite,objet));
+				
+			}
+
+		}
+		
+	}
+}
+
+
+void Jeu::regrouper_tous_les_elements()
+{
+	grille->clear();
+	
+	
+	
+	string numero_ligne_string = "0";
+	string numero_colonne_string = "0";
+	string cle = "0x0";
+	
+	shared_ptr<Objet> objet ;
+	
+	for (unsigned i = 1 ; i <= nb_lignes ; i++)
+	{
+		
+		for(unsigned j = 1 ; j <= nb_colonnes ; j++)
+		{
+			numero_ligne_string = to_string(i);
+			numero_colonne_string = to_string(j);
+			
+			cle = numero_ligne_string+"x"+numero_colonne_string;
+			 
+			for (_it_multimap it=grille_de_transition->equal_range(cle).first;
+			it!=grille_de_transition->equal_range(cle).second; ++it)
+			{
+				if( grille_de_transition->count(cle) == 1)
+				{
+					objet = it->second;
+					
+					
+					grille
+					->insert(pair<string,shared_ptr<Objet>>(cle,objet));
+				}
+				
+				
+				
+			}
+		}
+	}
+	
+	
+	for( _it_map it = map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->begin();
+		it!=map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->end(); 
+		++it
+	)
+	{
+		grille->insert(pair<string,shared_ptr<Objet>>(it->first,it->second));
+	}
+	
+	grille_de_transition->clear();
+	multimap_contenant_que_les_elements_en_collision->clear();
+	map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->clear();
+		
 }
 
 
