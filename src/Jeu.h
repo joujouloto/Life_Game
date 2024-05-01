@@ -66,6 +66,9 @@ class Jeu
 	void appliquer_les_regles_de_priorite_sur_les_collisions();
 	void regrouper_tous_les_elements();
 	
+	//Méthode qui simplifie et qui regroupe les 5 précédentes
+	void faire_deplacer_objets();
+	
 	
 	
 	

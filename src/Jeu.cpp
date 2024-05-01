@@ -233,10 +233,23 @@ void Jeu::afficher_infos_de_base_du_jeu()
 void Jeu::afficher_contenu_de_la_grille()
 {
 	
+	shared_ptr<Gaulois> gaulois;
+	
 	cout << "-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------" << endl;
 	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
 	{	
-		cout << it->first << it->second->toString()<< endl;
+
+		if(it->second->getNom()=="Gaulois"||it->second->getNom()=="Gauloise")
+		{
+			gaulois = dynamic_pointer_cast<Gaulois> (it->second);
+			
+			cout << gaulois->getNom() << " " << gaulois->getAncienneLigne()<<"x"<< gaulois->getAncienneColonne()
+			<< " >> "<< gaulois->getNumeroLigne() << "x" << gaulois->getNumeroColonne() << endl;
+			
+		}else
+		{
+			cout << it->second->getNom()<< " -> "<< it->second->getNumeroLigne() << "x" << it->second->getNumeroColonne()<<endl;
+		}
 	}
 	
 	
@@ -696,6 +709,14 @@ void Jeu::regrouper_tous_les_elements()
 	multimap_contenant_que_les_elements_en_collision->clear();
 	map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->clear();
 		
+}
+
+void Jeu::faire_deplacer_objets()
+{
+	faire_deplacer_objets_dans_grille_de_transition();
+	mettre_objets_en_collision_dans_une_multimap();
+	appliquer_les_regles_de_priorite_sur_les_collisions();
+	regrouper_tous_les_elements();
 }
 
 

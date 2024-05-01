@@ -785,3 +785,56 @@
 3x3 Arbre
 ----Fin-tester_que_les_objets_se_deplacent_sans_collision-------: 
 --------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+----tester_que_les_objets_se_deplacent_sans_collision-------: 
+-------------------------------------grille initialisee--- 
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x1 Arbre
+1x2 Gaulois
+ courant: 1x2
+ ancien: 0x0
+2x1 Gaulois
+ courant: 2x1
+ ancien: 0x0
+2x5 Gauloise
+ courant: 2x5
+ ancien: 0x0
+3x2 Gaulois
+ courant: 3x2
+ ancien: 0x0
+3x3 Arbre
+-------------------------------------contenu de la grille de transition 
+1x1 =>  Arbre
+1x3 =>  Gaulois
+ courant: 1x3
+ ancien: 1x2
+2x2 =>  Gaulois
+ courant: 2x2
+ ancien: 2x1
+2x4 =>  Gauloise
+ courant: 2x4
+ ancien: 2x5
+3x1 =>  Gaulois
+ courant: 3x1
+ ancien: 3x2
+3x3 =>  Arbre
+-------------------------------------contenu de la multimap qui contient que les elements en collision 
+-------------------------------------contenu de la map qui contient que les elements qui etaient en collision sont priorises 
+------------------------------------la nouvelle grille--- 
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x1 Arbre
+1x3 Gaulois
+ courant: 1x3
+ ancien: 1x2
+2x2 Gaulois
+ courant: 2x2
+ ancien: 2x1
+2x4 Gauloise
+ courant: 2x4
+ ancien: 2x5
+3x1 Gaulois
+ courant: 3x1
+ ancien: 3x2
+3x3 Arbre
+----Fin-tester_que_les_objets_se_deplacent_sans_collision-------: 
+--------------------------------------------------------------------------------------------------------------------------------------------------

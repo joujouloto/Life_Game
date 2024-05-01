@@ -22,6 +22,9 @@ class Gaulois : public Objet
 	void setPosition(unsigned pNumero_ligne, unsigned pNumero_colonne);
 	
 	
+	//Getters
+	unsigned getAncienneLigne();
+	unsigned getAncienneColonne();
 	
 	//Méthodes autres
 	string toString();

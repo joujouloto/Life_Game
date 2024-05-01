@@ -135,6 +135,56 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 }
 
 
+void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS)
+{
+	fstream file;
+    file.open("../../tests/tester_que_les_objets_se_deplacent_bien.txt", ios::out|ios::app);
+    string line;
+	
+	
+	unsigned tours = TOURS;
+	
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	
+	cout << "----tester_que_les_objets_se_deplacent_bien-------: "<< endl ;
+	
+	
+	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
+	
+	cout << "-------------------------------------grille initialisee--- " << endl;
+	jeu.afficher_contenu_de_la_grille();
+	
+	
+	
+	
+	for(unsigned i = 1;i<=tours;i++)
+	{
+		cout << "-->>>>>>Jeu en mouvement: Tour " << i << endl;
+	
+		jeu.faire_deplacer_objets();
+		jeu.afficher_contenu_de_la_grille();
+	}
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+	
+}
+
+
 void tester()
 {
 	cout << " Tests " << endl;
@@ -145,7 +195,10 @@ void tester()
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,9);
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);*/
 	
-	tester_que_les_objets_se_deplacent_sans_collision(3, 5, 2);
+	//tester_que_les_objets_se_deplacent_sans_collision(3, 5, 2);
+	
+	
+	tester_que_les_objets_se_deplacent_bien(10,7,3,10);
 
 		
 }

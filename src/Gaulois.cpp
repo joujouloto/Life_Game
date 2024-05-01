@@ -99,3 +99,17 @@ void Gaulois::vieillir()
 {
 	age++;
 }
+
+unsigned Gaulois::getAncienneLigne()
+{
+	return ancienNumLigne;
+}
+
+
+unsigned Gaulois::getAncienneColonne()
+{
+	return ancienNumColonne;
+}
+
+
+
