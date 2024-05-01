@@ -16,6 +16,8 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	
 	age = 1;
 	sexe = pSexe;
+	ancienNumLigne = 0;
+	ancienNumColonne = 0;
 	
 	if(pSexe == 'F')
 	{
@@ -29,6 +31,9 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 {
 	age = 1 ;
 	sexe = pSexe;
+	
+	ancienNumLigne = 0;
+	ancienNumColonne = 0;
 	
 	if(pSexe == 'F')
 	{
@@ -74,20 +79,19 @@ void Gaulois::seDeplacerA_Droite()
 string Gaulois::toString()
 {
 	return " "+nom+
-	" || nligne: "+to_string(numero_ligne)+
-	" || ncolonne: "+to_string(numero_colonne)/*+
-	" || age: "+to_string(age)+
-	" || sexe: "+sexe+
-	" || ancien nligne: "+to_string(ancienNumLigne)+
-	" || ancien ncolonne: "+to_string(ancienNumColonne)*/
-	
-	
+	"\n courant: "+to_string(numero_ligne)+"x"+to_string(numero_colonne)+/*+
+	"  || age: "+to_string(age)+
+	"  || sexe: "+sexe+*/
+	"\n ancien: "+to_string(ancienNumLigne)+"x"+to_string(ancienNumColonne)
 	;
 }
 
 void Gaulois::retournerAsonAnciennePosition()
 {
-	setPosition(ancienNumLigne,ancienNumColonne);
+	
+	
+	numero_ligne = ancienNumLigne;
+	numero_colonne = ancienNumColonne;
 }
 
 //Incrémente l'âge

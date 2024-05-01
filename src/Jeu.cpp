@@ -614,6 +614,13 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 			{
 				gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
 				
+				/*
+					Attention à la fonction retourner à son ancienne position car l'element qui etait en collision a pour ancienne coordonnee la position 
+					où il etait en collision. Or cela doit sa position avant son deplacement en collision
+				*/
+				
+				
+				
 				gaulois_e->retournerAsonAnciennePosition();
 				
 				objet = gaulois_e ;

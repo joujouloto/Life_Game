@@ -68,6 +68,8 @@ class Jeu
 	
 	
 	
+	
+	
 	//-------------------------------------------------------------------------------
 	
 	//Attributs
@@ -80,7 +82,7 @@ class Jeu
 	_map grille;
 	
 	
-	//Attributs que l'on veut pas trop montrer
+	//Attributs que l'on veut pas trop montrer (interne au fonctionnement du déplacement des objets)
 	_multimap grille_de_transition;
 	_multimap multimap_contenant_que_les_elements_en_collision;
 	_map map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite;

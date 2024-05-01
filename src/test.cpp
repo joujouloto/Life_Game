@@ -1,5 +1,7 @@
 
-
+#include <fstream>
+#include <iostream>
+#include <string>
 
 
 #include "Jeu.h"
@@ -14,6 +16,24 @@ using _it_map = map<string,shared_ptr<Objet>>::iterator;
 
 void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE )
 {
+	fstream file;
+    file.open("../../tests/tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne.txt", ios::out|ios::app);
+    string line;
+	
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
 	
@@ -39,39 +59,65 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, uns
 	jeu.afficher_contenu_de_la_grille();
 	
 	cout << "----Fin-tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: "<< endl; 
+	
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+	
+	
 }
 
 void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 {
+	
+	fstream file;
+    file.open("../../tests/tester_que_les_objets_se_deplacent_sans_collision.txt", ios::out|ios::app);
+    string line;
+	
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 	
 	cout << "----tester_que_les_objets_se_deplacent_sans_collision-------: "<< endl ;
 	
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
-	cout << " ---grille initialisee--- " << endl;
+	cout << "-------------------------------------grille initialisee--- " << endl;
 	jeu.afficher_contenu_de_la_grille();
 	
 	
 	
 	jeu.faire_deplacer_objets_dans_grille_de_transition();
 	
-	cout << " contenu de la grille de transition " << endl;
+	cout << "-------------------------------------contenu de la grille de transition " << endl;
 	jeu.afficher_grille_de_transition();
 	
-	cout << " contenu de la multimap qui contient que les elements en collision " << endl;
+	cout << "-------------------------------------contenu de la multimap qui contient que les elements en collision " << endl;
 	
 	jeu.mettre_objets_en_collision_dans_une_multimap();
 	jeu.afficher_multimap_qui_contient_que_les_elements_en_collision();
 	
 	
-	cout << " contenu de la map qui contient que les elements qui etaient en collision sont priorises " << endl;
+	cout << "-------------------------------------contenu de la map qui contient que les elements qui etaient en collision sont priorises " << endl;
 	
 	jeu.appliquer_les_regles_de_priorite_sur_les_collisions();
 	jeu.afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
 	
 	
-	cout << " ---la nouvelle grille--- " << endl;
+	cout << "------------------------------------la nouvelle grille--- " << endl;
 	
 	jeu.regrouper_tous_les_elements();
 	jeu.afficher_contenu_de_la_grille();
@@ -80,6 +126,12 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 	
 	cout << "----Fin-tester_que_les_objets_se_deplacent_sans_collision-------: "<< endl ;
 	
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
 }
 
 
