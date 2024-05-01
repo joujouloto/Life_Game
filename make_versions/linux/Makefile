@@ -4,7 +4,7 @@
 CC := g++
 
 # set the compiler flags
-CFLAGS := `sdl2-config --libs --cflags` -ggdb3 -O0 --std=c++17 -Wall -lSDL2_image -lm
+CFLAGS := `sdl2-config --libs --cflags` -ggdb3 -O0 --std=c++17 -Wall -lSDL2_image -lm -w
 # add header files here
 HDRS := ../.././src/*.h
 

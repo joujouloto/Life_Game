@@ -141,11 +141,7 @@ void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COL
     file.open("../../tests/tester_que_les_objets_se_deplacent_bien.txt", ios::out|ios::app);
     string line;
 	
-	
-	unsigned tours = TOURS;
-	
-	
-	 // Backup streambuffers of  cout
+	// Backup streambuffers of  cout
     streambuf* stream_buffer_cout = cout.rdbuf();
     streambuf* stream_buffer_cin = cin.rdbuf();
  
@@ -168,7 +164,7 @@ void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COL
 	
 	
 	
-	for(unsigned i = 1;i<=tours;i++)
+	for(unsigned i = 1;i<=TOURS;i++)
 	{
 		cout << "-->>>>>>Jeu en mouvement: Tour " << i << endl;
 	
@@ -182,6 +178,42 @@ void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COL
 	
 	file.close();
 	
+}
+
+void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS)
+{
+	fstream file;
+    file.open("../../tests/tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour.txt", ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	
+	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
+	
+	for(unsigned i = 1; i <= TOURS ;i++)
+	{
+		cout << "-->>>>>>Jeu en mouvement: Tour " << i << endl;
+		jeu.faire_deplacer_objets();
+		cout << "nombre d elements >> " << jeu.get_nb_total_elements_presents_dans_la_grille() << endl;
+	}
+	
+	
+	
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
 }
 
 
@@ -198,9 +230,9 @@ void tester()
 	//tester_que_les_objets_se_deplacent_sans_collision(3, 5, 2);
 	
 	
-	tester_que_les_objets_se_deplacent_bien(10,7,3,10);
+	//tester_que_les_objets_se_deplacent_bien(10,7,3,10);
 
-		
+	tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
 }
 	
 	
