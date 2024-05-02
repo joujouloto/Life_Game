@@ -24,6 +24,9 @@
 
 #include <set>
 
+#include<chrono>
+#include<thread>
+
 //-----------------------------------------------------------------------------------------------
 
 
@@ -718,6 +721,180 @@ void Jeu::faire_deplacer_objets()
 	appliquer_les_regles_de_priorite_sur_les_collisions();
 	regrouper_tous_les_elements();
 }
+
+
+void Jeu::SDL()
+{
+	SDL_Window *win;
+    SDL_Renderer *renderer;
+	
+
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
+    {
+        cout <<  "SDL_Init Error: %s\n" <<  SDL_GetError() << endl;
+        return;
+    }
+
+    win = SDL_CreateWindow("Jeu de la vie!", 200, 50, 1300, 900, SDL_WINDOW_SHOWN);
+    if (win == NULL)
+    {
+       
+		cout <<  "SDL_CreateWindow Error: %s\n" <<  SDL_GetError() << endl;
+        return;
+    }
+
+    renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    if (renderer == NULL)
+    {
+		cout <<  "SDL_CreateRenderer Error: %s\n" <<  SDL_GetError() << endl;
+		
+        SDL_DestroyWindow(win);
+        SDL_Quit();
+        return;
+    }
+	
+	initialiser_map(nb_lignes, nb_colonnes, nb_elements_a_mettre_par_ligne_au_debut);
+	afficher_grille_SDL(renderer);
+	
+	
+	boucle_SDL(renderer);
+	
+	
+	fermeture_SDL(win,renderer);
+	
+}
+
+void Jeu::afficher_grille_SDL(SDL_Renderer *renderer)
+{
+    SDL_Rect single_rect;
+	
+	/*int nb_lignes = 14 ;
+	int nb_cases_par_ligne = 18;*/
+	
+	int pos_x = 40;
+	int pos_y = 40;
+	int espace = 20 ;
+	
+	single_rect.w = 50;
+	single_rect.h = 50;
+	
+	single_rect.x = pos_x + espace ;
+	single_rect.y = pos_y;
+	
+	
+	//Images
+		
+	SDL_Surface * image_vide = SDL_LoadBMP("../../images/vide.bmp");
+	
+	SDL_Surface * image_arbre = SDL_LoadBMP("../../images/arbre.bmp");
+	
+	SDL_Surface * image_gaulois = SDL_LoadBMP("../../images/gaulois.bmp");
+	
+	SDL_Surface * image_gauloise = SDL_LoadBMP("../../images/gauloise.bmp");
+		
+		
+	//Textures
+	SDL_Texture * texture_vide = SDL_CreateTextureFromSurface(renderer, image_vide);
+	
+	SDL_Texture * texture_arbre = SDL_CreateTextureFromSurface(renderer, image_arbre);
+	
+	SDL_Texture * texture_gaulois = SDL_CreateTextureFromSurface(renderer, image_gaulois);
+	
+	SDL_Texture * texture_gauloise = SDL_CreateTextureFromSurface(renderer, image_gauloise);
+	
+	//169*221
+	
+	
+	string numero_ligne_string = "0";
+	string numero_colonne_string = "0";
+	
+	
+	
+	map<string,shared_ptr<Objet>>::iterator it;
+	
+	
+	for(int i = 1 ; i <= nb_lignes ; i++)
+	{
+		
+		for( int j = 1 ; j <= nb_colonnes ; j++)
+		{
+			single_rect.x +=  pos_x + espace ;
+			
+			numero_ligne_string = to_string(i);
+			numero_colonne_string = to_string(j);
+			
+			it = grille->find(numero_ligne_string+"x"+numero_colonne_string);
+			
+			if(it!=grille->end())
+			{
+				if(it->second->getNom()=="Arbre")
+				{
+					SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
+				}
+				else if(it->second->getNom()=="Gaulois")
+				{
+					SDL_RenderCopy(renderer, texture_gaulois, NULL, &single_rect);
+				}
+				else if(it->second->getNom()=="Gauloise")
+				{
+					SDL_RenderCopy(renderer, texture_gauloise, NULL, &single_rect);
+				}
+				
+			}else
+			{
+				//SDL_SetRenderDrawColor(renderer, 50, 205, 50, 255);
+				//SDL_RenderFillRect(renderer, &single_rect);
+				SDL_RenderCopy(renderer, texture_vide, NULL, &single_rect);
+			}
+			
+		}
+		
+		single_rect.y += pos_y + espace;
+		single_rect.x =  pos_x + espace ;
+	}
+	
+	SDL_RenderPresent(renderer);
+	
+}
+
+
+void Jeu::fermeture_SDL(SDL_Window *win, SDL_Renderer *renderer)
+{
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(win);
+	SDL_Quit();
+}
+
+void Jeu::boucle_SDL(SDL_Renderer *renderer)
+{
+	
+	SDL_Event ev;
+	
+	bool isRunning = true;
+	
+	
+	
+	while(isRunning)
+	{
+		this_thread::sleep_for(chrono::milliseconds(1500));
+		faire_deplacer_objets();
+		SDL_RenderClear(renderer);
+		afficher_grille_SDL(renderer);
+		
+		
+		while( SDL_PollEvent( &ev ) != 0 ) 
+		{
+			switch (ev.type) 
+			{
+				case SDL_QUIT:
+				isRunning = false;
+					
+			}
+		
+		}
+	}
+}
+
 
 
 

@@ -13,6 +13,8 @@
 
 #include <memory>
 
+#include <SDL2/SDL.h>
+
 
 
 using _map = shared_ptr<map<string,shared_ptr<Objet>>>;
@@ -69,8 +71,14 @@ class Jeu
 	//Méthode qui simplifie et qui regroupe les 5 précédentes
 	void faire_deplacer_objets();
 	
+	//Méthodes de la SDL
 	
+	void afficher_grille_SDL(SDL_Renderer *renderer);
+	void boucle_SDL(SDL_Renderer *renderer);
+	void fermeture_SDL(SDL_Window *win, SDL_Renderer *renderer);
 	
+	//Méthode qui regroupe les 3 précédentes
+	void SDL();
 	
 	//-------------------------------------------------------------------------------
 	
@@ -90,6 +98,7 @@ class Jeu
 	_map map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite;
 	
 	
+	//Attributs SDL
 	
 	
 	
