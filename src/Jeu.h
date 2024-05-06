@@ -71,6 +71,9 @@ class Jeu
 	//Méthode qui simplifie et qui regroupe les 5 précédentes
 	void faire_deplacer_objets();
 	
+	
+	
+	//----------------------------------------------------------------SDL
 	//Méthodes de la SDL
 	
 	void afficher_grille_SDL(SDL_Renderer *renderer);
@@ -81,6 +84,11 @@ class Jeu
 	void SDL();
 	
 	//-------------------------------------------------------------------------------
+	
+	void faire_vieillir_population_gauloise();
+	void faire_mourir_les_gaulois_trop_vieux(unsigned age_de_deces);
+	
+	
 	
 	//Attributs
 	protected:

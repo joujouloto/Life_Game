@@ -79,11 +79,15 @@ void Gaulois::seDeplacerA_Droite()
 string Gaulois::toString()
 {
 	return " "+nom+
-	"\n courant: "+to_string(numero_ligne)+"x"+to_string(numero_colonne)+/*+
-	"  || age: "+to_string(age)+
+	"\n"+to_string(getAncienneLigne())+"x"+to_string(getAncienneColonne())+
+	" >> "+
+	to_string(numero_ligne)+"x"+to_string(numero_colonne)+
+	"\nage: "+to_string(age)/*
 	"  || sexe: "+sexe+*/
-	"\n ancien: "+to_string(ancienNumLigne)+"x"+to_string(ancienNumColonne)
 	;
+	
+	
+			
 }
 
 void Gaulois::retournerAsonAnciennePosition()
@@ -111,5 +115,14 @@ unsigned Gaulois::getAncienneColonne()
 	return ancienNumColonne;
 }
 
+unsigned Gaulois::getAge()
+{
+	return age;
+}
+
+string Gaulois::getPosition()
+{
+	return to_string(numero_ligne)+"x"+to_string(numero_colonne);
+}
 
 

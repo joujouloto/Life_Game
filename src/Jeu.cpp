@@ -246,8 +246,7 @@ void Jeu::afficher_contenu_de_la_grille()
 		{
 			gaulois = dynamic_pointer_cast<Gaulois> (it->second);
 			
-			cout << gaulois->getNom() << " " << gaulois->getAncienneLigne()<<"x"<< gaulois->getAncienneColonne()
-			<< " >> "<< gaulois->getNumeroLigne() << "x" << gaulois->getNumeroColonne() << endl;
+			cout << gaulois->toString()<< endl;
 			
 		}else
 		{
@@ -538,6 +537,11 @@ shared_ptr<Objet> Jeu::faire_deplacer_un_gaulois_e_dans_grille(shared_ptr<Objet>
 	return objet;
 }
 
+/*
+	On appelle collision lorsque 2 gaulois veulent aller sur la même case mais les gaulois peuvent se chevaucher, c'est à dire que si un gaulois est à 1x1 et veut aller
+	à 1x2 et que une gauloise est à 1x2 veut aller à 1x1 ça marche c'est pas consideré comme collision
+*/
+
 void Jeu::mettre_objets_en_collision_dans_une_multimap()
 {
 	string numero_ligne_string = "0";
@@ -744,6 +748,7 @@ void Jeu::SDL()
     }
 
     renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	
     if (renderer == NULL)
     {
 		cout <<  "SDL_CreateRenderer Error: %s\n" <<  SDL_GetError() << endl;
@@ -877,7 +882,15 @@ void Jeu::boucle_SDL(SDL_Renderer *renderer)
 	while(isRunning)
 	{
 		this_thread::sleep_for(chrono::milliseconds(1500));
+		
 		faire_deplacer_objets();
+		faire_vieillir_population_gauloise();
+		
+		faire_mourir_les_gaulois_trop_vieux(5);
+		
+		
+		afficher_contenu_de_la_grille();
+		
 		SDL_RenderClear(renderer);
 		afficher_grille_SDL(renderer);
 		
@@ -893,6 +906,85 @@ void Jeu::boucle_SDL(SDL_Renderer *renderer)
 		
 		}
 	}
+}
+
+void Jeu::faire_vieillir_population_gauloise()
+{
+	shared_ptr<Gaulois> gaulois;
+	
+	
+	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	{	
+
+		if(it->second->getNom()=="Gaulois"||it->second->getNom()=="Gauloise")
+		{
+			gaulois = dynamic_pointer_cast<Gaulois> (it->second);
+			
+			gaulois->vieillir();
+		}
+	}
+	
+}
+
+/*
+	Certains gaulois qui ont l'age de deces ne meurent pas. Je sais pas pourquoi.
+*/
+
+
+
+void Jeu::faire_mourir_les_gaulois_trop_vieux(unsigned age_de_deces_probable)
+{
+	shared_ptr<Gaulois> gaulois;
+	
+	set<string> cles_gaulois_trop_vieux;
+	
+	
+	set<string>::iterator it_set;
+	
+	random_device rd;
+	mt19937 gen(rd());
+	
+	uniform_int_distribution<> dis(1, 10);//uniform distribution between 1 and 4 
+	 
+	int chances_de_deces = 0;
+	
+	
+	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	{	
+
+		if(it->second->getNom()=="Gaulois"||it->second->getNom()=="Gauloise")
+		{
+			gaulois = dynamic_pointer_cast<Gaulois> (it->second);
+			
+			
+			
+			if(age_de_deces_probable<=gaulois->getAge())
+			{
+				//grille->erase(it);
+				
+				chances_de_deces = dis(gen);
+				
+				//Quand un gaulois(e) atteint l'age de deces il a 30% de chances de mourir
+				
+				if(chances_de_deces==8||chances_de_deces==9||chances_de_deces==10)
+				{
+					cles_gaulois_trop_vieux.insert(gaulois->getPosition());
+					
+					cout << gaulois->toString() << endl;
+				}
+				
+				
+				
+			}
+		}
+	}
+	
+	for(it_set = cles_gaulois_trop_vieux.begin() ; it_set != cles_gaulois_trop_vieux.end() ; ++it_set)
+	{
+		grille->erase(grille->find(*it_set));
+	}
+	
+	
 }
 
 

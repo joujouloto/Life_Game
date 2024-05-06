@@ -239,6 +239,44 @@ void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENT
 	
 	jeu.SDL();
 	
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+}
+
+void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS, unsigned age_de_deces_probable)
+{
+	fstream file;
+    file.open("../../tests/tester_le_nombre_de_morts.txt", ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	
+	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
+	jeu.initialiser_map(NB_LIGNES, NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE );
+	
+	for(unsigned i = 1; i <= TOURS ;i++)
+	{
+		cout << "-->>>>>>Jeu en mouvement: Tour " << i << endl;
+		jeu.faire_deplacer_objets();
+		jeu.faire_vieillir_population_gauloise();
+		jeu.faire_mourir_les_gaulois_trop_vieux(age_de_deces_probable);
+		
+	}
+	
+	
 	cout.rdbuf(stream_buffer_cout);
 	
 	
@@ -248,6 +286,9 @@ void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENT
 
 void tester()
 {
+	
+	
+	
 	cout << " Tests " << endl;
 	
 	/*
@@ -264,7 +305,9 @@ void tester()
 	//tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
 	
 	
-	tester_la_SDL(10,7,3);
+	//tester_la_SDL(10,7,3);
+	
+	tester_le_nombre_de_morts(7,10,5,30,10);
 }
 	
 	

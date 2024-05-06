@@ -25,6 +25,8 @@ class Gaulois : public Objet
 	//Getters
 	unsigned getAncienneLigne();
 	unsigned getAncienneColonne();
+	unsigned getAge();
+	string getPosition();
 	
 	//Méthodes autres
 	string toString();

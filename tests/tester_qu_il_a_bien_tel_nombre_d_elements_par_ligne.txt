@@ -1,0 +1,248 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+----tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+3 lignes 
+10 colonnes 
+4 elements_initiaux 
+12 nombre total d'elements 
+12 nombre total qui est cense y avoir 
+OK
+numero de ligne 1 :4
+numero de ligne 2 :4
+numero de ligne 3 :4
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Arbre -> 1x2
+Arbre -> 1x7
+Gaulois 0x0 >> 1x8
+Gauloise 0x0 >> 1x9
+Gaulois 0x0 >> 2x1
+Gaulois 0x0 >> 2x3
+Gauloise 0x0 >> 2x5
+Arbre -> 2x8
+Gaulois 0x0 >> 3x1
+Gaulois 0x0 >> 3x4
+Gauloise 0x0 >> 3x6
+Gaulois 0x0 >> 3x9
+----Fin-tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+----tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+7 lignes 
+10 colonnes 
+5 elements_initiaux 
+35 nombre total d'elements 
+35 nombre total qui est cense y avoir 
+OK
+numero de ligne 1 :5
+numero de ligne 2 :5
+numero de ligne 3 :5
+numero de ligne 4 :5
+numero de ligne 5 :5
+numero de ligne 6 :5
+numero de ligne 7 :5
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 0x0 >> 1x1
+Gaulois 0x0 >> 1x10
+Gaulois 0x0 >> 1x2
+Arbre -> 1x6
+Arbre -> 1x8
+Gauloise 0x0 >> 2x1
+Gaulois 0x0 >> 2x10
+Gauloise 0x0 >> 2x5
+Arbre -> 2x6
+Gauloise 0x0 >> 2x8
+Gaulois 0x0 >> 3x1
+Gaulois 0x0 >> 3x10
+Arbre -> 3x2
+Arbre -> 3x8
+Gaulois 0x0 >> 3x9
+Arbre -> 4x10
+Gaulois 0x0 >> 4x2
+Gauloise 0x0 >> 4x7
+Gauloise 0x0 >> 4x8
+Arbre -> 4x9
+Gauloise 0x0 >> 5x1
+Gaulois 0x0 >> 5x3
+Gauloise 0x0 >> 5x6
+Arbre -> 5x7
+Gauloise 0x0 >> 5x9
+Gauloise 0x0 >> 6x1
+Arbre -> 6x10
+Gauloise 0x0 >> 6x2
+Gaulois 0x0 >> 6x3
+Arbre -> 6x8
+Gauloise 0x0 >> 7x10
+Arbre -> 7x3
+Arbre -> 7x4
+Gaulois 0x0 >> 7x5
+Arbre -> 7x8
+----Fin-tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+----tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+7 lignes 
+10 colonnes 
+9 elements_initiaux 
+63 nombre total d'elements 
+63 nombre total qui est cense y avoir 
+OK
+numero de ligne 1 :9
+numero de ligne 2 :9
+numero de ligne 3 :9
+numero de ligne 4 :9
+numero de ligne 5 :9
+numero de ligne 6 :9
+numero de ligne 7 :9
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 0x0 >> 1x1
+Gauloise 0x0 >> 1x10
+Gauloise 0x0 >> 1x2
+Gauloise 0x0 >> 1x3
+Gauloise 0x0 >> 1x4
+Gaulois 0x0 >> 1x5
+Arbre -> 1x7
+Gaulois 0x0 >> 1x8
+Gaulois 0x0 >> 1x9
+Gaulois 0x0 >> 2x1
+Gaulois 0x0 >> 2x10
+Arbre -> 2x3
+Arbre -> 2x4
+Arbre -> 2x5
+Gaulois 0x0 >> 2x6
+Arbre -> 2x7
+Gaulois 0x0 >> 2x8
+Gauloise 0x0 >> 2x9
+Gaulois 0x0 >> 3x1
+Gauloise 0x0 >> 3x10
+Gaulois 0x0 >> 3x2
+Gauloise 0x0 >> 3x3
+Gauloise 0x0 >> 3x4
+Gauloise 0x0 >> 3x5
+Gauloise 0x0 >> 3x6
+Gauloise 0x0 >> 3x8
+Gaulois 0x0 >> 3x9
+Arbre -> 4x1
+Arbre -> 4x2
+Gauloise 0x0 >> 4x3
+Gauloise 0x0 >> 4x4
+Arbre -> 4x5
+Arbre -> 4x6
+Arbre -> 4x7
+Arbre -> 4x8
+Arbre -> 4x9
+Gauloise 0x0 >> 5x1
+Gauloise 0x0 >> 5x10
+Arbre -> 5x2
+Gaulois 0x0 >> 5x4
+Gaulois 0x0 >> 5x5
+Gaulois 0x0 >> 5x6
+Gauloise 0x0 >> 5x7
+Arbre -> 5x8
+Arbre -> 5x9
+Gauloise 0x0 >> 6x1
+Arbre -> 6x10
+Gaulois 0x0 >> 6x2
+Gaulois 0x0 >> 6x4
+Arbre -> 6x5
+Gauloise 0x0 >> 6x6
+Gaulois 0x0 >> 6x7
+Gauloise 0x0 >> 6x8
+Arbre -> 6x9
+Arbre -> 7x10
+Gaulois 0x0 >> 7x2
+Arbre -> 7x3
+Gaulois 0x0 >> 7x4
+Gaulois 0x0 >> 7x5
+Gaulois 0x0 >> 7x6
+Arbre -> 7x7
+Gaulois 0x0 >> 7x8
+Arbre -> 7x9
+----Fin-tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+----tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+7 lignes 
+10 colonnes 
+10 elements_initiaux 
+70 nombre total d'elements 
+70 nombre total qui est cense y avoir 
+OK
+numero de ligne 1 :10
+numero de ligne 2 :10
+numero de ligne 3 :10
+numero de ligne 4 :10
+numero de ligne 5 :10
+numero de ligne 6 :10
+numero de ligne 7 :10
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gauloise 0x0 >> 1x1
+Arbre -> 1x10
+Gauloise 0x0 >> 1x2
+Gauloise 0x0 >> 1x3
+Gauloise 0x0 >> 1x4
+Arbre -> 1x5
+Gaulois 0x0 >> 1x6
+Gauloise 0x0 >> 1x7
+Gauloise 0x0 >> 1x8
+Gaulois 0x0 >> 1x9
+Gauloise 0x0 >> 2x1
+Arbre -> 2x10
+Gauloise 0x0 >> 2x2
+Gauloise 0x0 >> 2x3
+Gauloise 0x0 >> 2x4
+Gauloise 0x0 >> 2x5
+Gaulois 0x0 >> 2x6
+Arbre -> 2x7
+Gaulois 0x0 >> 2x8
+Arbre -> 2x9
+Arbre -> 3x1
+Gaulois 0x0 >> 3x10
+Gaulois 0x0 >> 3x2
+Gaulois 0x0 >> 3x3
+Gaulois 0x0 >> 3x4
+Gaulois 0x0 >> 3x5
+Gauloise 0x0 >> 3x6
+Arbre -> 3x7
+Gaulois 0x0 >> 3x8
+Arbre -> 3x9
+Gauloise 0x0 >> 4x1
+Arbre -> 4x10
+Arbre -> 4x2
+Arbre -> 4x3
+Gaulois 0x0 >> 4x4
+Gauloise 0x0 >> 4x5
+Arbre -> 4x6
+Gauloise 0x0 >> 4x7
+Gaulois 0x0 >> 4x8
+Gaulois 0x0 >> 4x9
+Arbre -> 5x1
+Gauloise 0x0 >> 5x10
+Gauloise 0x0 >> 5x2
+Gaulois 0x0 >> 5x3
+Arbre -> 5x4
+Gauloise 0x0 >> 5x5
+Arbre -> 5x6
+Gaulois 0x0 >> 5x7
+Gaulois 0x0 >> 5x8
+Gaulois 0x0 >> 5x9
+Gaulois 0x0 >> 6x1
+Gaulois 0x0 >> 6x10
+Gauloise 0x0 >> 6x2
+Gauloise 0x0 >> 6x3
+Arbre -> 6x4
+Gauloise 0x0 >> 6x5
+Gauloise 0x0 >> 6x6
+Gaulois 0x0 >> 6x7
+Gaulois 0x0 >> 6x8
+Arbre -> 6x9
+Arbre -> 7x1
+Gauloise 0x0 >> 7x10
+Gauloise 0x0 >> 7x2
+Gauloise 0x0 >> 7x3
+Gaulois 0x0 >> 7x4
+Gauloise 0x0 >> 7x5
+Gauloise 0x0 >> 7x6
+Gaulois 0x0 >> 7x7
+Gaulois 0x0 >> 7x8
+Arbre -> 7x9
+----Fin-tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne-----: 
+--------------------------------------------------------------------------------------------------------------------------------------------------
