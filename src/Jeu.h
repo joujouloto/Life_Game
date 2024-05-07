@@ -35,7 +35,7 @@ class Jeu
 	
 	//Méthodes
 	//Pour créer au début une grille avec des elements initialement
-	void initialiser_map(unsigned nb_lignes, unsigned nb_cases_par_ligne, unsigned nb_objets_a_creer_par_ligne);
+	void initialiser_map();
 	
 	
 	//Méthodes d'affichage sur console
@@ -60,6 +60,16 @@ class Jeu
 	
 	//Avoir le nombre total d'elements dans la grille
 	unsigned get_nb_total_elements_presents_dans_la_grille();
+	
+	//Avoir le nombre total de toute la population gauloise
+	unsigned get_nb_total_gaulois();
+	unsigned get_nb_total_gaulois_feminin();
+	unsigned get_nb_total_gaulois_masculin();
+	
+	//Avoir le nombre total d'arbres
+	unsigned get_nb_total_arbres();
+	
+	
 	
 	//méthodes pour faire correctement déplacer les objets sur la grille
 	void faire_deplacer_objets_dans_grille_de_transition();

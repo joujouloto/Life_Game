@@ -200,11 +200,17 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
+	jeu.initialiser_map();
+	
 	for(unsigned i = 1; i <= TOURS ;i++)
 	{
-		cout << "-->>>>>>Jeu en mouvement: Tour " << i << endl;
+		cout << "-->>>>>> Jeu en mouvement: Tour " << i << endl;
 		jeu.faire_deplacer_objets();
-		cout << "nombre d elements >> " << jeu.get_nb_total_elements_presents_dans_la_grille() << endl;
+		cout << " nombre d elements: " << jeu.get_nb_total_elements_presents_dans_la_grille() << endl;
+		cout << " nombre total de gaulois et de gauloises: " << jeu.get_nb_total_gaulois() << endl;
+		cout << " nombre total de gauloises: " << jeu.get_nb_total_gaulois_feminin() << endl;
+		cout << " nombre total de gaulois: " << jeu.get_nb_total_gaulois_masculin() << endl;
+		cout << " nombre total d'arbres: " << jeu.get_nb_total_arbres() << endl;
 	}
 	
 	
@@ -265,7 +271,7 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 	
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
-	jeu.initialiser_map(NB_LIGNES, NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE );
+	jeu.initialiser_map();
 	
 	for(unsigned i = 1; i <= TOURS ;i++)
 	{
@@ -273,6 +279,7 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 		jeu.faire_deplacer_objets();
 		jeu.faire_vieillir_population_gauloise();
 		jeu.faire_mourir_les_gaulois_trop_vieux(age_de_deces_probable);
+		
 		
 	}
 	
@@ -302,12 +309,12 @@ void tester()
 	
 	//tester_que_les_objets_se_deplacent_bien(10,7,3,10);
 
-	//tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
+	tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
 	
 	
 	//tester_la_SDL(10,7,3);
 	
-	tester_le_nombre_de_morts(7,10,5,30,10);
+	//tester_le_nombre_de_morts(7,10,5,30,10);
 }
 	
 	

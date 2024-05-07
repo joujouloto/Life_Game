@@ -103,7 +103,7 @@ Jeu::Jeu(unsigned p_nb_lignes, unsigned p_nb_colonnes, unsigned p_nb_elements_a_
 	map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite = make_shared<map<string,shared_ptr<Objet>>>();
 	
 	
-	initialiser_map(nb_lignes, nb_colonnes, nb_elements_a_mettre_par_ligne_au_debut);
+	initialiser_map();
 	
 	
 	nb_total_d_elements_presents_dans_la_grille = grille->size();
@@ -112,7 +112,7 @@ Jeu::Jeu(unsigned p_nb_lignes, unsigned p_nb_colonnes, unsigned p_nb_elements_a_
 /*
 
 */
-void Jeu::initialiser_map(unsigned nb_lignes, unsigned nb_cases_par_ligne, unsigned nb_objets_a_creer_par_ligne)
+void Jeu::initialiser_map()
 {
 	
 	//On crée un pointeur intelligent de map qui a pour clé une chaîne de caracteres
@@ -129,7 +129,7 @@ void Jeu::initialiser_map(unsigned nb_lignes, unsigned nb_cases_par_ligne, unsig
 	mt19937 gen2(rd2());
 	
 	
-	uniform_int_distribution<> dis(1, nb_cases_par_ligne);//uniform distribution between 1 and 18
+	uniform_int_distribution<> dis(1, nb_colonnes);//uniform distribution between 1 and 18
 	uniform_int_distribution<> dis2(1, 3);//uniform distribution between 1 and 3
 	
 	unsigned numero_ligne_nombre = 0;
@@ -152,7 +152,7 @@ void Jeu::initialiser_map(unsigned nb_lignes, unsigned nb_cases_par_ligne, unsig
 	for(unsigned i = 1 ; i <= nb_lignes ; i++)
 	{
 		
-		for (unsigned n = 1; n <= nb_objets_a_creer_par_ligne ; n++) 
+		for (unsigned n = 1; n <= nb_elements_a_mettre_par_ligne_au_debut ; n++) 
 		{
 			
 			/*
@@ -758,7 +758,7 @@ void Jeu::SDL()
         return;
     }
 	
-	initialiser_map(nb_lignes, nb_colonnes, nb_elements_a_mettre_par_ligne_au_debut);
+	initialiser_map();
 	afficher_grille_SDL(renderer);
 	
 	
@@ -987,8 +987,65 @@ void Jeu::faire_mourir_les_gaulois_trop_vieux(unsigned age_de_deces_probable)
 	
 }
 
+unsigned Jeu::get_nb_total_gaulois_feminin()
+{
+	unsigned nb_total_gauloises = 0;
+	
+	
+	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	{	
+
+		if(it->second->getNom()=="Gauloise")
+		{
+			
+			nb_total_gauloises++;
+		}
+	}
+	
+	return nb_total_gauloises;
+}
 
 
+unsigned Jeu::get_nb_total_gaulois_masculin()
+{
+	unsigned nb_total_gaulois = 0;
+	
+	
+	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	{	
+
+		if(it->second->getNom()=="Gaulois")
+		{
+			
+			nb_total_gaulois++;
+		}
+	}
+	
+	return nb_total_gaulois;
+}
+
+unsigned Jeu::get_nb_total_gaulois()
+{
+	return get_nb_total_gaulois_feminin()+get_nb_total_gaulois_masculin();
+}
+
+unsigned Jeu::get_nb_total_arbres()
+{
+	unsigned nb_total_arbres = 0;
+	
+	
+	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
+	{	
+
+		if(it->second->getNom()=="Arbre")
+		{
+			
+			nb_total_arbres++;
+		}
+	}
+	
+	return nb_total_arbres;
+}
 
 
 
