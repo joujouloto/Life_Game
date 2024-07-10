@@ -1,800 +1,398 @@
--->>>>>>Jeu en mouvement: Tour 1
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 2
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 3
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 4
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 5
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 6
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 7
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 8
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 9
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 10
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 11
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 12
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 13
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 14
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 15
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 16
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 17
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 18
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 19
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 20
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 21
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 22
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 23
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 24
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 25
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 26
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 27
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 28
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 29
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 30
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 31
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 32
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 33
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 34
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 35
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 36
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 37
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 38
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 39
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 40
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 41
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 42
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 43
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 44
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 45
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 46
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 47
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 48
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 49
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 50
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 51
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 52
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 53
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 54
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 55
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 56
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 57
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 58
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 59
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 60
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 61
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 62
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 63
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 64
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 65
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 66
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 67
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 68
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 69
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 70
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 71
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 72
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 73
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 74
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 75
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 76
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 77
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 78
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 79
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 80
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 81
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 82
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 83
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 84
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 85
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 86
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 87
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 88
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 89
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 90
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 91
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 92
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 93
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 94
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 95
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 96
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 97
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 98
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 99
-nombre d elements >> 30
--->>>>>>Jeu en mouvement: Tour 100
-nombre d elements >> 30
 -->>>>>> Jeu en mouvement: Tour 1
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 21
- nombre total de gauloises: 9
- nombre total de gaulois: 12
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 2
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 21
- nombre total de gauloises: 9
- nombre total de gaulois: 12
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 3
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 20
- nombre total de gauloises: 8
- nombre total de gaulois: 12
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 4
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 20
- nombre total de gauloises: 8
- nombre total de gaulois: 12
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 5
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 20
- nombre total de gauloises: 8
- nombre total de gaulois: 12
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 6
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 19
- nombre total de gauloises: 8
- nombre total de gaulois: 11
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 7
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 19
- nombre total de gauloises: 8
- nombre total de gaulois: 11
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 8
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 19
- nombre total de gauloises: 8
- nombre total de gaulois: 11
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 9
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 19
- nombre total de gauloises: 8
- nombre total de gaulois: 11
- nombre total d'arbres: 9
+ nombre d'elements dans grille de transition: 25
+ nombre d'elements dans multimap de collision: 4
+ nombre d'elements dans map où on applique la priorité: 3
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
 -->>>>>> Jeu en mouvement: Tour 10
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 18
- nombre total de gauloises: 8
- nombre total de gaulois: 10
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 11
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 17
- nombre total de gauloises: 8
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 12
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 13
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 14
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 15
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 16
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 17
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 18
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 19
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 20
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 21
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 22
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 23
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 24
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 16
- nombre total de gauloises: 7
- nombre total de gaulois: 9
- nombre total d'arbres: 9
+ nombre d'elements dans grille de transition: 22
+ nombre d'elements dans multimap de collision: 4
+ nombre d'elements dans map où on applique la priorité: 3
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
 -->>>>>> Jeu en mouvement: Tour 25
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 15
- nombre total de gauloises: 6
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 26
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 15
- nombre total de gauloises: 6
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 27
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 15
- nombre total de gauloises: 6
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 28
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 15
- nombre total de gauloises: 6
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 29
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 15
- nombre total de gauloises: 6
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 30
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 31
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 32
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 33
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 34
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 35
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 36
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 37
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 38
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 39
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
+ nombre d'elements dans grille de transition: 21
+ nombre d'elements dans multimap de collision: 4
+ nombre d'elements dans map où on applique la priorité: 3
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
 -->>>>>> Jeu en mouvement: Tour 40
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 41
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 42
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 43
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 14
- nombre total de gauloises: 5
- nombre total de gaulois: 9
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 44
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 45
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 46
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 47
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 48
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 49
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 50
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 13
- nombre total de gauloises: 5
- nombre total de gaulois: 8
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 51
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 12
- nombre total de gauloises: 5
- nombre total de gaulois: 7
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 52
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 12
- nombre total de gauloises: 5
- nombre total de gaulois: 7
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 53
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 12
- nombre total de gauloises: 5
- nombre total de gaulois: 7
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 54
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 12
- nombre total de gauloises: 5
- nombre total de gaulois: 7
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 55
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 12
- nombre total de gauloises: 5
- nombre total de gaulois: 7
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 56
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 12
- nombre total de gauloises: 5
- nombre total de gaulois: 7
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 57
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 58
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 59
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 60
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 61
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 62
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 63
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 64
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 65
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 66
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 67
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 11
- nombre total de gauloises: 5
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 68
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 69
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 70
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 71
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 72
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 73
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 74
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 75
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
+ nombre d'elements dans grille de transition: 19
+ nombre d'elements dans multimap de collision: 4
+ nombre d'elements dans map où on applique la priorité: 3
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
 -->>>>>> Jeu en mouvement: Tour 76
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 77
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 78
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 79
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 80
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 10
- nombre total de gauloises: 4
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 81
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 82
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 83
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 84
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 85
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 86
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 87
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 88
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 89
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 90
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 91
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 92
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 93
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 94
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 95
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 96
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 97
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 98
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 99
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
 -->>>>>> Jeu en mouvement: Tour 100
- nombre d elements: 30
- nombre total de gaulois et de gauloises: 9
- nombre total de gauloises: 3
- nombre total de gaulois: 6
- nombre total d'arbres: 9
+-->>>>>> Jeu en mouvement: Tour 1
+-->>>>>> Jeu en mouvement: Tour 2
+-->>>>>> Jeu en mouvement: Tour 3
+-->>>>>> Jeu en mouvement: Tour 4
+5x5 =>  Gaulois
+4x5 >> 5x5
+age: 1
+5x5 =>  Gaulois
+6x5 >> 6x5
+age: 1
+6x5 =>  Gaulois
+6x4 >> 6x5
+age: 1
+6x5 =>  Gauloise
+7x5 >> 7x5
+age: 1
+ nombre d'elements dans grille de transition: 30
+ nombre d'elements dans multimap de collision: 4
+ nombre d'elements dans map où on applique la priorité: 3
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
+-->>>>>> Jeu en mouvement: Tour 5
+-->>>>>> Jeu en mouvement: Tour 6
+-->>>>>> Jeu en mouvement: Tour 7
+-->>>>>> Jeu en mouvement: Tour 8
+-->>>>>> Jeu en mouvement: Tour 9
+-->>>>>> Jeu en mouvement: Tour 10
+-->>>>>> Jeu en mouvement: Tour 11
+-->>>>>> Jeu en mouvement: Tour 12
+-->>>>>> Jeu en mouvement: Tour 13
+-->>>>>> Jeu en mouvement: Tour 14
+-->>>>>> Jeu en mouvement: Tour 15
+-->>>>>> Jeu en mouvement: Tour 16
+-->>>>>> Jeu en mouvement: Tour 17
+-->>>>>> Jeu en mouvement: Tour 18
+-->>>>>> Jeu en mouvement: Tour 19
+-->>>>>> Jeu en mouvement: Tour 20
+-->>>>>> Jeu en mouvement: Tour 21
+-->>>>>> Jeu en mouvement: Tour 22
+-->>>>>> Jeu en mouvement: Tour 23
+-->>>>>> Jeu en mouvement: Tour 24
+-->>>>>> Jeu en mouvement: Tour 25
+-->>>>>> Jeu en mouvement: Tour 26
+-->>>>>> Jeu en mouvement: Tour 27
+-->>>>>> Jeu en mouvement: Tour 28
+-->>>>>> Jeu en mouvement: Tour 29
+-->>>>>> Jeu en mouvement: Tour 30
+-->>>>>> Jeu en mouvement: Tour 31
+-->>>>>> Jeu en mouvement: Tour 32
+-->>>>>> Jeu en mouvement: Tour 33
+-->>>>>> Jeu en mouvement: Tour 34
+-->>>>>> Jeu en mouvement: Tour 35
+-->>>>>> Jeu en mouvement: Tour 36
+-->>>>>> Jeu en mouvement: Tour 37
+-->>>>>> Jeu en mouvement: Tour 38
+-->>>>>> Jeu en mouvement: Tour 39
+-->>>>>> Jeu en mouvement: Tour 40
+-->>>>>> Jeu en mouvement: Tour 41
+-->>>>>> Jeu en mouvement: Tour 42
+-->>>>>> Jeu en mouvement: Tour 43
+-->>>>>> Jeu en mouvement: Tour 44
+-->>>>>> Jeu en mouvement: Tour 45
+-->>>>>> Jeu en mouvement: Tour 46
+-->>>>>> Jeu en mouvement: Tour 47
+-->>>>>> Jeu en mouvement: Tour 48
+-->>>>>> Jeu en mouvement: Tour 49
+-->>>>>> Jeu en mouvement: Tour 50
+-->>>>>> Jeu en mouvement: Tour 51
+-->>>>>> Jeu en mouvement: Tour 52
+-->>>>>> Jeu en mouvement: Tour 53
+-->>>>>> Jeu en mouvement: Tour 54
+-->>>>>> Jeu en mouvement: Tour 55
+-->>>>>> Jeu en mouvement: Tour 56
+-->>>>>> Jeu en mouvement: Tour 57
+-->>>>>> Jeu en mouvement: Tour 58
+-->>>>>> Jeu en mouvement: Tour 59
+-->>>>>> Jeu en mouvement: Tour 60
+-->>>>>> Jeu en mouvement: Tour 61
+-->>>>>> Jeu en mouvement: Tour 62
+-->>>>>> Jeu en mouvement: Tour 63
+-->>>>>> Jeu en mouvement: Tour 64
+-->>>>>> Jeu en mouvement: Tour 65
+-->>>>>> Jeu en mouvement: Tour 66
+-->>>>>> Jeu en mouvement: Tour 67
+-->>>>>> Jeu en mouvement: Tour 68
+-->>>>>> Jeu en mouvement: Tour 69
+-->>>>>> Jeu en mouvement: Tour 70
+-->>>>>> Jeu en mouvement: Tour 71
+-->>>>>> Jeu en mouvement: Tour 72
+-->>>>>> Jeu en mouvement: Tour 73
+-->>>>>> Jeu en mouvement: Tour 74
+-->>>>>> Jeu en mouvement: Tour 75
+-->>>>>> Jeu en mouvement: Tour 76
+-->>>>>> Jeu en mouvement: Tour 77
+-->>>>>> Jeu en mouvement: Tour 78
+-->>>>>> Jeu en mouvement: Tour 79
+-->>>>>> Jeu en mouvement: Tour 80
+-->>>>>> Jeu en mouvement: Tour 81
+-->>>>>> Jeu en mouvement: Tour 82
+-->>>>>> Jeu en mouvement: Tour 83
+-->>>>>> Jeu en mouvement: Tour 84
+-->>>>>> Jeu en mouvement: Tour 85
+-->>>>>> Jeu en mouvement: Tour 86
+-->>>>>> Jeu en mouvement: Tour 87
+-->>>>>> Jeu en mouvement: Tour 88
+-->>>>>> Jeu en mouvement: Tour 89
+-->>>>>> Jeu en mouvement: Tour 90
+-->>>>>> Jeu en mouvement: Tour 91
+-->>>>>> Jeu en mouvement: Tour 92
+-->>>>>> Jeu en mouvement: Tour 93
+-->>>>>> Jeu en mouvement: Tour 94
+-->>>>>> Jeu en mouvement: Tour 95
+-->>>>>> Jeu en mouvement: Tour 96
+-->>>>>> Jeu en mouvement: Tour 97
+-->>>>>> Jeu en mouvement: Tour 98
+-->>>>>> Jeu en mouvement: Tour 99
+-->>>>>> Jeu en mouvement: Tour 100
+-->>>>>> Jeu en mouvement: Tour 1
+-->>>>>> Jeu en mouvement: Tour 2
+-->>>>>> Jeu en mouvement: Tour 3
+-->>>>>> Jeu en mouvement: Tour 4
+-->>>>>> Jeu en mouvement: Tour 5
+-->>>>>> Jeu en mouvement: Tour 6
+-->>>>>> Jeu en mouvement: Tour 7
+-->>>>>> Jeu en mouvement: Tour 8
+-->>>>>> Jeu en mouvement: Tour 9
+-->>>>>> Jeu en mouvement: Tour 10
+-->>>>>> Jeu en mouvement: Tour 11
+-->>>>>> Jeu en mouvement: Tour 12
+-->>>>>> Jeu en mouvement: Tour 13
+-->>>>>> Jeu en mouvement: Tour 14
+affichage multimap contenant que les elements en collision 
+10x6 =>  Gauloise
+10x7 >> 10x6
+age: 1
+10x6 =>  Gauloise
+9x6 >> 9x6
+age: 1
+2x6 =>  Gaulois
+2x5 >> 2x6
+age: 1
+2x6 =>  Gaulois
+3x6 >> 3x6
+age: 1
+3x6 =>  Gauloise
+2x6 >> 3x6
+age: 1
+3x6 =>  Gauloise
+4x6 >> 4x6
+age: 1
+affichage multimap ou on applique la priorite 
+10x6 =>  Gauloise
+10x7 >> 10x6
+age: 1
+2x6 =>  Gaulois
+2x5 >> 2x6
+age: 1
+3x6 =>  Gaulois
+3x6 >> 3x6
+age: 1
+4x6 =>  Gauloise
+4x6 >> 4x6
+age: 1
+9x6 =>  Gauloise
+9x6 >> 9x6
+age: 1
+ nombre d'elements dans grille de transition: 24
+ nombre d'elements dans multimap de collision: 6
+ nombre d'elements dans map où on applique la priorité: 5
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
+-->>>>>> Jeu en mouvement: Tour 15
+-->>>>>> Jeu en mouvement: Tour 16
+-->>>>>> Jeu en mouvement: Tour 17
+affichage multimap contenant que les elements en collision 
+2x5 =>  Gaulois
+1x5 >> 2x5
+age: 1
+2x5 =>  Gaulois
+3x5 >> 3x5
+age: 1
+3x5 =>  Gauloise
+3x4 >> 3x5
+age: 1
+3x5 =>  Gauloise
+4x5 >> 4x5
+age: 1
+affichage multimap ou on applique la priorite 
+2x5 =>  Gaulois
+1x5 >> 2x5
+age: 1
+3x5 =>  Gaulois
+3x5 >> 3x5
+age: 1
+4x5 =>  Gauloise
+4x5 >> 4x5
+age: 1
+ nombre d'elements dans grille de transition: 22
+ nombre d'elements dans multimap de collision: 4
+ nombre d'elements dans map où on applique la priorité: 3
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
+-->>>>>> Jeu en mouvement: Tour 18
+-->>>>>> Jeu en mouvement: Tour 19
+-->>>>>> Jeu en mouvement: Tour 20
+-->>>>>> Jeu en mouvement: Tour 21
+-->>>>>> Jeu en mouvement: Tour 22
+-->>>>>> Jeu en mouvement: Tour 23
+-->>>>>> Jeu en mouvement: Tour 24
+-->>>>>> Jeu en mouvement: Tour 25
+-->>>>>> Jeu en mouvement: Tour 26
+-->>>>>> Jeu en mouvement: Tour 27
+-->>>>>> Jeu en mouvement: Tour 28
+-->>>>>> Jeu en mouvement: Tour 29
+-->>>>>> Jeu en mouvement: Tour 30
+-->>>>>> Jeu en mouvement: Tour 31
+-->>>>>> Jeu en mouvement: Tour 32
+-->>>>>> Jeu en mouvement: Tour 33
+-->>>>>> Jeu en mouvement: Tour 34
+-->>>>>> Jeu en mouvement: Tour 35
+-->>>>>> Jeu en mouvement: Tour 36
+-->>>>>> Jeu en mouvement: Tour 37
+-->>>>>> Jeu en mouvement: Tour 38
+-->>>>>> Jeu en mouvement: Tour 39
+-->>>>>> Jeu en mouvement: Tour 40
+-->>>>>> Jeu en mouvement: Tour 41
+-->>>>>> Jeu en mouvement: Tour 42
+-->>>>>> Jeu en mouvement: Tour 43
+-->>>>>> Jeu en mouvement: Tour 44
+-->>>>>> Jeu en mouvement: Tour 45
+-->>>>>> Jeu en mouvement: Tour 46
+-->>>>>> Jeu en mouvement: Tour 47
+-->>>>>> Jeu en mouvement: Tour 48
+-->>>>>> Jeu en mouvement: Tour 49
+-->>>>>> Jeu en mouvement: Tour 50
+-->>>>>> Jeu en mouvement: Tour 51
+-->>>>>> Jeu en mouvement: Tour 52
+-->>>>>> Jeu en mouvement: Tour 53
+-->>>>>> Jeu en mouvement: Tour 54
+-->>>>>> Jeu en mouvement: Tour 55
+-->>>>>> Jeu en mouvement: Tour 56
+-->>>>>> Jeu en mouvement: Tour 57
+-->>>>>> Jeu en mouvement: Tour 58
+-->>>>>> Jeu en mouvement: Tour 59
+-->>>>>> Jeu en mouvement: Tour 60
+-->>>>>> Jeu en mouvement: Tour 61
+-->>>>>> Jeu en mouvement: Tour 62
+-->>>>>> Jeu en mouvement: Tour 63
+-->>>>>> Jeu en mouvement: Tour 64
+-->>>>>> Jeu en mouvement: Tour 65
+-->>>>>> Jeu en mouvement: Tour 66
+-->>>>>> Jeu en mouvement: Tour 67
+-->>>>>> Jeu en mouvement: Tour 68
+-->>>>>> Jeu en mouvement: Tour 69
+-->>>>>> Jeu en mouvement: Tour 70
+-->>>>>> Jeu en mouvement: Tour 71
+-->>>>>> Jeu en mouvement: Tour 72
+-->>>>>> Jeu en mouvement: Tour 73
+-->>>>>> Jeu en mouvement: Tour 74
+-->>>>>> Jeu en mouvement: Tour 75
+-->>>>>> Jeu en mouvement: Tour 76
+-->>>>>> Jeu en mouvement: Tour 77
+-->>>>>> Jeu en mouvement: Tour 78
+-->>>>>> Jeu en mouvement: Tour 79
+-->>>>>> Jeu en mouvement: Tour 80
+-->>>>>> Jeu en mouvement: Tour 81
+-->>>>>> Jeu en mouvement: Tour 82
+-->>>>>> Jeu en mouvement: Tour 83
+-->>>>>> Jeu en mouvement: Tour 84
+-->>>>>> Jeu en mouvement: Tour 85
+-->>>>>> Jeu en mouvement: Tour 86
+-->>>>>> Jeu en mouvement: Tour 87
+-->>>>>> Jeu en mouvement: Tour 88
+-->>>>>> Jeu en mouvement: Tour 89
+-->>>>>> Jeu en mouvement: Tour 90
+-->>>>>> Jeu en mouvement: Tour 91
+-->>>>>> Jeu en mouvement: Tour 92
+-->>>>>> Jeu en mouvement: Tour 93
+-->>>>>> Jeu en mouvement: Tour 94
+-->>>>>> Jeu en mouvement: Tour 95
+-->>>>>> Jeu en mouvement: Tour 96
+-->>>>>> Jeu en mouvement: Tour 97
+-->>>>>> Jeu en mouvement: Tour 98
+-->>>>>> Jeu en mouvement: Tour 99
+-->>>>>> Jeu en mouvement: Tour 100

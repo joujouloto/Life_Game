@@ -98,7 +98,10 @@ class Jeu
 	void faire_vieillir_population_gauloise();
 	void faire_mourir_les_gaulois_trop_vieux(unsigned age_de_deces);
 	
-	
+	//Attributs que l'on veut pas trop montrer (interne au fonctionnement du déplacement des objets)
+	_multimap grille_de_transition;
+	_multimap multimap_contenant_que_les_elements_en_collision;
+	_map map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite;
 	
 	//Attributs
 	protected:
@@ -110,10 +113,7 @@ class Jeu
 	_map grille;
 	
 	
-	//Attributs que l'on veut pas trop montrer (interne au fonctionnement du déplacement des objets)
-	_multimap grille_de_transition;
-	_multimap multimap_contenant_que_les_elements_en_collision;
-	_map map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite;
+	
 	
 	
 	//Attributs SDL

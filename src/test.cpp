@@ -183,6 +183,13 @@ void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COL
 //quand il y a juste des déplacements
 void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS)
 {
+	int nb_elements_dans_grille_transition = 0;
+	int nb_elements_en_collision = 0;
+	int nb_elements_ou_on_applique_la_priorite = 0;
+	
+	
+	
+	
 	fstream file;
     file.open("../../tests/tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour.txt", ios::out|ios::app);
     string line;
@@ -205,12 +212,64 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	for(unsigned i = 1; i <= TOURS ;i++)
 	{
 		cout << "-->>>>>> Jeu en mouvement: Tour " << i << endl;
-		jeu.faire_deplacer_objets();
+		
+		jeu.faire_deplacer_objets_dans_grille_de_transition();
+		
+		
+
+		nb_elements_dans_grille_transition = jeu.grille_de_transition->size() ;
+		
+		
+		
+		jeu.mettre_objets_en_collision_dans_une_multimap();
+		nb_elements_en_collision = jeu.multimap_contenant_que_les_elements_en_collision->size();
+		
+		
+		
+		jeu.appliquer_les_regles_de_priorite_sur_les_collisions();
+		nb_elements_ou_on_applique_la_priorite = jeu.map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->size();
+		
+		
+		
+		if(nb_elements_en_collision!=nb_elements_ou_on_applique_la_priorite)
+		{
+			cout << "affichage multimap contenant que les elements en collision " << endl;
+			jeu.afficher_multimap_qui_contient_que_les_elements_en_collision();
+			
+			cout << "affichage multimap ou on applique la priorite " << endl;
+			jeu.afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
+			
+			
+			
+			cout << " nombre d'elements dans grille de transition: "<< nb_elements_dans_grille_transition << endl;
+			cout << " nombre d'elements dans multimap de collision: " << nb_elements_en_collision << endl;
+			cout << " nombre d'elements dans map où on applique la priorité: " << nb_elements_ou_on_applique_la_priorite << endl;
+			cout << "Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite " << endl;
+			
+			
+		}
+		
+		if(nb_elements_en_collision==1||nb_elements_ou_on_applique_la_priorite==1)
+		{
+			cout << " nombre d'elements dans grille de transition: "<< nb_elements_dans_grille_transition << endl;
+			cout << " nombre d'elements dans multimap de collision: " << nb_elements_en_collision << endl;
+			cout << " nombre d'elements dans map où on applique la priorité: " << nb_elements_ou_on_applique_la_priorite << endl;
+			cout << "Le nombre d'elements en collision n'est pas egal  1 ou de meme pour les elements ou on applique la priorite" << endl;
+		}
+		
+		
+		
+		jeu.regrouper_tous_les_elements();
+		
+		
+		
+		
+		/*
 		cout << " nombre d elements: " << jeu.get_nb_total_elements_presents_dans_la_grille() << endl;
 		cout << " nombre total de gaulois et de gauloises: " << jeu.get_nb_total_gaulois() << endl;
 		cout << " nombre total de gauloises: " << jeu.get_nb_total_gaulois_feminin() << endl;
 		cout << " nombre total de gaulois: " << jeu.get_nb_total_gaulois_masculin() << endl;
-		cout << " nombre total d'arbres: " << jeu.get_nb_total_arbres() << endl;
+		cout << " nombre total d'arbres: " << jeu.get_nb_total_arbres() << endl;*/
 	}
 	
 	

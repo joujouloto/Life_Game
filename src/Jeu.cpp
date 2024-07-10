@@ -320,6 +320,9 @@ void Jeu::afficher_nb_elements_par_colonne()
 
 unsigned Jeu::get_nb_total_elements_presents_dans_la_grille()
 {
+	nb_total_d_elements_presents_dans_la_grille = grille->size();
+	
+	
 	return nb_total_d_elements_presents_dans_la_grille;
 }
 
@@ -558,7 +561,7 @@ void Jeu::mettre_objets_en_collision_dans_une_multimap()
 			numero_ligne_string = to_string(i);
 			numero_colonne_string = to_string(j);
 			
-			cle = numero_ligne_string+"x"+numero_colonne_string;
+			cle = numero_ligne_string + "x" + numero_colonne_string;
 			 
 			for (_it_multimap it=grille_de_transition->equal_range(cle).first;
 			it!=grille_de_transition->equal_range(cle).second; ++it)
@@ -606,7 +609,31 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 		
 		objet = it->second;
 		
-		
+		/*
+		affichage multimap contenant que les elements en collision 
+		2x5 =>  Gaulois
+		1x5 >> 2x5
+		age: 1
+		2x5 =>  Gaulois
+		3x5 >> 3x5
+		age: 1
+		3x5 =>  Gauloise
+		3x4 >> 3x5
+		age: 1
+		3x5 =>  Gauloise
+		4x5 >> 4x5
+		age: 1
+		affichage multimap ou on applique la priorite 
+		2x5 =>  Gaulois
+		1x5 >> 2x5
+		age: 1
+		3x5 =>  Gaulois
+		3x5 >> 3x5
+		age: 1
+		4x5 =>  Gauloise
+		4x5 >> 4x5
+		age: 1
+		*/
 		
 		numero_ligne_string = to_string(objet->getNumeroLigne());
 		numero_colonne_string = to_string(objet->getNumeroColonne());
