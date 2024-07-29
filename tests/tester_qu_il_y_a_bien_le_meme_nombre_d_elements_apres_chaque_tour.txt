@@ -396,3 +396,148 @@ Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels o
 -->>>>>> Jeu en mouvement: Tour 98
 -->>>>>> Jeu en mouvement: Tour 99
 -->>>>>> Jeu en mouvement: Tour 100
+-->>>>>> Jeu en mouvement: Tour 1
+-->>>>>> Jeu en mouvement: Tour 2
+-->>>>>> Jeu en mouvement: Tour 3
+-->>>>>> Jeu en mouvement: Tour 4
+-->>>>>> Jeu en mouvement: Tour 5
+-->>>>>> Jeu en mouvement: Tour 6
+-->>>>>> Jeu en mouvement: Tour 7
+-->>>>>> Jeu en mouvement: Tour 8
+-->>>>>> Jeu en mouvement: Tour 9
+-->>>>>> Jeu en mouvement: Tour 10
+-->>>>>> Jeu en mouvement: Tour 11
+affichage multimap contenant que les elements en collision 
+8x3 =>  Gauloise
+8x2 >> 8x3
+age: 1
+8x3 =>  Gauloise
+8x4 >> 8x4
+age: 1
+8x3 =>  Gauloise
+9x3 >> 9x3
+age: 1
+8x6 =>  Gaulois
+7x6 >> 8x6
+age: 1
+8x6 =>  Gaulois
+8x7 >> 8x7
+age: 1
+9x3 =>  Gauloise
+10x3 >> 10x3
+age: 1
+9x3 =>  Gaulois
+8x3 >> 8x3
+age: 1
+affichage multimap ou on applique la priorite 
+10x3 =>  Gauloise
+10x3 >> 10x3
+age: 1
+8x3 =>  Gauloise
+8x2 >> 8x3
+age: 1
+8x4 =>  Gauloise
+8x4 >> 8x4
+age: 1
+8x6 =>  Gaulois
+7x6 >> 8x6
+age: 1
+8x7 =>  Gaulois
+8x7 >> 8x7
+age: 1
+9x3 =>  Gauloise
+9x3 >> 9x3
+age: 1
+ nombre d'elements dans grille de transition: 30
+ nombre d'elements dans multimap de collision: 7
+ nombre d'elements dans map où on applique la priorité: 6
+Le nombre d'elements en collision n'est pas egal au nombre d'elements auxquels on applique la priorite 
+-->>>>>> Jeu en mouvement: Tour 12
+-->>>>>> Jeu en mouvement: Tour 13
+-->>>>>> Jeu en mouvement: Tour 14
+-->>>>>> Jeu en mouvement: Tour 15
+-->>>>>> Jeu en mouvement: Tour 16
+-->>>>>> Jeu en mouvement: Tour 17
+-->>>>>> Jeu en mouvement: Tour 18
+-->>>>>> Jeu en mouvement: Tour 19
+-->>>>>> Jeu en mouvement: Tour 20
+-->>>>>> Jeu en mouvement: Tour 21
+-->>>>>> Jeu en mouvement: Tour 22
+-->>>>>> Jeu en mouvement: Tour 23
+-->>>>>> Jeu en mouvement: Tour 24
+-->>>>>> Jeu en mouvement: Tour 25
+-->>>>>> Jeu en mouvement: Tour 26
+-->>>>>> Jeu en mouvement: Tour 27
+-->>>>>> Jeu en mouvement: Tour 28
+-->>>>>> Jeu en mouvement: Tour 29
+-->>>>>> Jeu en mouvement: Tour 30
+-->>>>>> Jeu en mouvement: Tour 31
+-->>>>>> Jeu en mouvement: Tour 32
+-->>>>>> Jeu en mouvement: Tour 33
+-->>>>>> Jeu en mouvement: Tour 34
+-->>>>>> Jeu en mouvement: Tour 35
+-->>>>>> Jeu en mouvement: Tour 36
+-->>>>>> Jeu en mouvement: Tour 37
+-->>>>>> Jeu en mouvement: Tour 38
+-->>>>>> Jeu en mouvement: Tour 39
+-->>>>>> Jeu en mouvement: Tour 40
+-->>>>>> Jeu en mouvement: Tour 41
+-->>>>>> Jeu en mouvement: Tour 42
+-->>>>>> Jeu en mouvement: Tour 43
+-->>>>>> Jeu en mouvement: Tour 44
+-->>>>>> Jeu en mouvement: Tour 45
+-->>>>>> Jeu en mouvement: Tour 46
+-->>>>>> Jeu en mouvement: Tour 47
+-->>>>>> Jeu en mouvement: Tour 48
+-->>>>>> Jeu en mouvement: Tour 49
+-->>>>>> Jeu en mouvement: Tour 50
+-->>>>>> Jeu en mouvement: Tour 51
+-->>>>>> Jeu en mouvement: Tour 52
+-->>>>>> Jeu en mouvement: Tour 53
+-->>>>>> Jeu en mouvement: Tour 54
+-->>>>>> Jeu en mouvement: Tour 55
+-->>>>>> Jeu en mouvement: Tour 56
+-->>>>>> Jeu en mouvement: Tour 57
+-->>>>>> Jeu en mouvement: Tour 58
+-->>>>>> Jeu en mouvement: Tour 59
+-->>>>>> Jeu en mouvement: Tour 60
+-->>>>>> Jeu en mouvement: Tour 61
+-->>>>>> Jeu en mouvement: Tour 62
+-->>>>>> Jeu en mouvement: Tour 63
+-->>>>>> Jeu en mouvement: Tour 64
+-->>>>>> Jeu en mouvement: Tour 65
+-->>>>>> Jeu en mouvement: Tour 66
+-->>>>>> Jeu en mouvement: Tour 67
+-->>>>>> Jeu en mouvement: Tour 68
+-->>>>>> Jeu en mouvement: Tour 69
+-->>>>>> Jeu en mouvement: Tour 70
+-->>>>>> Jeu en mouvement: Tour 71
+-->>>>>> Jeu en mouvement: Tour 72
+-->>>>>> Jeu en mouvement: Tour 73
+-->>>>>> Jeu en mouvement: Tour 74
+-->>>>>> Jeu en mouvement: Tour 75
+-->>>>>> Jeu en mouvement: Tour 76
+-->>>>>> Jeu en mouvement: Tour 77
+-->>>>>> Jeu en mouvement: Tour 78
+-->>>>>> Jeu en mouvement: Tour 79
+-->>>>>> Jeu en mouvement: Tour 80
+-->>>>>> Jeu en mouvement: Tour 81
+-->>>>>> Jeu en mouvement: Tour 82
+-->>>>>> Jeu en mouvement: Tour 83
+-->>>>>> Jeu en mouvement: Tour 84
+-->>>>>> Jeu en mouvement: Tour 85
+-->>>>>> Jeu en mouvement: Tour 86
+-->>>>>> Jeu en mouvement: Tour 87
+-->>>>>> Jeu en mouvement: Tour 88
+-->>>>>> Jeu en mouvement: Tour 89
+-->>>>>> Jeu en mouvement: Tour 90
+-->>>>>> Jeu en mouvement: Tour 91
+-->>>>>> Jeu en mouvement: Tour 92
+-->>>>>> Jeu en mouvement: Tour 93
+-->>>>>> Jeu en mouvement: Tour 94
+-->>>>>> Jeu en mouvement: Tour 95
+-->>>>>> Jeu en mouvement: Tour 96
+-->>>>>> Jeu en mouvement: Tour 97
+-->>>>>> Jeu en mouvement: Tour 98
+-->>>>>> Jeu en mouvement: Tour 99
+-->>>>>> Jeu en mouvement: Tour 100

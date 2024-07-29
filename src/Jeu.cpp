@@ -601,6 +601,13 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 	 string numero_ligne_objet_qui_ne_garde_pas_sa_priorite_string = "0";
 	 string numero_colonne_objet_qui_ne_garde_pas_sa_priorite_string = "0";
 	 
+	 pair<multimap<string,shared_ptr<Objet>>::iterator,bool> ret;
+	 string numero_ligne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string = "0";
+	 string numero_colonne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string = "0";
+	 
+	 string cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position = "0x0";
+	 
+	 
 	
 	for (_it_multimap it=multimap_contenant_que_les_elements_en_collision->begin();
 			it!=multimap_contenant_que_les_elements_en_collision->end(); ++it)
@@ -652,6 +659,30 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 			map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(
 			cle_objet_qui_garde_sa_priorite,objet));
 			
+			/*/ret = map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(
+			cle_objet_qui_garde_sa_priorite,objet));
+			/*
+			if(ret.second==false)
+			{
+				gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
+				
+				
+				gaulois_e->retournerAsonAnciennePosition();
+				
+				objet = gaulois_e ;
+				
+				numero_ligne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string = to_string(objet->getNumeroLigne());
+				
+				numero_colonne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string = to_string(objet->getNumeroColonne());
+				
+				cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position =	numero_ligne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string+"x"+numero_colonne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string;
+				
+				map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position,objet));
+			}*/
+			
+			
+			
+			
 		}
 		else
 		{
@@ -663,7 +694,7 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 				
 				/*
 					Attention à la fonction retourner à son ancienne position car l'element qui etait en collision a pour ancienne coordonnee la position 
-					où il etait en collision. Or cela doit sa position avant son deplacement en collision
+					où il etait en collision. Or cela doit être sa position avant son deplacement en collision
 				*/
 				
 				
