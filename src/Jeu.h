@@ -37,6 +37,9 @@ class Jeu
 	//Pour créer au début une grille avec des elements initialement
 	void initialiser_map();
 	
+	//Ajouter un element en particulier
+	void ajouter_element_a_l_emplacement_specifie(unsigned num_ligne, unsigned num_colonne, shared_ptr<Objet> objet);
+	
 	
 	//Méthodes d'affichage sur console
 	void afficher_infos_de_base_du_jeu();

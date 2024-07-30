@@ -5,6 +5,7 @@
 
 
 #include "Jeu.h"
+#include "Gaulois.h"
 
 
 using namespace std;
@@ -224,7 +225,8 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 		jeu.mettre_objets_en_collision_dans_une_multimap();
 		nb_elements_en_collision = jeu.multimap_contenant_que_les_elements_en_collision->size();
 		
-		
+		cout << "affichage multimap contenant que les elements en collision " << endl;
+		jeu.afficher_multimap_qui_contient_que_les_elements_en_collision();
 		
 		jeu.appliquer_les_regles_de_priorite_sur_les_collisions();
 		nb_elements_ou_on_applique_la_priorite = jeu.map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->size();
@@ -233,12 +235,9 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 		
 		if(nb_elements_en_collision!=nb_elements_ou_on_applique_la_priorite)
 		{
-			cout << "affichage multimap contenant que les elements en collision " << endl;
-			jeu.afficher_multimap_qui_contient_que_les_elements_en_collision();
 			
 			cout << "affichage multimap ou on applique la priorite " << endl;
 			jeu.afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
-			
 			
 			
 			cout << " nombre d'elements dans grille de transition: "<< nb_elements_dans_grille_transition << endl;
@@ -349,6 +348,54 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 	file.close();
 }
 
+void creer_arbitrairement_des_elements_specifies(unsigned NB_LIGNES, unsigned NB_COLONNES)
+{
+	fstream file;
+    file.open("../../tests/creation_arbitraire_d_elements.txt", ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	
+	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,0);
+	
+	shared_ptr<Gaulois> gaulois;
+	shared_ptr<Gaulois> gauloise;
+	
+	gaulois = make_shared<Gaulois>('M',1,5);
+	jeu.ajouter_element_a_l_emplacement_specifie(1,5, gaulois);
+	
+	
+	gaulois = make_shared<Gaulois>('M',3,5);
+	jeu.ajouter_element_a_l_emplacement_specifie(3,5, gaulois);
+	
+	
+	gauloise = make_shared<Gaulois>('F',3, 4);
+	jeu.ajouter_element_a_l_emplacement_specifie(3,4, gauloise);
+	
+	gauloise = make_shared<Gaulois>('F',4, 5);
+	jeu.ajouter_element_a_l_emplacement_specifie(4,5, gauloise);
+	
+	
+	jeu.afficher_contenu_de_la_grille();
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+}
+
+
+
 
 void tester()
 {
@@ -368,12 +415,15 @@ void tester()
 	
 	//tester_que_les_objets_se_deplacent_bien(10,7,3,10);
 
-	tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
+	//tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
 	
 	
 	//tester_la_SDL(10,7,3);
 	
 	//tester_le_nombre_de_morts(7,10,5,30,10);
+	
+	creer_arbitrairement_des_elements_specifies(10, 10);
+	
 }
 	
 	

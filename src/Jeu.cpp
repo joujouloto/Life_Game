@@ -131,6 +131,9 @@ void Jeu::initialiser_map()
 	
 	uniform_int_distribution<> dis(1, nb_colonnes);//uniform distribution between 1 and 18
 	uniform_int_distribution<> dis2(1, 3);//uniform distribution between 1 and 3
+	//3 car il n'y a pour l'instant que 3 types d'objets gaulois , gauloise et arbre
+	
+	
 	
 	unsigned numero_ligne_nombre = 0;
 	unsigned numero_colonne_nombre = 0;
@@ -221,6 +224,13 @@ void Jeu::initialiser_map()
 		liste_numeros_colonne_deja_tombes.clear();
 	}
 }
+
+void Jeu::ajouter_element_a_l_emplacement_specifie(unsigned num_ligne, unsigned num_colonne, shared_ptr<Objet> objet)
+{	
+	grille->insert(pair<string,shared_ptr<Objet>>(num_ligne+"x"+num_colonne,objet));
+}
+
+
 
 void Jeu::afficher_infos_de_base_du_jeu()
 {
@@ -656,14 +666,12 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 			
 			cle_objet_qui_garde_sa_priorite = cle_objet_parcouru;
 			
-			map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(
+			ret = map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(
 			cle_objet_qui_garde_sa_priorite,objet));
 			
-			/*/ret = map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(
-			cle_objet_qui_garde_sa_priorite,objet));
-			/*
 			if(ret.second==false)
 			{
+				/*
 				gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
 				
 				
@@ -677,8 +685,11 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 				
 				cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position =	numero_ligne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string+"x"+numero_colonne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string;
 				
-				map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position,objet));
-			}*/
+				map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position,objet));*/
+				
+				
+				cout << "Element priorisé qui va sur un emplacement occupé " << endl;
+			}
 			
 			
 			
