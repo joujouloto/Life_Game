@@ -1,0 +1,6 @@
+---------------Création d'elements dans la grille où on applique la priorite------------------
+ On cree des elements volontairement en collision pour tester si la fonction appliquer_les_regles_de_priorite_sur_les_collisions() fonctionne bien 
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+---------------Création d'elements dans la grille où on applique la priorite------------------
+ On cree des elements volontairement en collision pour tester si la fonction appliquer_les_regles_de_priorite_sur_les_collisions() fonctionne bien 
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------

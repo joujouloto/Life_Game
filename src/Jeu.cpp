@@ -225,13 +225,6 @@ void Jeu::initialiser_map()
 	}
 }
 
-void Jeu::ajouter_element_a_l_emplacement_specifie(unsigned num_ligne, unsigned num_colonne, shared_ptr<Objet> objet)
-{	
-	grille->insert(pair<string,shared_ptr<Objet>>(num_ligne+"x"+num_colonne,objet));
-}
-
-
-
 void Jeu::afficher_infos_de_base_du_jeu()
 {
 	cout << "----------------------------------------------------------------JEU_DE_LA_VIE-----------------------" << endl;
@@ -335,6 +328,31 @@ unsigned Jeu::get_nb_total_elements_presents_dans_la_grille()
 	
 	return nb_total_d_elements_presents_dans_la_grille;
 }
+
+_map Jeu::get_Map_normale()
+{
+	return grille;
+}
+
+
+_multimap Jeu::get_grille_de_transition()
+{
+	return grille_de_transition;
+}
+
+_multimap Jeu::get_multimap_contenant_que_les_elements_en_collision()
+{
+	return multimap_contenant_que_les_elements_en_collision;
+}
+
+
+
+_map Jeu::get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()
+{
+	return map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite;
+}
+
+
 
 
 void Jeu::afficher_grille_de_transition()

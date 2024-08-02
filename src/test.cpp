@@ -348,10 +348,10 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 	file.close();
 }
 
-void creer_arbitrairement_des_elements_specifies(unsigned NB_LIGNES, unsigned NB_COLONNES)
+void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsigned NB_LIGNES, unsigned NB_COLONNES)
 {
 	fstream file;
-    file.open("../../tests/creation_arbitraire_d_elements.txt", ios::out|ios::app);
+    file.open("../../tests/tester_de_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions().txt", ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -367,22 +367,56 @@ void creer_arbitrairement_des_elements_specifies(unsigned NB_LIGNES, unsigned NB
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,0);
 	
-	shared_ptr<Gaulois> gaulois;
-	shared_ptr<Gaulois> gauloise;
-	
-	gaulois = make_shared<Gaulois>('M',1,5);
-	jeu.ajouter_element_a_l_emplacement_specifie(1,5, gaulois);
-	
-	
-	gaulois = make_shared<Gaulois>('M',3,5);
-	jeu.ajouter_element_a_l_emplacement_specifie(3,5, gaulois);
+	shared_ptr<Gaulois> gaulois_1;
+	shared_ptr<Gaulois> gaulois_2;
+	shared_ptr<Gaulois> gauloise_3;
+	shared_ptr<Gaulois> gauloise_4;
 	
 	
-	gauloise = make_shared<Gaulois>('F',3, 4);
-	jeu.ajouter_element_a_l_emplacement_specifie(3,4, gauloise);
+	cout << "---------------Création d'elements dans la grille où on applique la priorite------------------" << endl;
+	cout << " On cree des elements volontairement en collision pour tester si la fonction appliquer_les_regles_de_priorite_sur_les_collisions() fonctionne bien " << endl;
 	
-	gauloise = make_shared<Gaulois>('F',4, 5);
-	jeu.ajouter_element_a_l_emplacement_specifie(4,5, gauloise);
+	/*
+		affichage multimap contenant que les elements en collision 
+		2x5 =>  Gaulois
+		1x5 >> 2x5
+		age: 1
+		2x5 =>  Gaulois
+		3x5 >> 3x5
+		age: 1
+		3x5 =>  Gauloise
+		3x4 >> 3x5
+		age: 1
+		3x5 =>  Gauloise
+		4x5 >> 4x5
+		age: 1
+		affichage multimap ou on applique la priorite 
+		2x5 =>  Gaulois
+		1x5 >> 2x5
+		age: 1
+		3x5 =>  Gaulois
+		3x5 >> 3x5
+		age: 1
+		4x5 =>  Gauloise
+		4x5 >> 4x5
+		age: 1
+		*/
+	
+	gaulois_1 = make_shared<Gaulois>('M',1,5);
+	gaulois_1->setPosition(2,5);
+	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("2x5",gaulois_1));
+	
+	gaulois_2 = make_shared<Gaulois>('M',2,5);
+	gaulois_2->setPosition(3,5);
+	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("3x5",gaulois_2));
+	
+	gauloise_3 = make_shared<Gaulois>('F',3, 4);
+	gauloise_3->setPosition(3,5);
+	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("3x5",gauloise_3));
+	
+	gauloise_4 = make_shared<Gaulois>('F',4, 5);
+	gauloise_4->setPosition(3,5);
+	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("3x5",gauloise_4));
 	
 	
 	jeu.afficher_contenu_de_la_grille();
@@ -422,7 +456,7 @@ void tester()
 	
 	//tester_le_nombre_de_morts(7,10,5,30,10);
 	
-	creer_arbitrairement_des_elements_specifies(10, 10);
+	tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(10, 10);
 	
 }
 	

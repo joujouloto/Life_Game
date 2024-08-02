@@ -37,10 +37,6 @@ class Jeu
 	//Pour créer au début une grille avec des elements initialement
 	void initialiser_map();
 	
-	//Ajouter un element en particulier
-	void ajouter_element_a_l_emplacement_specifie(unsigned num_ligne, unsigned num_colonne, shared_ptr<Objet> objet);
-	
-	
 	//Méthodes d'affichage sur console
 	void afficher_infos_de_base_du_jeu();
 	void afficher_contenu_de_la_grille();
@@ -71,6 +67,12 @@ class Jeu
 	
 	//Avoir le nombre total d'arbres
 	unsigned get_nb_total_arbres();
+	
+	//Avoir la grille normale
+	_map get_Map_normale();
+	_multimap get_grille_de_transition();
+	_multimap get_multimap_contenant_que_les_elements_en_collision();
+	_map get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
 	
 	
 	

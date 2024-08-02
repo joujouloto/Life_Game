@@ -16,7 +16,7 @@ void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENT
 void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS, unsigned age_de_deces_probable);
 
 
-void creer_arbitrairement_des_elements_specifies(unsigned NB_LIGNES, unsigned NB_COLONNES);
+void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsigned NB_LIGNES, unsigned NB_COLONNES);
 
 void tester();
 
