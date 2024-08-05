@@ -24,6 +24,7 @@ class Objet
 	string getNom();
 	unsigned getNumeroLigne();
 	unsigned getNumeroColonne();
+	string getPosition();
 	
 	//Set
 	void setNom(string pNom);

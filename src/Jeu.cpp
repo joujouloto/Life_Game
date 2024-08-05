@@ -329,6 +329,8 @@ unsigned Jeu::get_nb_total_elements_presents_dans_la_grille()
 	return nb_total_d_elements_presents_dans_la_grille;
 }
 
+//--------------------------------------------------------------------------------------------------
+
 _map Jeu::get_Map_normale()
 {
 	return grille;
@@ -353,7 +355,28 @@ _map Jeu::get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_prio
 }
 
 
+//--------------------------------------------------------------------------------------------------
+void Jeu::ajouter_objet_dans_map_normale(shared_ptr<Objet> objet)
+{
+	grille->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
+}
 
+void Jeu::ajouter_objet_dans_grille_de_transition(shared_ptr<Objet> objet)
+{
+	grille_de_transition->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
+}
+
+void Jeu::ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(shared_ptr<Objet> objet)
+{
+	multimap_contenant_que_les_elements_en_collision->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
+}
+
+void Jeu::ajouter_objet_dans_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite(shared_ptr<Objet> objet)
+{
+	map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
+}
+
+//--------------------------------------------------------------------------------------------------
 
 void Jeu::afficher_grille_de_transition()
 {
@@ -649,25 +672,32 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 		2x5 =>  Gaulois
 		1x5 >> 2x5
 		age: 1
+		
 		2x5 =>  Gaulois
-		3x5 >> 3x5
+		3x5 >> 2x5
 		age: 1
+		
 		3x5 =>  Gauloise
 		3x4 >> 3x5
 		age: 1
+		
 		3x5 =>  Gauloise
-		4x5 >> 4x5
+		4x5 >> 3x5
 		age: 1
+		
 		affichage multimap ou on applique la priorite 
 		2x5 =>  Gaulois
 		1x5 >> 2x5
 		age: 1
+		
 		3x5 =>  Gaulois
 		3x5 >> 3x5
 		age: 1
+		
 		4x5 =>  Gauloise
 		4x5 >> 4x5
 		age: 1
+		
 		*/
 		
 		numero_ligne_string = to_string(objet->getNumeroLigne());

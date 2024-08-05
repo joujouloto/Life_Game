@@ -43,7 +43,7 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 
 
 //Setters
-void Gaulois::setPosition(unsigned pNumero_ligne, unsigned pNumero_colonne)
+void Gaulois::seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
 	ancienNumLigne = numero_ligne;
 	ancienNumColonne = numero_colonne;
@@ -57,22 +57,22 @@ void Gaulois::setPosition(unsigned pNumero_ligne, unsigned pNumero_colonne)
 
 void Gaulois::seDeplacerEnHaut()
 {
-	setPosition(numero_ligne,numero_colonne-1);
+	seDeplacer(numero_ligne,numero_colonne-1);
 }
 
 void Gaulois::seDeplacerEnBas()
 {
-	setPosition(numero_ligne,numero_colonne+1);
+	seDeplacer(numero_ligne,numero_colonne+1);
 }
 
 void Gaulois::seDeplacerA_Gauche()
 {
-	setPosition(numero_ligne-1,numero_colonne);
+	seDeplacer(numero_ligne-1,numero_colonne);
 }
 
 void Gaulois::seDeplacerA_Droite()
 {
-	setPosition(numero_ligne+1,numero_colonne);
+	seDeplacer(numero_ligne+1,numero_colonne);
 }
 
 //Retourne une description textuelle de gaulois
@@ -84,7 +84,7 @@ string Gaulois::toString()
 	to_string(numero_ligne)+"x"+to_string(numero_colonne)+
 	"\nage: "+to_string(age)/*
 	"  || sexe: "+sexe+*/
-	;
+	+"\n";
 	
 	
 			
@@ -120,9 +120,6 @@ unsigned Gaulois::getAge()
 	return age;
 }
 
-string Gaulois::getPosition()
-{
-	return to_string(numero_ligne)+"x"+to_string(numero_colonne);
-}
+
 
 

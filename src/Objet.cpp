@@ -57,6 +57,12 @@ unsigned Objet::getNumeroColonne()
 	" || numero_colonne: "+to_string(numero_colonne);
 }*/
 
+
+string Objet::getPosition()
+{
+	return to_string(numero_ligne)+"x"+to_string(numero_colonne);
+}
+
 //Setters
 
 

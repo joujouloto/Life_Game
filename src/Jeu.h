@@ -75,6 +75,15 @@ class Jeu
 	_map get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
 	
 	
+	//Ajouter objet
+	void ajouter_objet_dans_map_normale(shared_ptr<Objet> objet);
+	void ajouter_objet_dans_grille_de_transition(shared_ptr<Objet> objet);
+	void ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(shared_ptr<Objet> objet);
+	void ajouter_objet_dans_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite(shared_ptr<Objet> objet);
+	
+	
+	
+	
 	
 	//méthodes pour faire correctement déplacer les objets sur la grille
 	void faire_deplacer_objets_dans_grille_de_transition();

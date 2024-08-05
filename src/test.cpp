@@ -371,6 +371,7 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 	shared_ptr<Gaulois> gaulois_2;
 	shared_ptr<Gaulois> gauloise_3;
 	shared_ptr<Gaulois> gauloise_4;
+	shared_ptr<Gaulois> gaulois_5;
 	
 	
 	cout << "---------------Création d'elements dans la grille où on applique la priorite------------------" << endl;
@@ -381,45 +382,71 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 		2x5 =>  Gaulois
 		1x5 >> 2x5
 		age: 1
+		
 		2x5 =>  Gaulois
 		3x5 >> 3x5
 		age: 1
+		
 		3x5 =>  Gauloise
 		3x4 >> 3x5
 		age: 1
+		
 		3x5 =>  Gauloise
 		4x5 >> 4x5
 		age: 1
+		
 		affichage multimap ou on applique la priorite 
 		2x5 =>  Gaulois
 		1x5 >> 2x5
 		age: 1
+		
 		3x5 =>  Gaulois
 		3x5 >> 3x5
 		age: 1
+		
 		4x5 =>  Gauloise
 		4x5 >> 4x5
 		age: 1
+		
 		*/
 	
 	gaulois_1 = make_shared<Gaulois>('M',1,5);
-	gaulois_1->setPosition(2,5);
-	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("2x5",gaulois_1));
+	gaulois_1->seDeplacer(2,5);
+	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gaulois_1);
+	
+	
+	
 	
 	gaulois_2 = make_shared<Gaulois>('M',2,5);
-	gaulois_2->setPosition(3,5);
-	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("3x5",gaulois_2));
+	gaulois_2->seDeplacer(3,5);
+	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gaulois_2);
 	
 	gauloise_3 = make_shared<Gaulois>('F',3, 4);
-	gauloise_3->setPosition(3,5);
-	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("3x5",gauloise_3));
+	gauloise_3->seDeplacer(3,5);
+	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gauloise_3);
 	
 	gauloise_4 = make_shared<Gaulois>('F',4, 5);
-	gauloise_4->setPosition(3,5);
-	jeu.get_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()->insert(pair<string,shared_ptr<Objet>>("3x5",gauloise_4));
+	gauloise_4->seDeplacer(3,5);
+	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gauloise_4);
 	
 	
-	jeu.afficher_contenu_de_la_grille();
+	
+	gaulois_5 = make_shared<Gaulois>('M',5, 5);
+	gaulois_5->seDeplacer(4,5);
+	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gaulois_5);
+	
+	jeu.afficher_multimap_qui_contient_que_les_elements_en_collision();
+	
+	
+	//On applique la priorite
+	
+	
+	
+	cout << "----------------On applique la priorite---------------------------------------------" << endl;
+	
+	jeu.appliquer_les_regles_de_priorite_sur_les_collisions();
+	
+	jeu.afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite();
 	
 	
 	cout.rdbuf(stream_buffer_cout);

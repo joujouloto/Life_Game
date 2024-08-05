@@ -19,14 +19,14 @@ class Gaulois : public Objet
 	Gaulois(char pSexe, unsigned pNumero_ligne, unsigned pNumero_colonne);
 	
 	//Setters
-	void setPosition(unsigned pNumero_ligne, unsigned pNumero_colonne);
+	void seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne);
 	
 	
 	//Getters
 	unsigned getAncienneLigne();
 	unsigned getAncienneColonne();
 	unsigned getAge();
-	string getPosition();
+	
 	
 	//Méthodes autres
 	string toString();
