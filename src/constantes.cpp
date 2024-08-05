@@ -21,6 +21,14 @@ using _objet = shared_ptr<Objet>;
 using _it_map = map<string,shared_ptr<Objet>>::iterator;
 using _it_multimap = multimap<string,shared_ptr<Objet>>::iterator;
 
+//-------------------------------------------------------------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------
+
+enum type_Objet { type_Arbre = 1, type_Gaulois = 2, type_Gauloise = 3 };
+
+enum type_Deplacement { gauche = 1, droite = 2, haut = 3, bas = 4};
+
 
 //-------------------------------------------------------------------------------------------------------------
 

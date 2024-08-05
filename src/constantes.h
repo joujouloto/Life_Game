@@ -7,7 +7,9 @@
 #ifndef CONSTANTES_H
 #define CONSTANTES_H
 
+enum type_Objet { type_Arbre, type_Gaulois, type_Gauloise};
 
+enum type_Deplacement { gauche, droite, haut, bas};
 
 
 bool ne_deborde_pas_par_la_gauche(shared_ptr<Gaulois> gaulois_ou_gauloise);
