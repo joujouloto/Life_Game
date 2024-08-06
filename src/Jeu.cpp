@@ -363,6 +363,7 @@ void Jeu::ajouter_objet_dans_map_contenant_que_les_elements_en_collision_ou_on_a
 
 void Jeu::afficher_grille_de_transition()
 {
+	cout << "-----------------------------------------------CONTENU_DE_LA_GRILLE DE TRANSITION---------------------------------" << endl;
 	for ( _it_multimap it=grille_de_transition->begin(); it!=grille_de_transition->end(); ++it) 
 	{
     	cout << it->first << " => " << it->second->toString() << endl;
@@ -371,6 +372,7 @@ void Jeu::afficher_grille_de_transition()
 
 void Jeu::afficher_multimap_qui_contient_que_les_elements_en_collision()
 {
+	cout << "-----------------------CONTENU_DE_LA_GRILLE QUI CONTIENT QUE LES ELEMENTS EN COLLISION---------------------------------" << endl;
 	for ( _it_multimap it=multimap_contenant_que_les_elements_en_collision->begin(); it!=multimap_contenant_que_les_elements_en_collision->end(); ++it) 
 	{
     	cout << it->first << " => " << it->second->toString() << endl;
@@ -379,6 +381,7 @@ void Jeu::afficher_multimap_qui_contient_que_les_elements_en_collision()
 
 void Jeu::afficher_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite()
 {
+	cout << "----------------------------------------CONTENU_DE_LA_GRILLE OU ON APPLIQUE LA PRIORITE---------------------------------" << endl;
 	for ( _it_map it=map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->begin(); 
 	it!=map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->end(); 
 	++it) 
@@ -702,7 +705,7 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 			
 			if(ret.second==false)
 			{
-				/*
+				
 				gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
 				
 				
@@ -716,10 +719,14 @@ void Jeu::appliquer_les_regles_de_priorite_sur_les_collisions()
 				
 				cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position =	numero_ligne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string+"x"+numero_colonne_objet_qui_gardait_sa_priorite_mais_en_collision_avec_un_element_et_qui_doit_retourner_a_son_ancienne_position_string;
 				
-				map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position,objet));*/
+				map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(cle_objet_qui_gardait_sa_priorite_mais_qui_est_en_collision_et_qui_doit_retourner_a_son_ancienne_position,objet));
 				
 				
 				cout << "Element priorisé qui va sur un emplacement occupé " << endl;
+				cout << "Element doit retourner a son ancienne position " << endl;
+				cout << "--------------------------------------------------" << endl;
+				cout << objet->toString() << endl;
+				cout << "--------------------------------------------------" << endl;
 			}
 			
 			

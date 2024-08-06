@@ -15,10 +15,17 @@ using _it_map = map<string,shared_ptr<Objet>>::iterator;
 
 //Fonctions pour tester le code du projet
 
+
+//meme_nombre_d_elements_a_la_creation
+
+//----------------------------------------------------------------------------------------------------------------
+
+
+
 void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE )
 {
 	fstream file;
-    file.open("../../tests/tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne.txt", ios::out|ios::app);
+    file.open("../../tests/meme_nombre_d_elements_a_la_creation/tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne.txt", ios::out|ios::app);
     string line;
 	
 	
@@ -67,15 +74,20 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, uns
 	
 	
 	file.close();
-	
-	
 }
+
+//----------------------------------------------------------------------------------------------------------------
+
+
+//fonction_deplacement
+
+//----------------------------------------------------------------------------------------------------------------
 
 void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 {
 	
 	fstream file;
-    file.open("../../tests/tester_que_les_objets_se_deplacent_sans_collision.txt", ios::out|ios::app);
+    file.open("../../tests/fonction_deplacement/tester_que_les_objets_se_deplacent_sans_collision.txt", ios::out|ios::app);
     string line;
 	
 	
@@ -139,7 +151,7 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS)
 {
 	fstream file;
-    file.open("../../tests/tester_que_les_objets_se_deplacent_bien.txt", ios::out|ios::app);
+    file.open("../../tests/fonction_deplacement/tester_que_les_objets_se_deplacent_bien.txt", ios::out|ios::app);
     string line;
 	
 	// Backup streambuffers of  cout
@@ -192,7 +204,7 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	
 	
 	fstream file;
-    file.open("../../tests/tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour.txt", ios::out|ios::app);
+    file.open("../../tests/fonction_deplacement/tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour.txt", ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -281,11 +293,17 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	file.close();
 }
 
+//----------------------------------------------------------------------------------------------------------------
+
+
+//SDL
+
+//----------------------------------------------------------------------------------------------------------------
 
 void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 {
 	fstream file;
-    file.open("../../tests/tester_la_SDL.txt", ios::out|ios::app);
+    file.open("../../tests/SDL/tester_la_SDL.txt", ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -311,10 +329,17 @@ void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENT
 	file.close();
 }
 
+//----------------------------------------------------------------------------------------------------------------
+
+
+//vieilissement
+
+//----------------------------------------------------------------------------------------------------------------
+
 void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS, unsigned age_de_deces_probable)
 {
 	fstream file;
-    file.open("../../tests/tester_le_nombre_de_morts.txt", ios::out|ios::app);
+    file.open("../../tests/vieillissement/tester_le_nombre_de_morts.txt", ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -348,10 +373,16 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 	file.close();
 }
 
+//----------------------------------------------------------------------------------------------------------------
+
+//fonction_appliquer_les_regles_de_priorite
+
+//----------------------------------------------------------------------------------------------------------------
+
 void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsigned NB_LIGNES, unsigned NB_COLONNES)
 {
 	fstream file;
-    file.open("../../tests/tester_de_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions().txt", ios::out|ios::app);
+    file.open("../../tests/fonction_appliquer_les_regles_de_priorite/tester_de_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions().txt", ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -456,7 +487,7 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 }
 
 
-
+//----------------------------------------------------------------------------------------------------------------
 
 void tester()
 {
