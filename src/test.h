@@ -2,11 +2,19 @@
 #define TEST_H
 
 
+
+
 //meme_nombre_d_elements_a_la_creation
 
 //----------------------------------------------------------------------------------------------------------------
 
 void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE);
+
+
+void tests_en_boucle_meme_nb_elts();
+
+
+
 
 //----------------------------------------------------------------------------------------------------------------
 

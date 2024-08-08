@@ -171,27 +171,31 @@ void Jeu::initialiser_map()
 			
 			numero_ligne_string = to_string(numero_ligne_nombre);
 			
-			
+			//cout << "type arbre" << type_Arbre << endl;
 			
 			if(objet_genere==type_Arbre)
 			{
+				//cout << "dans arbre " << objet_genere << endl;
 				arbre = make_shared<Arbre>(numero_ligne_nombre,numero_colonne_nombre);	
 				ret_map = grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,arbre));
 			}
 			else if(objet_genere==type_Gaulois)
 			{
-				gaulois = make_shared<Gaulois>('M',numero_ligne_nombre,numero_colonne_nombre);	
+				//cout << "dans gaulois " << objet_genere << endl;
+				gaulois = make_shared<Gaulois>(homme,numero_ligne_nombre,numero_colonne_nombre);	
 				ret_map = grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,gaulois));
 			}
 			else if(objet_genere==type_Gauloise)
 			{
-				gauloise = make_shared<Gaulois>('F',numero_ligne_nombre, numero_colonne_nombre);
+				//cout << "dans gauloise " << objet_genere << endl;
+				gauloise = make_shared<Gaulois>(femme,numero_ligne_nombre, numero_colonne_nombre);
 				ret_map = grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,gauloise));
 			}
-			else
+			/*else
 			{
-				cout << "else " << endl;
-			}
+				//cout << " objet genere ni de type arbre, ni de type gaulois et ni de type gauloise " << endl;
+				//cout << "nombre genere (normalement soit 1 soit 2 soit 3 :" << objet_genere << endl;
+			}*/
 			
 			/*
 			if(ret_map.second==true)

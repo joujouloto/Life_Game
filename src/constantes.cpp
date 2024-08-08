@@ -29,6 +29,8 @@ enum type_Objet { type_Arbre = 1, type_Gaulois = 2, type_Gauloise = 3 };
 
 enum type_Deplacement { gauche = 1, droite = 2, haut = 3, bas = 4};
 
+enum sexe_gaulois { homme = 'M' , femme = 'F'};
+
 
 //-------------------------------------------------------------------------------------------------------------
 

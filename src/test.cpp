@@ -2,10 +2,12 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <random>
 
 
 #include "Jeu.h"
 #include "Gaulois.h"
+#include "constantes.h"
 
 
 using namespace std;
@@ -75,6 +77,81 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, uns
 	
 	file.close();
 }
+
+//Ici, on prévoit une grille de 10x10 juste pour simplifier. Quand le test sera bien établi, on modifiera la taille de la grille
+void tests_en_boucle_meme_nb_elts()
+{
+	fstream file;
+    file.open("../../tests/meme_nombre_d_elements_a_la_creation/meme_nb_elts.txt", ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	
+	//Variable aléatoire
+	random_device rd;
+	mt19937 gen(rd());
+	int nb_elts_prevus_de_creer = 0;
+	
+	//On a une distribution uniforme entre 1 et 10, en gros il y peut avoir 1 element, 2 elements prevus de créer jusqu'à 10
+	uniform_int_distribution<> dis(1, 10);
+	
+	
+	
+	//Nombre de tests réalisés
+	int nb_tests = 100;
+	
+	//Numero du test
+	int num_test = 1;
+	
+	//On veut compter le nombre de tests où il n'y a pas le même nombre d'elements prevus et reels
+	int nb_tests_faux = 0;
+	
+	
+	
+	cout << "tests en boucle pour verifier si on cree tel nombre d'elements, on a bien ce nombre d'elements a l'arrivee " << endl;
+	cout << "Nombre de tests réalisés: " << nb_tests << endl;
+	
+	
+	while (num_test <= nb_tests)
+	{
+		cout << "Test n°:" << num_test << endl;
+		
+		nb_elts_prevus_de_creer = dis(gen);
+		
+		//grille de 10x10
+		Jeu jeu = Jeu(10,10,nb_elts_prevus_de_creer);
+		
+		cout << "Nombre d'elements prevus a creer: " << nb_elts_prevus_de_creer * 10 << endl;
+		cout << "Nombre reel d'elements crees : " << jeu.get_nb_total_elements_presents_dans_la_grille() << endl;
+		
+		
+		if(nb_elts_prevus_de_creer * 10 != jeu.get_nb_total_elements_presents_dans_la_grille())
+		{
+			nb_tests_faux++;
+		}
+		num_test++;
+	}
+	
+	cout << "nombre de tests où il n'y a pas le meme nombre d'elements prevus et reel:" << nb_tests_faux << endl;
+	cout <<  "Pourcentage de tests réussis:" << ((nb_tests - nb_tests_faux) / nb_tests)*100 << '%' <<endl;
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+}
+
+
 
 //----------------------------------------------------------------------------------------------------------------
 
@@ -441,28 +518,28 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 		
 		*/
 	
-	gaulois_1 = make_shared<Gaulois>('M',1,5);
+	gaulois_1 = make_shared<Gaulois>(homme,1,5);
 	gaulois_1->seDeplacer(2,5);
 	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gaulois_1);
 	
 	
 	
 	
-	gaulois_2 = make_shared<Gaulois>('M',2,5);
+	gaulois_2 = make_shared<Gaulois>(homme,2,5);
 	gaulois_2->seDeplacer(3,5);
 	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gaulois_2);
 	
-	gauloise_3 = make_shared<Gaulois>('F',3, 4);
+	gauloise_3 = make_shared<Gaulois>(femme,3, 4);
 	gauloise_3->seDeplacer(3,5);
 	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gauloise_3);
 	
-	gauloise_4 = make_shared<Gaulois>('F',4, 5);
+	gauloise_4 = make_shared<Gaulois>(femme,4, 5);
 	gauloise_4->seDeplacer(3,5);
 	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gauloise_4);
 	
 	
 	
-	gaulois_5 = make_shared<Gaulois>('M',5, 5);
+	gaulois_5 = make_shared<Gaulois>(homme,5, 5);
 	gaulois_5->seDeplacer(4,5);
 	jeu.ajouter_objet_dans_multimap_contenant_que_les_elements_en_collision(gaulois_5);
 	
@@ -514,7 +591,11 @@ void tester()
 	
 	//tester_le_nombre_de_morts(7,10,5,30,10);
 	
-	tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(10, 10);
+	//tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(10, 10);
+	
+	
+	tests_en_boucle_meme_nb_elts();
+	
 	
 }
 	
