@@ -1,989 +1,313 @@
+
+
+La date et l'heure UTC sont:Sat Aug 10 10:02:50 2024
+
+
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gaulois
-10x1 >> 10x2
-age: 2
-Arbre -> 10x3
-Arbre -> 10x6
+Arbre -> 10x2
  Gauloise
-1x4 >> 1x3
-age: 2
-Arbre -> 1x5
- Gauloise
-2x1 >> 2x2
-age: 2
- Gaulois
-3x3 >> 2x3
-age: 2
-Arbre -> 2x4
- Gauloise
-2x5 >> 2x6
-age: 2
- Gaulois
-1x7 >> 2x7
-age: 2
- Gaulois
-3x2 >> 3x2
-age: 2
- Gaulois
-4x3 >> 3x3
-age: 2
-Arbre -> 3x6
- Gauloise
-4x1 >> 4x2
-age: 2
-Arbre -> 4x6
- Gauloise
-5x7 >> 4x7
-age: 2
-Arbre -> 5x1
-Arbre -> 5x3
- Gauloise
-7x2 >> 6x2
-age: 2
- Gaulois
-7x6 >> 6x6
-age: 2
-Arbre -> 6x7
- Gaulois
-6x1 >> 7x1
-age: 2
- Gauloise
-6x2 >> 7x2
-age: 2
- Gaulois
-8x2 >> 8x1
-age: 2
- Gaulois
-9x5 >> 8x5
-age: 2
-Arbre -> 9x1
- Gauloise
-8x4 >> 9x4
-age: 2
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gaulois
-10x2 >> 10x1
-age: 3
-Arbre -> 10x3
-Arbre -> 10x6
- Gauloise
-2x2 >> 1x2
-age: 3
- Gaulois
-2x3 >> 1x3
-age: 3
-Arbre -> 1x5
- Gauloise
-2x6 >> 1x6
-age: 3
- Gaulois
 2x7 >> 1x7
-age: 3
- Gaulois
-3x2 >> 2x2
-age: 3
- Gauloise
-1x3 >> 2x3
-age: 3
-Arbre -> 2x4
-Arbre -> 3x6
- Gauloise
-4x7 >> 3x7
-age: 3
- Gaulois
-3x3 >> 4x3
-age: 3
-Arbre -> 4x6
-Arbre -> 5x1
- Gauloise
-4x2 >> 5x2
-age: 3
-Arbre -> 5x3
- Gauloise
-6x2 >> 6x3
-age: 3
- Gaulois
-6x6 >> 6x5
-age: 3
-Arbre -> 6x7
- Gauloise
-7x2 >> 7x1
-age: 3
- Gaulois
-7x1 >> 8x1
-age: 3
- Gauloise
-9x4 >> 8x4
-age: 3
- Gaulois
-8x5 >> 8x6
-age: 3
-Arbre -> 9x1
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gaulois
-10x1 >> 10x2
-age: 4
-Arbre -> 10x3
-Arbre -> 10x6
- Gauloise
-2x3 >> 1x3
-age: 4
- Gaulois
-1x3 >> 1x4
-age: 4
-Arbre -> 1x5
+age: 2
+
  Gauloise
 1x2 >> 2x2
-age: 4
- Gaulois
-2x2 >> 2x3
-age: 4
-Arbre -> 2x4
- Gauloise
-1x6 >> 2x6
-age: 4
- Gaulois
-1x7 >> 2x7
-age: 4
- Gaulois
-4x3 >> 3x3
-age: 4
-Arbre -> 3x6
-Arbre -> 4x6
- Gauloise
-3x7 >> 4x7
-age: 4
-Arbre -> 5x1
-Arbre -> 5x3
- Gauloise
-7x1 >> 6x1
-age: 4
- Gauloise
-5x2 >> 6x2
-age: 4
- Gauloise
-6x3 >> 6x4
-age: 4
- Gaulois
-6x5 >> 6x5
-age: 4
-Arbre -> 6x7
- Gaulois
-8x1 >> 7x1
-age: 4
- Gauloise
-8x4 >> 8x5
-age: 4
-Arbre -> 9x1
- Gaulois
-8x6 >> 9x6
-age: 4
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x3
-Arbre -> 10x6
-Arbre -> 1x5
-Arbre -> 2x4
-Arbre -> 3x6
-Arbre -> 4x6
-Arbre -> 5x1
-Arbre -> 5x3
- Gauloise
-4x7 >> 5x7
-age: 5
-Arbre -> 6x7
- Gauloise
-8x5 >> 7x5
-age: 5
-Arbre -> 9x1
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x3
-Arbre -> 10x6
-Arbre -> 1x5
-Arbre -> 2x4
-Arbre -> 3x6
-Arbre -> 4x6
-Arbre -> 5x1
-Arbre -> 5x3
-Arbre -> 6x7
-Arbre -> 9x1
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x3
-Arbre -> 10x6
-Arbre -> 1x5
-Arbre -> 2x4
-Arbre -> 3x6
-Arbre -> 4x6
-Arbre -> 5x1
-Arbre -> 5x3
-Arbre -> 6x7
-Arbre -> 9x1
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x3
-Arbre -> 10x6
-Arbre -> 1x5
-Arbre -> 2x4
-Arbre -> 3x6
-Arbre -> 4x6
-Arbre -> 5x1
-Arbre -> 5x3
-Arbre -> 6x7
-Arbre -> 9x1
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x3
-Arbre -> 10x6
-Arbre -> 1x5
-Arbre -> 2x4
-Arbre -> 3x6
-Arbre -> 4x6
-Arbre -> 5x1
-Arbre -> 5x3
-Arbre -> 6x7
-Arbre -> 9x1
-Arbre -> 9x7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gaulois
-10x4 >> 10x3
 age: 2
- Gauloise
-10x6 >> 10x5
-age: 2
-Arbre -> 1x1
- Gaulois
-2x7 >> 1x7
-age: 2
- Gauloise
-2x1 >> 2x2
-age: 2
+
  Gauloise
 1x3 >> 2x3
 age: 2
- Gaulois
-1x7 >> 2x7
-age: 2
- Gaulois
-3x1 >> 3x2
-age: 2
- Gaulois
-2x4 >> 3x4
-age: 2
- Gauloise
-4x6 >> 3x6
-age: 2
- Gaulois
-4x2 >> 4x1
-age: 2
- Gaulois
-3x4 >> 4x4
-age: 2
- Gaulois
-3x5 >> 4x5
-age: 2
- Gaulois
-4x7 >> 4x6
-age: 2
-Arbre -> 5x2
- Gaulois
-5x5 >> 5x5
-age: 2
- Gaulois
-5x7 >> 5x6
-age: 2
-Arbre -> 6x3
-Arbre -> 6x5
- Gaulois
-7x1 >> 7x1
-age: 2
- Gaulois
-6x2 >> 7x2
-age: 2
-Arbre -> 7x4
- Gauloise
-8x5 >> 7x5
-age: 2
-Arbre -> 7x6
- Gaulois
-8x2 >> 8x3
-age: 2
-Arbre -> 9x1
- Gauloise
-9x5 >> 9x5
-age: 2
- Gauloise
-8x6 >> 9x6
-age: 2
- Gauloise
-10x7 >> 9x7
-age: 2
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gauloise
-9x5 >> 10x5
-age: 3
- Gauloise
-10x5 >> 10x6
-age: 3
- Gauloise
-9x7 >> 10x7
-age: 3
-Arbre -> 1x1
- Gaulois
-1x7 >> 1x6
-age: 3
- Gauloise
-2x2 >> 2x1
-age: 3
- Gauloise
-2x3 >> 2x2
-age: 3
- Gaulois
-2x7 >> 2x6
-age: 3
- Gaulois
-3x2 >> 3x1
-age: 3
- Gaulois
-4x4 >> 3x4
-age: 3
- Gaulois
-3x4 >> 3x5
-age: 3
- Gauloise
-3x6 >> 3x6
-age: 3
- Gaulois
-4x1 >> 4x1
-age: 3
- Gaulois
-4x5 >> 4x4
-age: 3
- Gaulois
-5x5 >> 4x5
-age: 3
- Gaulois
-5x6 >> 4x6
-age: 3
- Gaulois
-4x6 >> 4x7
-age: 3
-Arbre -> 5x2
-Arbre -> 6x3
-Arbre -> 6x5
- Gaulois
-7x2 >> 7x3
-age: 3
-Arbre -> 7x4
-Arbre -> 7x6
- Gaulois
-7x1 >> 8x1
-age: 3
- Gaulois
-8x3 >> 8x3
-age: 3
- Gauloise
-7x5 >> 8x5
-age: 3
-Arbre -> 9x1
- Gaulois
-10x3 >> 9x3
-age: 3
- Gauloise
-9x6 >> 9x6
-age: 3
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gauloise
-10x7 >> 10x6
-age: 4
-Arbre -> 1x1
- Gauloise
-2x1 >> 2x2
-age: 4
- Gauloise
-2x2 >> 2x3
-age: 4
- Gaulois
-1x6 >> 2x6
-age: 4
- Gaulois
-3x1 >> 3x2
-age: 4
- Gaulois
-3x4 >> 3x3
-age: 4
- Gaulois
-3x5 >> 3x5
-age: 4
- Gaulois
-2x6 >> 3x6
-age: 4
- Gauloise
-3x6 >> 3x7
-age: 4
- Gaulois
-4x1 >> 4x2
-age: 4
- Gaulois
-4x4 >> 4x5
-age: 4
- Gaulois
-4x5 >> 4x6
-age: 4
-Arbre -> 5x2
- Gaulois
-4x7 >> 5x7
-age: 4
-Arbre -> 6x3
-Arbre -> 6x5
- Gaulois
-8x1 >> 7x1
-age: 4
- Gaulois
-7x3 >> 7x2
-age: 4
-Arbre -> 7x4
-Arbre -> 7x6
- Gaulois
-9x3 >> 8x3
-age: 4
- Gauloise
-8x5 >> 8x4
-age: 4
-Arbre -> 9x1
- Gaulois
-8x3 >> 9x3
-age: 4
- Gauloise
-10x5 >> 9x5
-age: 4
- Gauloise
-10x6 >> 9x6
-age: 4
- Gauloise
-9x6 >> 9x7
-age: 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x1
-Arbre -> 5x2
-Arbre -> 6x3
-Arbre -> 6x5
-Arbre -> 7x4
-Arbre -> 7x6
-Arbre -> 9x1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x1
-Arbre -> 5x2
-Arbre -> 6x3
-Arbre -> 6x5
-Arbre -> 7x4
-Arbre -> 7x6
-Arbre -> 9x1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x1
-Arbre -> 5x2
-Arbre -> 6x3
-Arbre -> 6x5
-Arbre -> 7x4
-Arbre -> 7x6
-Arbre -> 9x1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x1
-Arbre -> 5x2
-Arbre -> 6x3
-Arbre -> 6x5
-Arbre -> 7x4
-Arbre -> 7x6
-Arbre -> 9x1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gaulois
-10x5 >> 10x4
-age: 2
- Gauloise
-2x1 >> 1x1
-age: 2
-Arbre -> 1x6
-Arbre -> 2x2
+
  Gaulois
 1x4 >> 2x4
 age: 2
+
+Arbre -> 2x5
+ Gauloise
+3x1 >> 3x1
+age: 2
+
  Gaulois
-1x5 >> 2x5
+2x2 >> 3x2
 age: 2
-Arbre -> 2x7
-Arbre -> 3x1
- Gauloise
-3x5 >> 3x4
-age: 2
- Gauloise
-5x1 >> 4x1
-age: 2
- Gauloise
-4x1 >> 4x2
-age: 2
- Gauloise
-3x6 >> 4x6
-age: 2
- Gauloise
-4x7 >> 4x7
-age: 2
+
  Gaulois
-5x2 >> 5x2
+4x4 >> 3x4
 age: 2
+
  Gauloise
-5x6 >> 5x5
+3x5 >> 3x6
 age: 2
- Gaulois
-4x6 >> 5x6
-age: 2
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-6x1 >> 7x1
-age: 2
- Gaulois
-7x1 >> 7x2
-age: 2
- Gaulois
-7x5 >> 7x6
-age: 2
- Gaulois
-7x6 >> 7x7
-age: 2
+
  Gauloise
-9x4 >> 8x4
+3x4 >> 4x4
 age: 2
-Arbre -> 8x6
+
+Arbre -> 4x6
  Gaulois
-8x7 >> 8x7
+4x1 >> 5x1
 age: 2
+
+Arbre -> 5x3
+Arbre -> 5x7
  Gauloise
-9x1 >> 9x2
+6x1 >> 6x2
 age: 2
- Gauloise
-8x3 >> 9x3
+
+ Gaulois
+5x4 >> 6x4
 age: 2
-Arbre -> 9x5
- Gauloise
+
+Arbre -> 6x5
+Arbre -> 6x6
+ Gaulois
+7x2 >> 7x2
+age: 2
+
+ Gaulois
+7x3 >> 7x4
+age: 2
+
+Arbre -> 8x1
+Arbre -> 8x2
+Arbre -> 8x4
+ Gaulois
+7x6 >> 8x6
+age: 2
+
+Arbre -> 9x2
+Arbre -> 9x3
+Arbre -> 9x4
+ Gaulois
 10x6 >> 9x6
 age: 2
+
  Gaulois
 10x7 >> 9x7
 age: 2
+
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Arbre -> 10x2
  Gauloise
-9x2 >> 10x2
+2x2 >> 1x2
 age: 3
+
+ Gauloise
+1x7 >> 1x6
+age: 3
+
+ Gauloise
+2x3 >> 2x4
+age: 3
+
+Arbre -> 2x5
+ Gauloise
+3x6 >> 2x6
+age: 3
+
  Gaulois
-10x4 >> 10x3
+3x2 >> 3x1
 age: 3
+
  Gauloise
-9x6 >> 10x6
+3x1 >> 3x2
 age: 3
- Gauloise
-1x1 >> 1x2
-age: 3
-Arbre -> 1x6
-Arbre -> 2x2
+
  Gaulois
-2x4 >> 2x5
+3x4 >> 3x3
 age: 3
+
  Gaulois
-2x5 >> 2x6
+2x4 >> 3x4
 age: 3
-Arbre -> 2x7
-Arbre -> 3x1
+
  Gauloise
-4x6 >> 3x6
+4x4 >> 4x3
 age: 3
- Gauloise
-4x1 >> 4x2
-age: 3
- Gauloise
-3x4 >> 4x4
-age: 3
- Gauloise
-4x7 >> 4x6
-age: 3
- Gauloise
-4x2 >> 5x2
-age: 3
+
+Arbre -> 4x6
+Arbre -> 5x3
  Gaulois
-5x2 >> 5x3
+6x4 >> 5x4
 age: 3
+
+Arbre -> 5x7
+ Gaulois
+5x1 >> 6x1
+age: 3
+
  Gauloise
-5x5 >> 5x4
+6x2 >> 6x3
 age: 3
-Arbre -> 6x2
-Arbre -> 6x4
+
+Arbre -> 6x5
+Arbre -> 6x6
  Gaulois
-5x6 >> 6x6
+7x2 >> 7x3
 age: 3
+
  Gaulois
-7x1 >> 7x2
+7x4 >> 7x4
 age: 3
+
+Arbre -> 8x1
+Arbre -> 8x2
+Arbre -> 8x4
+Arbre -> 9x2
+Arbre -> 9x3
+Arbre -> 9x4
  Gaulois
-7x7 >> 7x6
+8x6 >> 9x6
 age: 3
+
  Gaulois
-7x2 >> 8x2
+9x6 >> 9x7
 age: 3
- Gauloise
-8x4 >> 8x5
-age: 3
-Arbre -> 8x6
- Gaulois
-9x7 >> 8x7
-age: 3
- Gauloise
-9x3 >> 9x4
-age: 3
-Arbre -> 9x5
- Gaulois
-8x7 >> 9x7
-age: 3
+
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gauloise
-9x4 >> 10x4
-age: 4
- Gauloise
-10x6 >> 10x7
-age: 4
+Arbre -> 10x2
  Gauloise
 1x2 >> 1x1
 age: 4
-Arbre -> 1x6
-Arbre -> 2x2
+
+ Gauloise
+2x6 >> 1x6
+age: 4
+
+ Gauloise
+1x6 >> 1x7
+age: 4
+
+ Gauloise
+2x4 >> 2x3
+age: 4
+
+Arbre -> 2x5
+ Gauloise
+3x2 >> 3x1
+age: 4
+
  Gaulois
-2x5 >> 2x4
+3x1 >> 3x2
 age: 4
+
  Gauloise
-3x6 >> 2x6
+4x3 >> 3x3
 age: 4
-Arbre -> 2x7
-Arbre -> 3x1
- Gauloise
-4x2 >> 3x2
-age: 4
+
  Gaulois
-2x6 >> 3x6
+3x4 >> 3x5
 age: 4
+
+Arbre -> 4x6
  Gaulois
-5x3 >> 4x3
+6x1 >> 5x1
 age: 4
- Gauloise
-4x4 >> 4x5
-age: 4
- Gauloise
-4x6 >> 4x6
-age: 4
- Gauloise
-5x2 >> 5x3
-age: 4
- Gauloise
-5x4 >> 5x4
-age: 4
-Arbre -> 6x2
-Arbre -> 6x4
+
+Arbre -> 5x3
  Gaulois
-6x6 >> 6x7
+5x4 >> 5x5
 age: 4
+
+Arbre -> 5x7
  Gaulois
-7x2 >> 7x1
+7x4 >> 6x4
 age: 4
- Gaulois
-7x6 >> 7x5
-age: 4
- Gaulois
-8x2 >> 8x1
-age: 4
+
+Arbre -> 6x5
+Arbre -> 6x6
  Gauloise
-8x5 >> 8x4
+6x3 >> 7x3
 age: 4
-Arbre -> 8x6
- Gauloise
-10x2 >> 9x2
-age: 4
+
  Gaulois
-10x3 >> 9x3
+7x3 >> 7x4
 age: 4
-Arbre -> 9x5
+
+Arbre -> 8x1
+Arbre -> 8x2
+Arbre -> 8x4
+Arbre -> 9x2
+Arbre -> 9x3
+Arbre -> 9x4
  Gaulois
-8x7 >> 9x7
+9x7 >> 9x6
 age: 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gauloise
-9x2 >> 10x2
-age: 5
- Gauloise
-10x4 >> 10x5
-age: 5
+
+ Gaulois
+9x6 >> 9x7
+age: 4
+
  Gauloise
 1x1 >> 1x2
 age: 5
- Gaulois
-2x4 >> 1x4
-age: 5
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gaulois
-3x6 >> 3x5
-age: 5
+
  Gauloise
-5x3 >> 5x2
+1x6 >> 2x6
 age: 5
+
  Gaulois
-7x1 >> 6x1
+3x2 >> 3x1
 age: 5
-Arbre -> 6x2
-Arbre -> 6x4
+
  Gaulois
-7x5 >> 6x5
+5x1 >> 4x1
 age: 5
+
  Gaulois
-6x7 >> 6x6
+5x5 >> 5x6
 age: 5
-Arbre -> 8x6
+
  Gaulois
-8x1 >> 9x1
+7x4 >> 6x4
 age: 5
-Arbre -> 9x5
- Gauloise
-10x7 >> 9x7
-age: 5
+
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
- Gauloise
-10x5 >> 10x4
-age: 6
- Gauloise
-1x2 >> 1x3
-age: 6
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gauloise
-5x2 >> 4x2
-age: 6
+Arbre -> 10x2
  Gaulois
-3x5 >> 4x5
-age: 6
- Gaulois
-6x1 >> 5x1
-age: 6
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-6x6 >> 6x5
-age: 6
-Arbre -> 8x6
+9x6 >> 10x6
+age: 5
+
  Gauloise
-9x7 >> 8x7
-age: 6
- Gaulois
-9x1 >> 9x1
-age: 6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x7 >> 1x6
+age: 5
+
  Gauloise
-10x4 >> 10x3
-age: 7
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
+2x3 >> 2x4
+age: 5
+
+Arbre -> 2x5
  Gauloise
-4x2 >> 4x3
-age: 7
+3x1 >> 3x2
+age: 5
+
  Gaulois
-5x1 >> 6x1
-age: 7
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-6x5 >> 6x6
-age: 7
-Arbre -> 8x6
- Gaulois
-9x1 >> 9x2
-age: 7
-Arbre -> 9x5
- Gauloise
-8x7 >> 9x7
-age: 7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gauloise
-4x3 >> 3x3
-age: 8
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-6x6 >> 6x5
-age: 8
-Arbre -> 8x6
- Gaulois
-9x2 >> 9x3
-age: 8
-Arbre -> 9x5
- Gauloise
-9x7 >> 9x6
-age: 8
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
+3x5 >> 3x4
+age: 5
+
  Gauloise
 3x3 >> 4x3
-age: 9
-Arbre -> 6x2
-Arbre -> 6x4
+age: 5
+
+Arbre -> 4x6
+Arbre -> 5x3
+Arbre -> 5x7
  Gaulois
-6x5 >> 6x6
-age: 9
-Arbre -> 8x6
- Gaulois
-9x3 >> 9x4
-age: 9
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
+6x4 >> 6x3
+age: 5
+
+Arbre -> 6x5
+Arbre -> 6x6
  Gauloise
-4x3 >> 4x2
-age: 10
-Arbre -> 6x2
-Arbre -> 6x4
+7x3 >> 7x3
+age: 5
+
+Arbre -> 8x1
+Arbre -> 8x2
+Arbre -> 8x4
+Arbre -> 9x2
+Arbre -> 9x3
+Arbre -> 9x4
  Gaulois
-6x6 >> 7x6
-age: 10
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gauloise
-4x2 >> 5x2
-age: 11
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-7x6 >> 6x6
-age: 11
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gauloise
-5x2 >> 4x2
-age: 12
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-6x6 >> 6x5
-age: 12
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 6x2
-Arbre -> 6x4
- Gaulois
-6x5 >> 6x6
-age: 13
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gaulois
-6x6 >> 5x6
-age: 14
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gaulois
-5x6 >> 5x5
-age: 15
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gaulois
-5x5 >> 5x4
-age: 16
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
- Gaulois
-5x4 >> 5x3
-age: 17
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 6x2
-Arbre -> 6x4
-Arbre -> 8x6
-Arbre -> 9x5
+9x7 >> 9x6
+age: 5
+

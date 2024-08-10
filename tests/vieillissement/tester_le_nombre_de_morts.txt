@@ -1,62 +1,101 @@
+
+
+La date et l'heure UTC sont:Sat Aug 10 10:02:58 2024
+
+
 -->>>>>>Jeu en mouvement: Tour 1
 -->>>>>>Jeu en mouvement: Tour 2
 -->>>>>>Jeu en mouvement: Tour 3
 -->>>>>>Jeu en mouvement: Tour 4
 -->>>>>>Jeu en mouvement: Tour 5
 -->>>>>>Jeu en mouvement: Tour 6
+Element priorisé qui va sur un emplacement occupé 
+Element doit retourner a son ancienne position 
+--------------------------------------------------
+ Gaulois
+2x2 >> 2x2
+age: 6
+
+--------------------------------------------------
 -->>>>>>Jeu en mouvement: Tour 7
 -->>>>>>Jeu en mouvement: Tour 8
 -->>>>>>Jeu en mouvement: Tour 9
- Gauloise
-4x6 >> 4x5
-age: 10
  Gaulois
-5x1 >> 5x2
+4x7 >> 4x8
 age: 10
+
+ Gaulois
+5x4 >> 5x5
+age: 10
+
+ Gaulois
+6x1 >> 6x2
+age: 10
+
+ Gaulois
+6x8 >> 6x8
+age: 10
+
 -->>>>>>Jeu en mouvement: Tour 10
- Gauloise
-2x3 >> 2x2
-age: 11
  Gaulois
-3x7 >> 3x6
+3x2 >> 3x2
 age: 11
+
  Gauloise
-4x6 >> 4x7
+2x4 >> 3x4
 age: 11
+
  Gaulois
-6x10 >> 6x9
+3x6 >> 3x7
 age: 11
+
+ Gaulois
+5x7 >> 4x7
+age: 11
+
+ Gauloise
+3x8 >> 4x8
+age: 11
+
+ Gaulois
+4x2 >> 5x2
+age: 11
+
+ Gauloise
+5x8 >> 5x8
+age: 11
+
 -->>>>>>Jeu en mouvement: Tour 11
  Gauloise
-6x5 >> 7x5
+6x2 >> 7x2
 age: 12
+
 -->>>>>>Jeu en mouvement: Tour 12
  Gaulois
-6x6 >> 6x5
+1x2 >> 1x3
 age: 13
- Gaulois
-6x5 >> 6x6
+
+ Gauloise
+3x6 >> 2x6
 age: 13
+
 -->>>>>>Jeu en mouvement: Tour 13
- Gaulois
-1x7 >> 2x7
+ Gauloise
+2x7 >> 3x7
 age: 14
+
+ Gaulois
+6x8 >> 6x7
+age: 14
+
+ Gaulois
+6x6 >> 7x6
+age: 14
+
 -->>>>>>Jeu en mouvement: Tour 14
 -->>>>>>Jeu en mouvement: Tour 15
 -->>>>>>Jeu en mouvement: Tour 16
- Gaulois
-3x3 >> 2x3
-age: 17
 -->>>>>>Jeu en mouvement: Tour 17
- Gaulois
-1x4 >> 2x4
-age: 18
- Gauloise
-4x10 >> 4x9
-age: 18
- Gaulois
-6x3 >> 6x2
-age: 18
 -->>>>>>Jeu en mouvement: Tour 18
 -->>>>>>Jeu en mouvement: Tour 19
 -->>>>>>Jeu en mouvement: Tour 20
@@ -64,9 +103,6 @@ age: 18
 -->>>>>>Jeu en mouvement: Tour 22
 -->>>>>>Jeu en mouvement: Tour 23
 -->>>>>>Jeu en mouvement: Tour 24
- Gauloise
-1x2 >> 1x3
-age: 25
 -->>>>>>Jeu en mouvement: Tour 25
 -->>>>>>Jeu en mouvement: Tour 26
 -->>>>>>Jeu en mouvement: Tour 27

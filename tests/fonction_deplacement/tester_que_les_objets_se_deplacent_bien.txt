@@ -1,2264 +1,869 @@
+
+
+La date et l'heure UTC sont:Sat Aug 10 10:02:50 2024
+
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 ----tester_que_les_objets_se_deplacent_bien-------: 
 -------------------------------------grille initialisee--- 
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2 Arbre
-10x4 Gaulois
- courant: 10x4
- ancien: 0x0
-10x5 Gaulois
- courant: 10x5
- ancien: 0x0
-1x2 Arbre
-1x4 Gauloise
- courant: 1x4
- ancien: 0x0
-1x5 Gaulois
- courant: 1x5
- ancien: 0x0
-2x2 Gaulois
- courant: 2x2
- ancien: 0x0
-2x4 Arbre
-2x5 Gauloise
- courant: 2x5
- ancien: 0x0
-3x1 Arbre
-3x3 Arbre
-3x4 Gauloise
- courant: 3x4
- ancien: 0x0
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 0x0
-4x7 Gauloise
- courant: 4x7
- ancien: 0x0
-5x4 Gaulois
- courant: 5x4
- ancien: 0x0
-5x5 Gauloise
- courant: 5x5
- ancien: 0x0
-5x7 Arbre
-6x1 Arbre
-6x4 Gaulois
- courant: 6x4
- ancien: 0x0
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x5 Arbre
-8x1 Arbre
-8x2 Gaulois
- courant: 8x2
- ancien: 0x0
-8x4 Gauloise
- courant: 8x4
- ancien: 0x0
-9x1 Gauloise
- courant: 9x1
- ancien: 0x0
-9x2 Arbre
-9x7 Arbre
- Jeu en mouvement: Tour 1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1 Gauloise
- courant: 10x1
- ancien: 9x1
-10x2 Arbre
-10x3 Gaulois
- courant: 10x3
- ancien: 10x4
-10x4 Gaulois
- courant: 10x4
- ancien: 10x5
-1x2 Arbre
-1x3 Gauloise
- courant: 1x3
- ancien: 1x4
-2x4 Arbre
-2x5 Gaulois
- courant: 2x5
- ancien: 1x5
-2x6 Gauloise
- courant: 2x6
- ancien: 2x5
-3x1 Arbre
-3x2 Gaulois
- courant: 3x2
- ancien: 2x2
-3x3 Arbre
-3x5 Gauloise
- courant: 3x5
- ancien: 3x4
-3x6 Gauloise
- courant: 3x6
- ancien: 4x6
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 4x7
-5x4 Gaulois
- courant: 5x4
- ancien: 6x4
-5x7 Arbre
-6x1 Arbre
-6x4 Gaulois
- courant: 6x4
- ancien: 5x4
-6x5 Gauloise
- courant: 6x5
- ancien: 5x5
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x5 Arbre
-8x1 Arbre
-8x3 Gaulois
- courant: 8x3
- ancien: 8x2
-8x4 Gauloise
- courant: 8x4
- ancien: 8x4
-9x2 Arbre
-9x7 Arbre
- Jeu en mouvement: Tour 2
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2 Arbre
-10x3 Gaulois
- courant: 10x3
- ancien: 10x4
-10x4 Gaulois
- courant: 10x4
- ancien: 10x3
-1x2 Arbre
-1x4 Gauloise
- courant: 1x4
- ancien: 1x3
-2x4 Arbre
-3x1 Arbre
-3x3 Arbre
-3x4 Gauloise
- courant: 3x4
- ancien: 3x5
-3x5 Gaulois
- courant: 3x5
- ancien: 2x5
-3x6 Gauloise
- courant: 3x6
- ancien: 2x6
-4x2 Gaulois
- courant: 4x2
- ancien: 3x2
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 3x6
-5x5 Gaulois
- courant: 5x5
- ancien: 5x4
-5x7 Arbre
-6x1 Arbre
-6x5 Gauloise
- courant: 6x5
- ancien: 6x5
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x4 Gaulois
- courant: 7x4
- ancien: 6x4
-7x5 Arbre
-8x1 Arbre
-9x1 Gauloise
- courant: 9x1
- ancien: 10x1
-9x2 Arbre
-9x3 Gaulois
- courant: 9x3
- ancien: 8x3
-9x4 Gauloise
- courant: 9x4
- ancien: 8x4
-9x7 Arbre
- Jeu en mouvement: Tour 3
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1 Gauloise
- courant: 10x1
- ancien: 9x1
-10x2 Arbre
-10x4 Gaulois
- courant: 10x4
- ancien: 10x3
-10x5 Gaulois
- courant: 10x5
- ancien: 10x4
-1x2 Arbre
-1x3 Gauloise
- courant: 1x3
- ancien: 1x4
-2x4 Arbre
-3x1 Arbre
-3x2 Gaulois
- courant: 3x2
- ancien: 4x2
-3x3 Arbre
-3x6 Gaulois
- courant: 3x6
- ancien: 3x5
-3x7 Gauloise
- courant: 3x7
- ancien: 3x6
-4x4 Gauloise
- courant: 4x4
- ancien: 3x4
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 4x6
-5x7 Arbre
-6x1 Arbre
-6x4 Gaulois
- courant: 6x4
- ancien: 7x4
-6x5 Gaulois
- courant: 6x5
- ancien: 5x5
-6x6 Gauloise
- courant: 6x6
- ancien: 6x5
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x5 Arbre
-8x1 Arbre
-8x3 Gaulois
- courant: 8x3
- ancien: 9x3
-8x4 Gauloise
- courant: 8x4
- ancien: 9x4
-9x2 Arbre
-9x7 Arbre
- Jeu en mouvement: Tour 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2 Arbre
-1x2 Arbre
-2x2 Gaulois
- courant: 2x2
- ancien: 3x2
-2x3 Gauloise
- courant: 2x3
- ancien: 1x3
-2x4 Arbre
-3x1 Arbre
-3x3 Arbre
-3x6 Gauloise
- courant: 3x6
- ancien: 3x7
-3x7 Gaulois
- courant: 3x7
- ancien: 3x6
-4x3 Gauloise
- courant: 4x3
- ancien: 4x4
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 4x6
-5x5 Gaulois
- courant: 5x5
- ancien: 6x5
-5x7 Arbre
-6x1 Arbre
-6x5 Gauloise
- courant: 6x5
- ancien: 6x6
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x4 Gaulois
- courant: 7x4
- ancien: 6x4
-7x5 Arbre
-8x1 Arbre
-8x4 Gauloise
- courant: 8x4
- ancien: 8x4
-9x1 Gauloise
- courant: 9x1
- ancien: 10x1
-9x2 Arbre
-9x3 Gaulois
- courant: 9x3
- ancien: 8x3
-9x4 Gaulois
- courant: 9x4
- ancien: 10x4
-9x5 Gaulois
- courant: 9x5
- ancien: 10x5
-9x7 Arbre
- Jeu en mouvement: Tour 5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1 Gauloise
- courant: 10x1
- ancien: 9x1
-10x2 Arbre
-10x5 Gaulois
- courant: 10x5
- ancien: 9x5
-1x2 Arbre
-1x3 Gauloise
- courant: 1x3
- ancien: 2x3
-2x4 Arbre
-3x1 Arbre
-3x2 Gaulois
- courant: 3x2
- ancien: 2x2
-3x3 Arbre
-3x6 Gaulois
- courant: 3x6
- ancien: 3x7
-3x7 Gauloise
- courant: 3x7
- ancien: 3x6
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 4x6
-5x3 Gauloise
- courant: 5x3
- ancien: 4x3
-5x7 Arbre
-6x1 Arbre
-6x4 Gauloise
- courant: 6x4
- ancien: 6x5
-6x5 Gaulois
- courant: 6x5
- ancien: 5x5
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x4 Gauloise
- courant: 7x4
- ancien: 8x4
-7x5 Arbre
-8x1 Arbre
-8x4 Gaulois
- courant: 8x4
- ancien: 7x4
-9x2 Arbre
-9x4 Gaulois
- courant: 9x4
- ancien: 9x3
-9x5 Gaulois
- courant: 9x5
- ancien: 9x4
-9x7 Arbre
- Jeu en mouvement: Tour 6
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2 Arbre
-1x2 Arbre
-1x4 Gauloise
- courant: 1x4
- ancien: 1x3
-2x2 Gaulois
- courant: 2x2
- ancien: 3x2
-2x4 Arbre
-3x1 Arbre
-3x3 Arbre
-3x6 Gauloise
- courant: 3x6
- ancien: 3x7
-4x5 Arbre
-4x6 Gaulois
- courant: 4x6
- ancien: 3x6
-4x7 Gauloise
- courant: 4x7
- ancien: 4x6
-5x4 Gauloise
- courant: 5x4
- ancien: 5x3
-5x7 Arbre
-6x1 Arbre
-6x6 Gaulois
- courant: 6x6
- ancien: 6x5
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x4 Gauloise
- courant: 7x4
- ancien: 6x4
-7x5 Arbre
-8x1 Arbre
-8x3 Gaulois
- courant: 8x3
- ancien: 8x4
-8x4 Gauloise
- courant: 8x4
- ancien: 7x4
-8x5 Gaulois
- courant: 8x5
- ancien: 9x5
-9x1 Gauloise
- courant: 9x1
- ancien: 10x1
-9x2 Arbre
-9x3 Gaulois
- courant: 9x3
- ancien: 9x4
-9x5 Gaulois
- courant: 9x5
- ancien: 10x5
-9x7 Arbre
- Jeu en mouvement: Tour 7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1 Gauloise
- courant: 10x1
- ancien: 9x1
-10x2 Arbre
-10x3 Gaulois
- courant: 10x3
- ancien: 9x3
-1x2 Arbre
-1x3 Gauloise
- courant: 1x3
- ancien: 1x4
-2x4 Arbre
-3x1 Arbre
-3x2 Gaulois
- courant: 3x2
- ancien: 2x2
-3x3 Arbre
-3x7 Gauloise
- courant: 3x7
- ancien: 3x6
-4x5 Arbre
-4x7 Gauloise
- courant: 4x7
- ancien: 4x7
-5x3 Gauloise
- courant: 5x3
- ancien: 5x4
-5x6 Gaulois
- courant: 5x6
- ancien: 4x6
-5x7 Arbre
-6x1 Arbre
-6x4 Gauloise
- courant: 6x4
- ancien: 7x4
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x4 Gauloise
- courant: 7x4
- ancien: 8x4
-7x5 Arbre
-7x6 Gaulois
- courant: 7x6
- ancien: 6x6
-8x1 Arbre
-8x4 Gaulois
- courant: 8x4
- ancien: 8x3
-8x6 Gaulois
- courant: 8x6
- ancien: 8x5
-9x2 Arbre
-9x6 Gaulois
- courant: 9x6
- ancien: 9x5
-9x7 Arbre
- Jeu en mouvement: Tour 8
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2 Arbre
-1x2 Arbre
-1x4 Gauloise
- courant: 1x4
- ancien: 1x3
-2x2 Gaulois
- courant: 2x2
- ancien: 3x2
-2x4 Arbre
-3x1 Arbre
-3x3 Arbre
-4x5 Arbre
-4x6 Gauloise
- courant: 4x6
- ancien: 4x7
-4x7 Gauloise
- courant: 4x7
- ancien: 3x7
-5x2 Gauloise
- courant: 5x2
- ancien: 5x3
-5x6 Gaulois
- courant: 5x6
- ancien: 5x6
-5x7 Arbre
-6x1 Arbre
-6x4 Gauloise
- courant: 6x4
- ancien: 7x4
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x4 Gauloise
- courant: 7x4
- ancien: 6x4
-7x5 Arbre
-7x7 Gaulois
- courant: 7x7
- ancien: 7x6
-8x1 Arbre
-8x4 Gaulois
- courant: 8x4
- ancien: 8x4
-9x1 Gauloise
- courant: 9x1
- ancien: 10x1
-9x2 Arbre
-9x3 Gaulois
- courant: 9x3
- ancien: 10x3
-9x5 Gaulois
- courant: 9x5
- ancien: 9x6
-9x6 Gaulois
- courant: 9x6
- ancien: 8x6
-9x7 Arbre
- Jeu en mouvement: Tour 9
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1 Gauloise
- courant: 10x1
- ancien: 9x1
-10x2 Arbre
-10x3 Gaulois
- courant: 10x3
- ancien: 9x3
-1x2 Arbre
-1x3 Gauloise
- courant: 1x3
- ancien: 1x4
-2x3 Gaulois
- courant: 2x3
- ancien: 2x2
-2x4 Arbre
-3x1 Arbre
-3x3 Arbre
-3x7 Gauloise
- courant: 3x7
- ancien: 4x7
-4x2 Gauloise
- courant: 4x2
- ancien: 5x2
-4x5 Arbre
-5x5 Gaulois
- courant: 5x5
- ancien: 5x6
-5x6 Gauloise
- courant: 5x6
- ancien: 4x6
-5x7 Arbre
-6x1 Arbre
-6x4 Gauloise
- courant: 6x4
- ancien: 7x4
-6x5 Gauloise
- courant: 6x5
- ancien: 6x4
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x5 Arbre
-7x6 Gaulois
- courant: 7x6
- ancien: 7x7
-8x1 Arbre
-8x5 Gaulois
- courant: 8x5
- ancien: 9x5
-8x6 Gaulois
- courant: 8x6
- ancien: 9x6
-9x2 Arbre
-9x4 Gaulois
- courant: 9x4
- ancien: 8x4
-9x7 Arbre
- Jeu en mouvement: Tour 10
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2 Arbre
-10x4 Gaulois
- courant: 10x4
- ancien: 10x3
-1x2 Arbre
-1x3 Gaulois
- courant: 1x3
- ancien: 2x3
-2x3 Gauloise
- courant: 2x3
- ancien: 1x3
-2x4 Arbre
-3x1 Arbre
-3x3 Arbre
-4x3 Gauloise
- courant: 4x3
- ancien: 4x2
-4x5 Arbre
-4x7 Gauloise
- courant: 4x7
- ancien: 3x7
-5x4 Gaulois
- courant: 5x4
- ancien: 5x5
-5x7 Arbre
-6x1 Arbre
-6x5 Gauloise
- courant: 6x5
- ancien: 6x4
-6x6 Gauloise
- courant: 6x6
- ancien: 5x6
-6x7 Arbre
-7x1 Arbre
-7x3 Arbre
-7x5 Arbre
-7x7 Gaulois
- courant: 7x7
- ancien: 7x6
-8x1 Arbre
-8x4 Gaulois
- courant: 8x4
- ancien: 9x4
-8x5 Gaulois
- courant: 8x5
- ancien: 8x6
-9x1 Gauloise
- courant: 9x1
- ancien: 10x1
-9x2 Arbre
-9x5 Gaulois
- courant: 9x5
- ancien: 8x5
-9x7 Arbre
---------------------------------------------------------------------------------------------------------------------------------------------------
-----tester_que_les_objets_se_deplacent_bien-------: 
--------------------------------------grille initialisee--- 
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1Gaulois
-10x3Arbre
-10x7Gauloise
-1x2Arbre
-1x5Gauloise
-1x6Gauloise
-2x1Gaulois
-2x4Gauloise
-2x7Gaulois
-3x3Gauloise
-3x5Gaulois
-3x7Gauloise
-4x1Gaulois
-4x2Arbre
-4x4Gauloise
-5x1Arbre
-5x3Gauloise
-5x7Gaulois
-6x1Gaulois
-6x2Gauloise
-6x3Arbre
-7x1Arbre
-7x4Arbre
-7x5Arbre
-8x3Arbre
-8x6Arbre
-8x7Gauloise
-9x4Arbre
-9x5Gauloise
-9x6Arbre
- Jeu en mouvement: Tour 1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x3Arbre
-10x5Gauloise
-10x6Gauloise
-1x1Gaulois
-1x2Arbre
-1x5Gauloise
-2x4Gauloise
-2x5Gauloise
-2x7Gauloise
-3x1Gaulois
-3x4Gauloise
-3x5Gaulois
-3x7Gaulois
-4x2Arbre
-4x3Gauloise
-5x1Arbre
-5x2Gauloise
-5x6Gaulois
-6x1Gauloise
-6x2Gaulois
-6x3Arbre
-7x1Arbre
-7x4Arbre
-7x5Arbre
-7x7Gauloise
-8x3Arbre
-8x6Arbre
-9x1Gaulois
-9x4Arbre
-9x6Arbre
- Jeu en mouvement: Tour 2
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x3Arbre
-10x5Gauloise
-1x2Arbre
-1x7Gauloise
-2x1Gaulois
-2x4Gauloise
-2x5Gauloise
-3x1Gaulois
-3x5Gauloise
-3x6Gaulois
-4x2Arbre
-4x4Gauloise
-4x7Gaulois
-5x1Arbre
-5x3Gauloise
-5x5Gaulois
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-7x1Arbre
-7x2Gaulois
-7x4Arbre
-7x5Arbre
-7x6Gauloise
-8x3Arbre
-8x6Arbre
-9x2Gaulois
-9x4Arbre
-9x5Gauloise
-9x6Arbre
- Jeu en mouvement: Tour 3
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2Gaulois
-10x3Arbre
-1x2Arbre
-1x5Gauloise
-2x2Gaulois
-2x7Gauloise
-3x2Gaulois
-3x4Gauloise
-3x7Gaulois
-4x2Arbre
-4x3Gauloise
-4x5Gauloise
-4x6Gaulois
-5x1Arbre
-5x4Gauloise
-5x5Gaulois
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-6x6Gauloise
-7x1Arbre
-7x3Gaulois
-7x4Arbre
-7x5Arbre
-8x3Arbre
-8x5Gauloise
-8x6Arbre
-9x4Arbre
-9x5Gauloise
-9x6Arbre
- Jeu en mouvement: Tour 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1Gaulois
-10x3Arbre
-1x2Arbre
-2x2Gaulois
-2x5Gauloise
-2x6Gauloise
-3x2Gaulois
-3x3Gauloise
-3x5Gauloise
-3x6Gaulois
-4x2Arbre
-4x5Gaulois
-5x1Arbre
-5x3Gauloise
-5x5Gauloise
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-7x1Arbre
-7x2Gaulois
-7x4Arbre
-7x5Arbre
-7x6Gauloise
-8x3Arbre
-8x4Gauloise
-8x5Gauloise
-8x6Arbre
-9x4Arbre
-9x6Arbre
- Jeu en mouvement: Tour 5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x3Arbre
-1x2Arbre
-2x2Gaulois
-2x3Gaulois
-2x5Gauloise
-3x3Gauloise
-3x5Gauloise
-3x7Gaulois
-4x2Arbre
-4x5Gaulois
-5x1Arbre
-5x2Gauloise
-5x5Gauloise
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-7x1Arbre
-7x4Arbre
-7x5Arbre
-7x7Gauloise
-8x2Gaulois
-8x3Arbre
-8x5Gauloise
-8x6Arbre
-9x1Gaulois
-9x4Arbre
-9x5Gauloise
-9x6Arbre
- Jeu en mouvement: Tour 6
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x3Arbre
-10x5Gauloise
-1x2Arbre
-1x5Gauloise
-3x2Gaulois
-3x3Gaulois
-3x4Gauloise
-3x5Gaulois
-3x6Gaulois
-4x2Arbre
-4x5Gauloise
-5x1Arbre
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-6x5Gauloise
-7x1Arbre
-7x4Arbre
-7x5Arbre
-8x1Gaulois
-8x3Arbre
-8x6Arbre
-8x7Gauloise
-9x2Gaulois
-9x4Arbre
-9x5Gauloise
-9x6Arbre
- Jeu en mouvement: Tour 7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x2Gaulois
-10x3Arbre
-10x5Gauloise
-10x6Gauloise
-1x2Arbre
-1x6Gauloise
-2x6Gaulois
-3x2Gaulois
-3x3Gaulois
-3x4Gauloise
-4x2Arbre
-4x5Gaulois
-4x6Gauloise
-5x1Arbre
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-6x4Gauloise
-7x1Arbre
-7x4Arbre
-7x5Arbre
-8x3Arbre
-8x6Arbre
-9x1Gaulois
-9x4Arbre
-9x6Arbre
-9x7Gauloise
- Jeu en mouvement: Tour 8
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x1Gaulois
-10x3Arbre
-10x4Gauloise
-10x5Gauloise
-10x7Gauloise
-1x2Arbre
-1x7Gauloise
-2x4Gauloise
-2x5Gaulois
-3x1Gaulois
-3x4Gaulois
-4x2Arbre
-4x4Gaulois
-4x5Gauloise
-5x1Arbre
-5x2Gauloise
-6x2Gauloise
-6x3Arbre
-6x5Gauloise
-7x1Arbre
-7x4Arbre
-7x5Arbre
-8x3Arbre
-8x6Arbre
-9x1Gaulois
-9x4Arbre
-9x6Arbre
- Jeu en mouvement: Tour 9
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x3Arbre
-10x5Gauloise
-10x6Gauloise
-1x2Arbre
-1x4Gauloise
-1x5Gaulois
-1x6Gauloise
-2x1Gaulois
-2x4Gaulois
-4x2Arbre
-4x5Gaulois
-5x1Arbre
-5x5Gauloise
-6x1Gauloise
-6x2Gauloise
-6x3Arbre
-6x6Gauloise
-7x1Arbre
-7x4Arbre
-7x5Arbre
-8x3Arbre
-8x6Arbre
-9x1Gaulois
-9x2Gaulois
-9x4Arbre
-9x5Gauloise
-9x6Arbre
- Jeu en mouvement: Tour 10
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-10x3Arbre
-10x4Gauloise
-10x5Gauloise
-1x2Arbre
-1x4Gaulois
-1x5Gauloise
-2x2Gaulois
-2x4Gauloise
-2x5Gaulois
-4x2Arbre
-4x4Gaulois
-5x1Arbre
-5x2Gauloise
-5x4Gauloise
-5x6Gauloise
-6x2Gauloise
-6x3Arbre
-7x1Arbre
-7x4Arbre
-7x5Arbre
-8x3Arbre
-8x5Gauloise
-8x6Arbre
-9x2Gaulois
-9x3Gaulois
-9x4Arbre
-9x6Arbre
---------------------------------------------------------------------------------------------------------------------------------------------------
-----tester_que_les_objets_se_deplacent_bien-------: 
--------------------------------------grille initialisee--- 
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloiss est deplace de 0x0 >> 10x4
-Gauloises est deplace de 0x0 >> 10x7
+ Gaulois
+0x0 >> 10x1
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
 Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 0x0 >> 1x7
-Arbre -> 2x2
-Gauloiss est deplace de 0x0 >> 2x3
-Arbre -> 2x7
-Arbre -> 3x1
-Gauloises est deplace de 0x0 >> 3x2
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloises est deplace de 0x0 >> 5x4
-Gauloises est deplace de 0x0 >> 5x5
-Gauloiss est deplace de 0x0 >> 5x7
-Gauloiss est deplace de 0x0 >> 6x2
-Arbre -> 6x3
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 0x0 >> 7x6
-Gauloises est deplace de 0x0 >> 7x7
-Gauloises est deplace de 0x0 >> 8x1
-Gauloiss est deplace de 0x0 >> 8x3
-Gauloises est deplace de 0x0 >> 8x4
-Gauloises est deplace de 0x0 >> 9x4
-Gauloiss est deplace de 0x0 >> 9x6
-Gauloises est deplace de 0x0 >> 9x7
- Jeu en mouvement: Tour 1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloiss est deplace de 10x4 >> 10x5
-Gauloises est deplace de 10x7 >> 10x6
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 1x7 >> 1x6
-Arbre -> 2x2
-Gauloiss est deplace de 2x3 >> 2x4
-Arbre -> 2x7
-Arbre -> 3x1
-Gauloises est deplace de 3x2 >> 3x3
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloises est deplace de 5x5 >> 5x4
-Gauloiss est deplace de 5x7 >> 5x6
-Gauloiss est deplace de 6x2 >> 6x1
-Arbre -> 6x3
-Gauloises est deplace de 5x4 >> 6x4
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 7x7 >> 7x6
-Gauloises est deplace de 8x1 >> 8x2
-Gauloises est deplace de 8x4 >> 8x3
-Gauloises est deplace de 9x4 >> 8x4
-Gauloises est deplace de 7x6 >> 8x6
-Gauloises est deplace de 9x7 >> 8x7
-Gauloiss est deplace de 8x3 >> 9x3
-Gauloiss est deplace de 9x6 >> 9x6
- Jeu en mouvement: Tour 2
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloises est deplace de 10x6 >> 10x5
-Gauloiss est deplace de 10x5 >> 10x6
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 1x6 >> 1x5
-Arbre -> 2x2
-Gauloises est deplace de 3x3 >> 2x3
-Gauloiss est deplace de 2x4 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloises est deplace de 6x4 >> 5x4
-Gauloiss est deplace de 5x6 >> 5x5
-Gauloiss est deplace de 6x1 >> 6x2
-Arbre -> 6x3
-Gauloises est deplace de 5x4 >> 6x4
-Arbre -> 6x6
-Gauloises est deplace de 8x4 >> 7x4
-Arbre -> 7x5
-Gauloises est deplace de 7x6 >> 7x7
-Gauloises est deplace de 8x2 >> 8x1
-Gauloises est deplace de 8x6 >> 8x5
-Gauloises est deplace de 8x3 >> 9x3
-Gauloiss est deplace de 9x3 >> 9x4
-Gauloiss est deplace de 9x6 >> 9x5
-Gauloises est deplace de 8x7 >> 9x7
- Jeu en mouvement: Tour 3
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloises est deplace de 9x3 >> 10x3
-Gauloiss est deplace de 9x4 >> 10x4
-Gauloises est deplace de 10x5 >> 10x6
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 1x5 >> 1x6
-Arbre -> 2x2
-Gauloises est deplace de 2x3 >> 2x4
-Gauloiss est deplace de 2x5 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Gauloises est deplace de 5x4 >> 4x4
-Arbre -> 4x6
-Gauloiss est deplace de 6x2 >> 5x2
-Gauloiss est deplace de 5x5 >> 5x6
-Arbre -> 6x3
-Arbre -> 6x6
-Gauloises est deplace de 7x7 >> 6x7
-Gauloises est deplace de 6x4 >> 7x4
-Arbre -> 7x5
-Gauloises est deplace de 7x4 >> 8x4
-Gauloises est deplace de 9x7 >> 8x7
-Gauloises est deplace de 8x1 >> 9x1
-Gauloiss est deplace de 9x5 >> 9x4
-Gauloises est deplace de 8x5 >> 9x5
-Gauloiss est deplace de 10x6 >> 9x6
- Jeu en mouvement: Tour 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloiss est deplace de 9x4 >> 10x4
-Gauloises est deplace de 9x5 >> 10x5
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloises est deplace de 2x4 >> 1x4
-Arbre -> 2x2
-Gauloiss est deplace de 1x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Gauloiss est deplace de 2x5 >> 3x5
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Gauloises est deplace de 4x4 >> 4x5
-Arbre -> 4x6
-Gauloiss est deplace de 5x6 >> 5x5
-Gauloiss est deplace de 5x2 >> 6x2
-Arbre -> 6x3
-Arbre -> 6x6
-Gauloises est deplace de 7x4 >> 7x3
-Arbre -> 7x5
-Gauloises est deplace de 6x7 >> 7x7
-Gauloises est deplace de 8x4 >> 8x5
-Gauloises est deplace de 8x7 >> 8x6
-Gauloises est deplace de 9x1 >> 9x2
-Gauloises est deplace de 10x3 >> 9x3
-Gauloiss est deplace de 10x4 >> 9x4
-Gauloises est deplace de 10x6 >> 9x6
-Gauloiss est deplace de 9x6 >> 9x7
- Jeu en mouvement: Tour 5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloiss est deplace de 10x4 >> 10x3
-Gauloises est deplace de 10x5 >> 10x4
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloises est deplace de 1x4 >> 1x5
-Gauloiss est deplace de 2x6 >> 1x6
-Arbre -> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
-Gauloises est deplace de 4x5 >> 3x5
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Gauloiss est deplace de 3x5 >> 4x5
-Arbre -> 4x6
-Gauloiss est deplace de 5x5 >> 5x5
-Gauloiss est deplace de 6x2 >> 6x1
-Arbre -> 6x3
-Arbre -> 6x6
-Gauloises est deplace de 7x7 >> 6x7
-Arbre -> 7x5
-Gauloises est deplace de 7x3 >> 8x3
-Gauloises est deplace de 8x6 >> 8x5
-Gauloises est deplace de 8x5 >> 8x6
-Gauloiss est deplace de 9x7 >> 8x7
-Gauloises est deplace de 9x2 >> 9x1
-Gauloises est deplace de 9x3 >> 9x3
-Gauloiss est deplace de 9x4 >> 9x5
-Gauloises est deplace de 9x6 >> 9x6
- Jeu en mouvement: Tour 6
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloises est deplace de 9x3 >> 10x3
-Gauloises est deplace de 10x4 >> 10x5
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloises est deplace de 1x5 >> 1x4
-Arbre -> 2x2
-Gauloiss est deplace de 1x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Gauloises est deplace de 3x5 >> 3x6
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Gauloiss est deplace de 4x5 >> 4x4
-Arbre -> 4x6
-Gauloiss est deplace de 5x5 >> 5x4
-Gauloises est deplace de 6x7 >> 5x7
-Gauloiss est deplace de 6x1 >> 6x2
-Arbre -> 6x3
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 8x3 >> 8x4
-Gauloiss est deplace de 9x5 >> 8x5
-Gauloiss est deplace de 8x7 >> 8x6
-Gauloises est deplace de 9x1 >> 9x2
-Gauloiss est deplace de 10x3 >> 9x3
-Gauloises est deplace de 8x6 >> 9x6
-Gauloises est deplace de 9x6 >> 9x7
- Jeu en mouvement: Tour 7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloiss est deplace de 9x3 >> 10x3
-Gauloises est deplace de 10x3 >> 10x4
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 2x6 >> 1x6
-Arbre -> 2x2
-Gauloises est deplace de 1x4 >> 2x4
-Gauloises est deplace de 3x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Gauloiss est deplace de 4x4 >> 3x4
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloiss est deplace de 5x4 >> 5x5
-Gauloises est deplace de 5x7 >> 5x6
-Gauloiss est deplace de 6x2 >> 6x1
-Arbre -> 6x3
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 8x4 >> 8x5
-Gauloiss est deplace de 8x6 >> 8x7
-Gauloises est deplace de 9x2 >> 9x1
-Gauloises est deplace de 10x5 >> 9x5
-Gauloises est deplace de 9x7 >> 9x6
-Gauloises est deplace de 9x6 >> 9x7
- Jeu en mouvement: Tour 8
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloises est deplace de 9x5 >> 10x5
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 1x6 >> 1x5
-Arbre -> 2x2
-Gauloiss est deplace de 3x4 >> 2x4
-Gauloises est deplace de 2x4 >> 2x5
-Gauloises est deplace de 2x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloiss est deplace de 6x1 >> 5x1
-Gauloises est deplace de 5x6 >> 5x5
-Arbre -> 6x3
-Gauloiss est deplace de 5x5 >> 6x5
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 9x1 >> 8x1
-Gauloises est deplace de 8x5 >> 8x4
-Gauloiss est deplace de 8x7 >> 8x6
-Gauloises est deplace de 9x7 >> 8x7
-Gauloiss est deplace de 10x3 >> 9x3
-Gauloises est deplace de 10x4 >> 9x4
-Gauloises est deplace de 9x6 >> 9x7
- Jeu en mouvement: Tour 9
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloiss est deplace de 9x3 >> 10x3
-Gauloises est deplace de 10x5 >> 10x4
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 2x4 >> 1x4
-Arbre -> 2x2
-Gauloiss est deplace de 1x5 >> 2x5
-Gauloises est deplace de 2x5 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloiss est deplace de 5x1 >> 5x2
-Gauloises est deplace de 5x5 >> 5x4
-Arbre -> 6x3
-Gauloiss est deplace de 6x5 >> 6x4
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 8x1 >> 8x2
-Gauloises est deplace de 8x4 >> 8x3
-Gauloiss est deplace de 8x6 >> 8x5
-Gauloises est deplace de 8x7 >> 8x6
-Gauloises est deplace de 9x4 >> 9x5
-Gauloises est deplace de 9x7 >> 9x6
- Jeu en mouvement: Tour 10
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloises est deplace de 9x6 >> 10x6
-Arbre -> 1x1
-Arbre -> 1x3
-Gauloiss est deplace de 1x4 >> 1x5
-Gauloises est deplace de 2x6 >> 1x6
-Arbre -> 2x2
-Gauloiss est deplace de 2x5 >> 2x4
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x7
-Arbre -> 4x2
-Arbre -> 4x3
-Arbre -> 4x6
-Gauloiss est deplace de 5x2 >> 5x1
-Arbre -> 6x3
-Gauloises est deplace de 5x4 >> 6x4
-Gauloiss est deplace de 6x4 >> 6x5
-Arbre -> 6x6
-Arbre -> 7x5
-Gauloises est deplace de 8x6 >> 7x6
-Gauloises est deplace de 8x3 >> 8x3
-Gauloises est deplace de 9x5 >> 8x5
-Gauloises est deplace de 8x2 >> 9x2
-Gauloiss est deplace de 10x3 >> 9x3
-Gauloises est deplace de 10x4 >> 9x4
-Gauloiss est deplace de 8x5 >> 9x5
---------------------------------------------------------------------------------------------------------------------------------------------------
-----tester_que_les_objets_se_deplacent_bien-------: 
--------------------------------------grille initialisee--- 
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloise 0x0 >> 10x4
-Gaulois 0x0 >> 10x5
-Arbre -> 1x1
-Gaulois 0x0 >> 1x3
-Gaulois 0x0 >> 1x4
-Gauloise 0x0 >> 2x5
-Gaulois 0x0 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Gauloise 0x0 >> 4x2
-Arbre -> 4x3
-Gauloise 0x0 >> 4x4
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 0x0 >> 5x7
-Gauloise 0x0 >> 6x2
-Gaulois 0x0 >> 6x3
-Gauloise 0x0 >> 6x4
-Arbre -> 7x1
-Arbre -> 7x4
-Gaulois 0x0 >> 7x6
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Arbre -> 9x1
-Gaulois 0x0 >> 9x3
-Gaulois 0x0 >> 9x6
- Jeu en mouvement: Tour 1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloise 10x4 >> 10x5
-Gaulois 10x5 >> 10x6
-Arbre -> 1x1
-Gaulois 1x4 >> 1x5
-Gaulois 1x3 >> 2x3
-Gauloise 2x5 >> 2x4
-Gaulois 2x6 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Gauloise 4x4 >> 4x5
-Gauloise 4x2 >> 5x2
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 5x7 >> 5x6
-Gaulois 6x3 >> 6x2
-Gauloise 6x4 >> 6x3
-Arbre -> 7x1
-Gauloise 6x2 >> 7x2
-Arbre -> 7x4
-Gaulois 7x6 >> 7x7
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Arbre -> 9x1
-Gaulois 9x3 >> 9x2
-Gaulois 9x6 >> 9x6
- Jeu en mouvement: Tour 2
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloise 10x5 >> 10x4
-Gaulois 9x6 >> 10x6
-Arbre -> 1x1
-Gaulois 2x3 >> 2x2
-Gauloise 2x4 >> 2x3
-Gaulois 1x5 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Gaulois 2x5 >> 3x5
-Arbre -> 4x3
-Gauloise 5x2 >> 5x1
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 4x5 >> 5x5
-Gauloise 5x6 >> 5x7
-Gaulois 6x2 >> 6x3
-Arbre -> 7x1
-Gauloise 7x2 >> 7x2
-Gauloise 6x3 >> 7x3
-Arbre -> 7x4
-Gaulois 7x7 >> 7x6
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Arbre -> 9x1
-Gaulois 9x2 >> 9x3
-Gaulois 10x6 >> 9x6
- Jeu en mouvement: Tour 3
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Arbre -> 1x1
-Gauloise 2x3 >> 2x2
-Gaulois 2x2 >> 2x3
-Gaulois 2x5 >> 2x4
-Gaulois 3x5 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 5x1 >> 6x1
-Gauloise 5x5 >> 6x5
-Gauloise 5x7 >> 6x7
-Arbre -> 7x1
-Gauloise 7x3 >> 7x2
-Gaulois 6x3 >> 7x3
-Arbre -> 7x4
-Gaulois 7x6 >> 7x5
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Arbre -> 9x1
-Gaulois 9x3 >> 9x3
-Gauloise 10x4 >> 9x4
-Gaulois 10x6 >> 9x6
-Gaulois 9x6 >> 9x7
- Jeu en mouvement: Tour 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gaulois 9x3 >> 10x3
-Gauloise 9x4 >> 10x4
-Gaulois 9x6 >> 10x6
-Arbre -> 1x1
-Gaulois 2x3 >> 1x3
-Gauloise 2x2 >> 2x1
-Gaulois 2x4 >> 2x5
-Gaulois 2x5 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 6x1 >> 6x2
-Arbre -> 7x1
-Gaulois 7x3 >> 7x2
-Arbre -> 7x4
-Gauloise 6x5 >> 7x5
-Gaulois 7x5 >> 7x6
-Gauloise 6x7 >> 7x7
-Arbre -> 8x1
-Gauloise 7x2 >> 8x2
-Arbre -> 8x4
-Arbre -> 8x5
-Arbre -> 9x1
-Gaulois 9x7 >> 9x6
- Jeu en mouvement: Tour 5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloise 10x4 >> 10x3
-Gaulois 10x3 >> 10x4
-Gaulois 9x6 >> 10x6
-Gaulois 10x6 >> 10x7
-Arbre -> 1x1
-Gauloise 2x1 >> 2x2
-Gaulois 1x3 >> 2x3
-Gaulois 2x5 >> 2x4
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Gaulois 2x6 >> 3x6
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 6x2 >> 6x3
-Arbre -> 7x1
-Gaulois 7x2 >> 7x3
-Arbre -> 7x4
-Gaulois 7x6 >> 7x5
-Gauloise 7x5 >> 7x6
-Gauloise 7x7 >> 7x7
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Arbre -> 9x1
-Gauloise 8x2 >> 9x2
- Jeu en mouvement: Tour 6
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gaulois 10x7 >> 10x6
-Gaulois 10x6 >> 10x7
-Arbre -> 1x1
-Gauloise 2x2 >> 2x3
-Gaulois 2x4 >> 2x4
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Gaulois 2x3 >> 3x3
-Arbre -> 3x4
-Arbre -> 4x3
-Gaulois 3x6 >> 4x6
-Arbre -> 5x3
-Arbre -> 5x4
-Gauloise 7x6 >> 6x6
-Arbre -> 7x1
-Gauloise 6x3 >> 7x3
-Arbre -> 7x4
-Gaulois 7x5 >> 7x6
-Arbre -> 8x1
-Gaulois 7x3 >> 8x3
-Arbre -> 8x4
-Arbre -> 8x5
-Gauloise 7x7 >> 8x7
-Arbre -> 9x1
-Gauloise 9x2 >> 9x2
-Gauloise 10x3 >> 9x3
-Gaulois 10x4 >> 9x4
- Jeu en mouvement: Tour 7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gaulois 10x7 >> 10x6
-Arbre -> 1x1
-Gauloise 2x3 >> 1x3
-Gaulois 2x4 >> 1x4
-Gaulois 3x3 >> 2x3
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gaulois 4x6 >> 5x6
-Gauloise 6x6 >> 6x6
-Arbre -> 7x1
-Gauloise 7x3 >> 7x2
-Gaulois 8x3 >> 7x3
-Arbre -> 7x4
-Gaulois 7x6 >> 7x7
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Gauloise 8x7 >> 8x6
-Arbre -> 9x1
-Gauloise 9x3 >> 9x2
-Gauloise 9x2 >> 9x3
-Gaulois 9x4 >> 9x4
-Gaulois 10x6 >> 9x6
- Jeu en mouvement: Tour 8
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloise 9x3 >> 10x3
-Gaulois 9x4 >> 10x4
-Arbre -> 1x1
-Gauloise 1x3 >> 1x2
-Gaulois 1x4 >> 1x5
-Gaulois 2x3 >> 2x2
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gaulois 7x3 >> 6x3
-Gaulois 5x6 >> 6x6
-Gauloise 6x6 >> 6x7
-Arbre -> 7x1
-Arbre -> 7x4
-Gaulois 7x7 >> 7x6
-Arbre -> 8x1
-Gauloise 7x2 >> 8x2
-Arbre -> 8x4
-Arbre -> 8x5
-Gauloise 8x6 >> 8x7
-Arbre -> 9x1
-Gauloise 9x2 >> 9x3
-Gaulois 9x6 >> 9x5
-Gaulois 10x6 >> 9x6
- Jeu en mouvement: Tour 9
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gaulois 10x4 >> 10x5
-Gaulois 9x6 >> 10x6
-Arbre -> 1x1
-Gaulois 2x2 >> 1x2
-Gauloise 1x2 >> 1x3
-Gaulois 1x5 >> 1x4
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gaulois 6x6 >> 5x6
-Gaulois 6x3 >> 6x2
-Gauloise 6x7 >> 6x6
-Arbre -> 7x1
-Gauloise 8x2 >> 7x2
-Arbre -> 7x4
-Arbre -> 8x1
-Arbre -> 8x4
-Arbre -> 8x5
-Gaulois 7x6 >> 8x6
-Gauloise 8x7 >> 8x7
-Arbre -> 9x1
-Gauloise 9x3 >> 9x2
-Gauloise 10x3 >> 9x3
-Gaulois 9x5 >> 9x5
- Jeu en mouvement: Tour 10
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x2
-Gauloise 9x3 >> 10x3
-Gaulois 9x5 >> 10x5
-Arbre -> 1x1
-Gaulois 1x4 >> 1x3
-Gaulois 1x2 >> 2x2
-Gauloise 1x3 >> 2x3
-Arbre -> 2x7
-Arbre -> 3x1
-Arbre -> 3x2
-Arbre -> 3x4
-Arbre -> 4x3
-Arbre -> 5x3
-Arbre -> 5x4
-Gaulois 5x6 >> 5x5
-Gaulois 6x2 >> 6x1
-Arbre -> 7x1
-Arbre -> 7x4
-Gauloise 6x6 >> 7x6
-Arbre -> 8x1
-Gauloise 7x2 >> 8x2
-Arbre -> 8x4
-Arbre -> 8x5
-Gauloise 8x7 >> 8x6
-Arbre -> 9x1
-Gauloise 9x2 >> 9x2
-Gaulois 10x5 >> 9x5
-Gaulois 10x6 >> 9x6
---------------------------------------------------------------------------------------------------------------------------------------------------
-----tester_que_les_objets_se_deplacent_bien-------: 
--------------------------------------grille initialisee--- 
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 0x0 >> 10x2
-Gauloise 0x0 >> 10x3
-Gauloise 0x0 >> 10x5
-Arbre -> 1x2
-Arbre -> 1x4
-Gauloise 0x0 >> 1x7
+ Gauloise
+0x0 >> 1x4
+age: 1
+
+ Gaulois
+0x0 >> 1x7
+age: 1
+
 Arbre -> 2x1
-Arbre -> 2x5
-Gaulois 0x0 >> 2x6
-Gauloise 0x0 >> 3x1
-Gaulois 0x0 >> 3x4
-Arbre -> 3x7
-Gauloise 0x0 >> 4x1
-Gauloise 0x0 >> 4x3
-Gauloise 0x0 >> 4x6
-Gauloise 0x0 >> 5x1
-Gauloise 0x0 >> 5x2
+Arbre -> 2x3
+ Gauloise
+0x0 >> 2x5
+age: 1
+
+Arbre -> 3x3
+ Gaulois
+0x0 >> 3x4
+age: 1
+
+ Gauloise
+0x0 >> 3x7
+age: 1
+
+Arbre -> 4x1
+ Gauloise
+0x0 >> 4x2
+age: 1
+
+Arbre -> 4x7
+ Gauloise
+0x0 >> 5x1
+age: 1
+
+ Gaulois
+0x0 >> 5x2
+age: 1
+
 Arbre -> 5x3
-Gauloise 0x0 >> 6x2
-Gaulois 0x0 >> 6x4
-Gauloise 0x0 >> 6x7
-Arbre -> 7x1
-Gauloise 0x0 >> 7x3
-Gauloise 0x0 >> 7x7
-Gaulois 0x0 >> 8x3
-Gaulois 0x0 >> 8x4
-Gauloise 0x0 >> 8x7
-Gaulois 0x0 >> 9x3
-Gaulois 0x0 >> 9x4
-Gaulois 0x0 >> 9x5
+Arbre -> 6x4
+ Gauloise
+0x0 >> 6x6
+age: 1
+
+ Gauloise
+0x0 >> 6x7
+age: 1
+
+ Gaulois
+0x0 >> 7x3
+age: 1
+
+ Gauloise
+0x0 >> 7x4
+age: 1
+
+ Gauloise
+0x0 >> 7x5
+age: 1
+
+ Gaulois
+0x0 >> 8x2
+age: 1
+
+ Gaulois
+0x0 >> 8x5
+age: 1
+
+Arbre -> 8x7
+ Gauloise
+0x0 >> 9x4
+age: 1
+
+ Gaulois
+0x0 >> 9x5
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 1
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 9x4 >> 10x4
-Gaulois 9x5 >> 10x5
-Arbre -> 1x2
-Arbre -> 1x4
-Gauloise 1x7 >> 1x6
+ Gaulois
+10x1 >> 10x2
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
 Arbre -> 2x1
-Arbre -> 2x5
-Gaulois 2x6 >> 2x7
-Gaulois 3x4 >> 3x3
-Gauloise 4x6 >> 3x6
-Arbre -> 3x7
-Gauloise 3x1 >> 4x1
-Gauloise 4x1 >> 4x2
-Gauloise 4x3 >> 4x4
-Gauloise 5x2 >> 5x1
+Arbre -> 2x3
+ Gauloise
+1x4 >> 2x4
+age: 1
+
+ Gauloise
+2x5 >> 2x6
+age: 1
+
+ Gaulois
+1x7 >> 2x7
+age: 1
+
+Arbre -> 3x3
+ Gauloise
+3x7 >> 3x7
+age: 1
+
+Arbre -> 4x1
+ Gauloise
+4x2 >> 4x3
+age: 1
+
+ Gaulois
+3x4 >> 4x4
+age: 1
+
+Arbre -> 4x7
+ Gaulois
+5x2 >> 5x1
+age: 1
+
+ Gauloise
+5x1 >> 5x2
+age: 1
+
 Arbre -> 5x3
-Gauloise 5x1 >> 6x1
-Gauloise 6x2 >> 6x2
-Gaulois 6x4 >> 6x3
-Arbre -> 7x1
-Gauloise 7x3 >> 7x2
-Gauloise 7x7 >> 7x6
-Gauloise 6x7 >> 7x7
-Gaulois 8x3 >> 8x3
-Gauloise 8x7 >> 8x7
-Gaulois 10x2 >> 9x2
-Gaulois 9x3 >> 9x3
-Gaulois 8x4 >> 9x4
-Gauloise 10x5 >> 9x5
+ Gauloise
+6x6 >> 5x6
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+7x5 >> 6x5
+age: 1
+
+ Gauloise
+6x7 >> 6x6
+age: 1
+
+ Gaulois
+7x3 >> 7x2
+age: 1
+
+ Gauloise
+7x4 >> 7x5
+age: 1
+
+ Gaulois
+8x2 >> 8x1
+age: 1
+
+ Gaulois
+8x5 >> 8x4
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+9x5 >> 9x4
+age: 1
+
+ Gauloise
+9x4 >> 9x5
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 2
+Element priorisé qui va sur un emplacement occupé 
+Element doit retourner a son ancienne position 
+--------------------------------------------------
+ Gauloise
+6x6 >> 6x6
+age: 1
+
+--------------------------------------------------
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 10x5 >> 10x6
-Arbre -> 1x2
-Arbre -> 1x4
-Gaulois 2x7 >> 1x7
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
 Arbre -> 2x1
-Arbre -> 2x5
-Gauloise 1x6 >> 2x6
-Gauloise 4x1 >> 3x1
-Gaulois 3x3 >> 3x4
-Arbre -> 3x7
-Gauloise 4x2 >> 4x1
-Gauloise 4x4 >> 4x5
-Gauloise 3x6 >> 4x6
-Gauloise 6x1 >> 5x1
-Gauloise 5x1 >> 5x2
+Arbre -> 2x3
+ Gauloise
+2x4 >> 2x5
+age: 1
+
+ Gaulois
+2x7 >> 2x6
+age: 1
+
+ Gauloise
+2x6 >> 2x7
+age: 1
+
+Arbre -> 3x3
+ Gauloise
+3x7 >> 3x6
+age: 1
+
+Arbre -> 4x1
+ Gauloise
+4x3 >> 4x2
+age: 1
+
+ Gaulois
+4x4 >> 4x5
+age: 1
+
+Arbre -> 4x7
+ Gaulois
+5x1 >> 5x2
+age: 1
+
 Arbre -> 5x3
-Gauloise 6x2 >> 6x3
-Gauloise 7x6 >> 6x6
-Arbre -> 7x1
-Gaulois 6x3 >> 7x3
-Gauloise 7x7 >> 7x6
-Gauloise 8x7 >> 7x7
-Gauloise 7x2 >> 8x2
-Gauloise 9x5 >> 8x5
-Gaulois 9x2 >> 9x2
-Gaulois 8x3 >> 9x3
-Gaulois 9x4 >> 9x4
+ Gauloise
+5x6 >> 5x5
+age: 1
+
+ Gaulois
+7x2 >> 6x2
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+6x5 >> 6x5
+age: 1
+
+ Gauloise
+6x6 >> 6x6
+age: 1
+
+ Gaulois
+8x4 >> 7x4
+age: 1
+
+ Gauloise
+7x5 >> 7x5
+age: 1
+
+ Gauloise
+9x5 >> 8x5
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+8x1 >> 9x1
+age: 1
+
+ Gaulois
+10x2 >> 9x2
+age: 1
+
+ Gaulois
+9x4 >> 9x3
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 3
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 9x2 >> 10x2
-Arbre -> 1x2
-Arbre -> 1x4
+ Gaulois
+9x3 >> 10x3
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
 Arbre -> 2x1
-Arbre -> 2x5
-Gaulois 1x7 >> 2x7
-Gaulois 3x4 >> 3x3
-Gauloise 2x6 >> 3x6
-Arbre -> 3x7
-Gauloise 3x1 >> 4x1
-Gauloise 4x5 >> 4x4
-Gauloise 4x6 >> 4x6
-Gauloise 4x1 >> 5x1
-Gauloise 5x1 >> 5x2
+Arbre -> 2x3
+ Gaulois
+2x6 >> 2x5
+age: 1
+
+ Gauloise
+2x5 >> 2x6
+age: 1
+
+ Gauloise
+2x7 >> 2x7
+age: 1
+
+Arbre -> 3x3
+ Gauloise
+3x6 >> 3x6
+age: 1
+
+Arbre -> 4x1
+ Gaulois
+4x5 >> 4x4
+age: 1
+
+Arbre -> 4x7
+ Gauloise
+4x2 >> 5x2
+age: 1
+
 Arbre -> 5x3
-Gauloise 5x2 >> 6x2
-Gaulois 7x3 >> 6x3
-Gauloise 6x6 >> 6x7
-Arbre -> 7x1
-Gauloise 7x6 >> 7x5
-Gauloise 7x7 >> 7x7
-Gauloise 8x2 >> 8x1
-Gaulois 9x3 >> 8x3
-Gauloise 8x5 >> 8x5
-Gaulois 9x4 >> 9x3
-Gaulois 10x6 >> 9x6
+ Gaulois
+5x2 >> 6x2
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+5x5 >> 6x5
+age: 1
+
+ Gauloise
+6x5 >> 6x6
+age: 1
+
+ Gaulois
+6x2 >> 7x2
+age: 1
+
+ Gauloise
+8x5 >> 7x5
+age: 1
+
+ Gaulois
+9x2 >> 8x2
+age: 1
+
+ Gaulois
+7x4 >> 8x4
+age: 1
+
+ Gauloise
+7x5 >> 8x5
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+9x1 >> 9x2
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 4
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 10x2 >> 10x3
-Gaulois 9x6 >> 10x6
-Arbre -> 1x2
-Arbre -> 1x4
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
 Arbre -> 2x1
-Arbre -> 2x5
-Gaulois 2x7 >> 2x6
-Gauloise 4x1 >> 3x1
-Gauloise 3x6 >> 3x5
-Gauloise 4x6 >> 3x6
-Arbre -> 3x7
-Gaulois 3x3 >> 4x3
-Gauloise 5x1 >> 5x2
+Arbre -> 2x3
+ Gaulois
+2x5 >> 2x4
+age: 1
+
+ Gauloise
+2x7 >> 2x6
+age: 1
+
+ Gauloise
+2x6 >> 2x7
+age: 1
+
+Arbre -> 3x3
+Arbre -> 4x1
+ Gaulois
+4x4 >> 4x5
+age: 1
+
+ Gauloise
+3x6 >> 4x6
+age: 1
+
+Arbre -> 4x7
+ Gaulois
+6x2 >> 5x2
+age: 1
+
 Arbre -> 5x3
-Gauloise 4x4 >> 5x4
-Gauloise 5x2 >> 6x2
-Gaulois 6x3 >> 6x4
-Gauloise 7x5 >> 6x5
-Gauloise 6x7 >> 6x6
-Arbre -> 7x1
-Gauloise 7x7 >> 7x6
-Gauloise 8x1 >> 8x2
-Gauloise 8x5 >> 8x6
-Gaulois 9x3 >> 9x2
-Gaulois 8x3 >> 9x3
+ Gauloise
+5x2 >> 6x2
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+7x5 >> 6x5
+age: 1
+
+ Gauloise
+6x6 >> 6x7
+age: 1
+
+ Gaulois
+7x2 >> 7x2
+age: 1
+
+ Gauloise
+6x5 >> 7x5
+age: 1
+
+ Gaulois
+8x2 >> 8x1
+age: 1
+
+ Gaulois
+9x2 >> 8x2
+age: 1
+
+ Gauloise
+8x5 >> 8x4
+age: 1
+
+ Gaulois
+8x4 >> 8x5
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+10x3 >> 9x3
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 5
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 9x2 >> 10x2
-Gaulois 10x6 >> 10x7
-Arbre -> 1x2
-Arbre -> 1x4
+ Gaulois
+9x3 >> 10x3
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
+ Gaulois
+2x4 >> 1x4
+age: 1
+
+ Gauloise
+2x7 >> 1x7
+age: 1
+
 Arbre -> 2x1
-Arbre -> 2x5
-Gauloise 3x1 >> 3x2
-Gauloise 3x6 >> 3x5
-Gaulois 2x6 >> 3x6
-Arbre -> 3x7
-Gaulois 4x3 >> 4x2
-Gauloise 5x2 >> 5x1
+Arbre -> 2x3
+Arbre -> 3x3
+ Gauloise
+2x6 >> 3x6
+age: 1
+
+Arbre -> 4x1
+ Gauloise
+4x6 >> 4x5
+age: 1
+
+Arbre -> 4x7
 Arbre -> 5x3
-Gauloise 6x2 >> 6x3
-Gaulois 6x4 >> 6x4
-Gauloise 6x5 >> 6x5
-Gauloise 7x6 >> 6x6
-Gauloise 6x6 >> 6x7
-Arbre -> 7x1
-Gauloise 8x6 >> 7x6
-Gauloise 8x2 >> 8x3
-Gaulois 10x3 >> 9x3
+ Gaulois
+4x5 >> 5x5
+age: 1
+
+ Gauloise
+6x2 >> 6x1
+age: 1
+
+ Gaulois
+5x2 >> 6x2
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+7x5 >> 6x5
+age: 1
+
+ Gauloise
+6x5 >> 6x6
+age: 1
+
+ Gauloise
+6x7 >> 6x7
+age: 1
+
+ Gaulois
+7x2 >> 7x1
+age: 1
+
+ Gaulois
+8x1 >> 8x1
+age: 1
+
+ Gauloise
+8x4 >> 8x3
+age: 1
+
+ Gaulois
+8x5 >> 8x4
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+8x2 >> 9x2
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 6
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 10x7 >> 10x6
-Arbre -> 1x2
-Arbre -> 1x4
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
 Arbre -> 2x1
-Arbre -> 2x5
-Gauloise 3x5 >> 3x4
-Gaulois 3x6 >> 3x5
-Arbre -> 3x7
-Gaulois 4x2 >> 4x1
-Gauloise 3x2 >> 4x2
-Gauloise 5x1 >> 5x2
+Arbre -> 2x3
+ Gaulois
+1x4 >> 2x4
+age: 1
+
+ Gauloise
+1x7 >> 2x7
+age: 1
+
+Arbre -> 3x3
+Arbre -> 4x1
+ Gauloise
+4x5 >> 4x4
+age: 1
+
+ Gauloise
+3x6 >> 4x6
+age: 1
+
+Arbre -> 4x7
 Arbre -> 5x3
-Gauloise 6x5 >> 5x5
-Gauloise 6x7 >> 5x7
-Gaulois 6x4 >> 6x5
-Arbre -> 7x1
-Gauloise 6x3 >> 7x3
-Gauloise 6x6 >> 7x6
-Gauloise 7x6 >> 7x7
-Gauloise 8x3 >> 8x2
-Gaulois 10x2 >> 9x2
-Gaulois 9x3 >> 9x4
+ Gauloise
+6x5 >> 5x5
+age: 1
+
+ Gaulois
+5x5 >> 5x6
+age: 1
+
+ Gaulois
+7x1 >> 6x1
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+6x7 >> 6x6
+age: 1
+
+ Gauloise
+6x6 >> 6x7
+age: 1
+
+ Gauloise
+6x1 >> 7x1
+age: 1
+
+ Gaulois
+6x2 >> 7x2
+age: 1
+
+ Gauloise
+8x3 >> 7x3
+age: 1
+
+ Gaulois
+9x2 >> 8x2
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+8x1 >> 9x1
+age: 1
+
+ Gaulois
+10x3 >> 9x3
+age: 1
+
+ Gaulois
+8x4 >> 9x4
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 7
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 10x6 >> 10x5
-Arbre -> 1x2
-Arbre -> 1x4
+ Gaulois
+9x4 >> 10x4
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
+ Gauloise
+2x7 >> 1x7
+age: 1
+
 Arbre -> 2x1
-Gauloise 3x4 >> 2x4
-Arbre -> 2x5
-Gaulois 3x5 >> 3x4
-Arbre -> 3x7
-Gaulois 4x1 >> 4x2
-Gauloise 4x2 >> 4x3
-Gauloise 5x7 >> 4x7
+Arbre -> 2x3
+ Gaulois
+2x4 >> 2x5
+age: 1
+
+Arbre -> 3x3
+ Gauloise
+4x4 >> 3x4
+age: 1
+
+ Gauloise
+4x6 >> 3x6
+age: 1
+
+Arbre -> 4x1
+Arbre -> 4x7
+ Gaulois
+6x1 >> 5x1
+age: 1
+
 Arbre -> 5x3
-Gauloise 5x5 >> 5x4
-Gauloise 5x2 >> 6x2
-Gaulois 6x5 >> 6x4
-Arbre -> 7x1
-Gauloise 8x2 >> 7x2
-Gauloise 7x6 >> 7x5
-Gauloise 7x3 >> 8x3
-Gaulois 9x4 >> 8x4
-Gauloise 7x7 >> 8x7
-Gaulois 9x2 >> 9x1
+ Gauloise
+5x5 >> 5x6
+age: 1
+
+ Gaulois
+5x6 >> 5x7
+age: 1
+
+ Gauloise
+7x1 >> 6x1
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+6x6 >> 6x7
+age: 1
+
+ Gaulois
+7x2 >> 7x3
+age: 1
+
+ Gauloise
+7x3 >> 8x3
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+9x1 >> 9x1
+age: 1
+
+ Gaulois
+8x2 >> 9x2
+age: 1
+
+ Gaulois
+9x3 >> 9x4
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 8
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 10x5 >> 10x4
-Arbre -> 1x2
-Arbre -> 1x4
+ Gaulois
+9x1 >> 10x1
+age: 1
+
+ Gaulois
+10x4 >> 10x3
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
+ Gauloise
+1x7 >> 1x6
+age: 1
+
 Arbre -> 2x1
-Arbre -> 2x5
-Gaulois 4x2 >> 3x2
-Gauloise 2x4 >> 3x4
-Gaulois 3x4 >> 3x5
-Arbre -> 3x7
-Gauloise 4x3 >> 4x2
-Gauloise 4x7 >> 4x6
+Arbre -> 2x3
+ Gaulois
+2x5 >> 2x6
+age: 1
+
+Arbre -> 3x3
+ Gauloise
+3x4 >> 3x5
+age: 1
+
+Arbre -> 4x1
+ Gauloise
+3x6 >> 4x6
+age: 1
+
+Arbre -> 4x7
+ Gauloise
+6x1 >> 5x1
+age: 1
+
 Arbre -> 5x3
-Gauloise 5x4 >> 5x5
-Gauloise 6x2 >> 6x3
-Gauloise 7x5 >> 6x5
-Arbre -> 7x1
-Gauloise 7x2 >> 7x3
-Gaulois 6x4 >> 7x4
-Gaulois 8x4 >> 8x3
-Gauloise 8x7 >> 8x6
-Gaulois 9x1 >> 9x2
+ Gaulois
+5x7 >> 5x6
+age: 1
+
+ Gaulois
+5x1 >> 6x1
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+5x6 >> 6x6
+age: 1
+
+ Gauloise
+6x7 >> 6x7
+age: 1
+
+ Gaulois
+7x3 >> 7x4
+age: 1
+
+ Gauloise
+8x3 >> 8x2
+age: 1
+
+ Gaulois
+9x4 >> 8x4
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+9x2 >> 9x1
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 9
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Gaulois 9x2 >> 10x2
-Arbre -> 1x2
-Arbre -> 1x4
+ Gaulois
+10x1 >> 10x2
+age: 1
+
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
+ Gaulois
+2x6 >> 1x6
+age: 1
+
+ Gauloise
+1x6 >> 1x7
+age: 1
+
 Arbre -> 2x1
-Arbre -> 2x5
-Gauloise 3x4 >> 3x5
-Arbre -> 3x7
-Gaulois 3x2 >> 4x2
-Gaulois 3x5 >> 4x5
-Gauloise 4x2 >> 5x2
+Arbre -> 2x3
+Arbre -> 3x3
+ Gauloise
+3x5 >> 3x4
+age: 1
+
+Arbre -> 4x1
+Arbre -> 4x7
 Arbre -> 5x3
-Gauloise 5x5 >> 5x4
-Gauloise 4x6 >> 5x6
-Gauloise 6x5 >> 6x4
-Arbre -> 7x1
-Gauloise 7x3 >> 7x2
-Gauloise 6x3 >> 7x3
-Gaulois 7x4 >> 7x4
-Gaulois 8x3 >> 8x2
-Gauloise 8x6 >> 8x5
-Gaulois 10x4 >> 9x4
---------------------------------------------------------------------------------------------------------------------------------------------------
-----tester_que_les_objets_se_deplacent_bien-------: 
--------------------------------------grille initialisee--- 
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gauloise 0x0 >> 10x4
-Gauloise 0x0 >> 10x7
-Gaulois 0x0 >> 1x2
-Gauloise 0x0 >> 1x3
-Gauloise 0x0 >> 1x5
-Arbre -> 2x4
-Gauloise 0x0 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x2
-Gauloise 0x0 >> 3x3
-Gauloise 0x0 >> 3x6
-Gaulois 0x0 >> 4x2
-Gauloise 0x0 >> 4x3
-Arbre -> 4x6
-Gaulois 0x0 >> 5x1
-Gauloise 0x0 >> 5x4
-Gauloise 0x0 >> 5x5
-Gauloise 0x0 >> 6x2
-Gauloise 0x0 >> 6x3
-Arbre -> 6x6
-Gaulois 0x0 >> 7x3
-Arbre -> 7x5
-Gauloise 0x0 >> 7x6
-Gaulois 0x0 >> 8x1
-Gaulois 0x0 >> 8x2
-Gauloise 0x0 >> 8x7
-Gaulois 0x0 >> 9x1
-Gauloise 0x0 >> 9x2
-Arbre -> 9x5
--->>>>>>Jeu en mouvement: Tour 1
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gauloise 10x4 >> 10x3
-Gauloise 1x3 >> 1x2
-Gauloise 1x5 >> 1x4
-Gaulois 1x2 >> 2x2
-Arbre -> 2x4
-Gauloise 2x5 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x2
-Gauloise 4x3 >> 3x3
-Gauloise 3x6 >> 3x6
-Gauloise 3x3 >> 4x3
-Arbre -> 4x6
-Gaulois 4x2 >> 5x2
-Gauloise 5x5 >> 5x4
-Gauloise 5x4 >> 5x5
-Gaulois 5x1 >> 6x1
-Gauloise 6x2 >> 6x2
-Gauloise 6x3 >> 6x4
-Arbre -> 6x6
-Gaulois 8x2 >> 7x2
-Gaulois 7x3 >> 7x4
-Arbre -> 7x5
-Gauloise 7x6 >> 7x7
-Gauloise 8x7 >> 8x7
-Gaulois 8x1 >> 9x1
-Gaulois 9x1 >> 9x2
-Gauloise 9x2 >> 9x3
-Arbre -> 9x5
-Gauloise 10x7 >> 9x7
--->>>>>>Jeu en mouvement: Tour 2
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gaulois 9x2 >> 10x2
-Gauloise 1x4 >> 1x3
-Gauloise 2x6 >> 1x6
-Gauloise 1x2 >> 2x2
-Gaulois 2x2 >> 2x3
-Arbre -> 2x4
-Arbre -> 2x7
-Arbre -> 3x2
-Gauloise 3x6 >> 3x5
-Gauloise 3x3 >> 4x3
-Arbre -> 4x6
-Gaulois 5x2 >> 5x1
-Gauloise 6x2 >> 5x2
-Gauloise 4x3 >> 5x3
-Gaulois 6x1 >> 6x1
-Gauloise 5x4 >> 6x4
-Gauloise 5x5 >> 6x5
-Arbre -> 6x6
-Gaulois 7x2 >> 7x1
-Gaulois 7x4 >> 7x3
-Gauloise 6x4 >> 7x4
-Arbre -> 7x5
-Gaulois 9x1 >> 8x1
-Gauloise 8x7 >> 8x6
-Gauloise 7x7 >> 8x7
-Gauloise 10x3 >> 9x3
-Gauloise 9x3 >> 9x4
-Arbre -> 9x5
-Gauloise 9x7 >> 9x6
--->>>>>>Jeu en mouvement: Tour 3
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gauloise 9x3 >> 10x3
-Gauloise 1x3 >> 1x4
-Gauloise 2x2 >> 2x1
-Gaulois 2x3 >> 2x2
-Arbre -> 2x4
-Gauloise 1x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x2
-Gauloise 3x5 >> 3x6
-Gauloise 4x3 >> 4x4
-Arbre -> 4x6
-Gaulois 6x1 >> 5x1
-Gaulois 5x1 >> 5x2
-Gaulois 7x1 >> 6x1
-Gauloise 5x2 >> 6x2
-Gauloise 5x3 >> 6x3
-Gauloise 6x4 >> 6x4
-Arbre -> 6x6
-Gaulois 7x3 >> 7x4
-Arbre -> 7x5
-Gaulois 8x1 >> 8x2
-Gauloise 8x6 >> 8x5
-Gauloise 9x6 >> 8x6
-Gaulois 10x2 >> 9x2
-Gauloise 9x4 >> 9x3
-Arbre -> 9x5
-Gauloise 8x7 >> 9x7
--->>>>>>Jeu en mouvement: Tour 4
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gaulois 9x2 >> 10x2
-Gauloise 1x4 >> 1x5
-Gauloise 2x6 >> 1x6
-Gaulois 2x2 >> 2x3
-Arbre -> 2x4
-Arbre -> 2x7
-Gauloise 2x1 >> 3x1
-Arbre -> 3x2
-Gauloise 3x6 >> 3x7
-Gaulois 5x1 >> 4x1
-Gauloise 4x4 >> 4x3
-Arbre -> 4x6
-Gaulois 5x2 >> 5x1
-Gaulois 6x1 >> 6x1
-Gauloise 6x3 >> 6x2
-Gauloise 6x4 >> 6x5
-Arbre -> 6x6
-Gauloise 6x2 >> 7x2
-Arbre -> 7x5
-Gaulois 8x2 >> 8x3
-Gaulois 7x4 >> 8x4
-Gauloise 8x5 >> 8x5
-Gauloise 10x3 >> 9x3
-Gauloise 9x3 >> 9x4
-Arbre -> 9x5
-Gauloise 8x6 >> 9x6
-Gauloise 9x7 >> 9x7
--->>>>>>Jeu en mouvement: Tour 5
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gauloise 9x3 >> 10x3
-Gauloise 1x5 >> 1x6
-Arbre -> 2x4
-Gauloise 1x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x2
-Gaulois 2x3 >> 3x3
-Gauloise 3x1 >> 4x1
-Gauloise 4x3 >> 4x2
-Arbre -> 4x6
-Gauloise 3x7 >> 4x7
-Gaulois 4x1 >> 5x1
-Gauloise 6x2 >> 5x2
-Gauloise 6x5 >> 5x5
-Gaulois 5x1 >> 6x1
-Gaulois 6x1 >> 6x2
-Arbre -> 6x6
-Gauloise 7x2 >> 7x1
-Gaulois 8x3 >> 7x3
-Arbre -> 7x5
-Gaulois 8x4 >> 8x5
-Gauloise 8x5 >> 8x6
-Gaulois 10x2 >> 9x2
-Gauloise 9x4 >> 9x3
-Arbre -> 9x5
-Gauloise 9x7 >> 9x6
--->>>>>>Jeu en mouvement: Tour 6
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gauloise 1x6 >> 1x7
-Arbre -> 2x4
-Gauloise 2x6 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x2
-Gaulois 3x3 >> 3x4
-Gauloise 4x7 >> 3x7
-Gauloise 4x2 >> 4x1
-Gauloise 4x1 >> 4x2
-Arbre -> 4x6
-Gaulois 5x1 >> 5x1
-Gauloise 5x5 >> 5x6
-Gaulois 6x1 >> 6x1
-Gauloise 5x2 >> 6x2
-Arbre -> 6x6
-Gaulois 6x2 >> 7x2
-Arbre -> 7x5
-Gauloise 7x1 >> 8x1
-Gaulois 7x3 >> 8x3
-Gaulois 8x5 >> 8x4
-Gauloise 8x6 >> 8x5
-Gaulois 9x2 >> 9x1
-Gauloise 9x3 >> 9x2
-Gauloise 10x3 >> 9x3
-Arbre -> 9x5
-Gauloise 9x6 >> 9x7
--->>>>>>Jeu en mouvement: Tour 7
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gauloise 9x3 >> 10x3
-Gauloise 9x7 >> 10x7
-Gauloise 1x7 >> 1x6
-Arbre -> 2x4
-Gauloise 2x5 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x2
-Gaulois 3x4 >> 3x5
-Gauloise 3x7 >> 3x6
-Gaulois 5x1 >> 4x1
-Arbre -> 4x6
-Gauloise 4x1 >> 5x1
-Gauloise 4x2 >> 5x2
-Gauloise 5x6 >> 5x5
-Gauloise 6x2 >> 6x1
-Arbre -> 6x6
-Arbre -> 7x5
-Gaulois 9x1 >> 8x1
-Gaulois 7x2 >> 8x2
-Gaulois 8x3 >> 8x3
-Gauloise 8x5 >> 8x4
-Gauloise 9x2 >> 9x2
-Gaulois 8x4 >> 9x4
-Arbre -> 9x5
--->>>>>>Jeu en mouvement: Tour 8
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gaulois 9x4 >> 10x4
-Gauloise 2x6 >> 1x6
-Arbre -> 2x4
-Gauloise 1x6 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x2
-Gaulois 3x5 >> 3x4
-Gauloise 3x6 >> 3x7
-Gauloise 5x2 >> 4x2
-Gauloise 5x5 >> 4x5
-Arbre -> 4x6
-Gaulois 4x1 >> 5x1
-Gauloise 5x1 >> 5x2
-Gauloise 6x1 >> 6x2
-Arbre -> 6x6
-Gaulois 8x2 >> 7x2
-Gaulois 8x3 >> 7x3
-Arbre -> 7x5
-Gaulois 8x1 >> 9x1
-Gauloise 9x2 >> 9x2
-Gauloise 10x3 >> 9x3
-Gauloise 8x4 >> 9x4
-Arbre -> 9x5
-Gauloise 10x7 >> 9x7
--->>>>>>Jeu en mouvement: Tour 9
------------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gaulois 10x4 >> 10x3
-Gauloise 9x4 >> 10x4
-Gauloise 1x6 >> 1x5
-Arbre -> 2x4
-Gauloise 2x6 >> 2x5
-Arbre -> 2x7
-Arbre -> 3x2
-Gaulois 3x4 >> 3x3
-Gauloise 3x7 >> 3x6
-Gauloise 4x2 >> 4x1
-Gauloise 5x2 >> 4x2
-Gauloise 4x5 >> 4x4
-Arbre -> 4x6
-Gaulois 5x1 >> 5x2
-Gaulois 7x2 >> 6x2
-Arbre -> 6x6
-Arbre -> 7x5
-Gaulois 7x3 >> 8x3
-Gauloise 9x7 >> 8x7
-Gaulois 9x1 >> 9x2
-Gauloise 9x2 >> 9x3
-Arbre -> 9x5
+ Gauloise
+4x6 >> 5x6
+age: 1
+
+ Gaulois
+5x6 >> 5x7
+age: 1
+
+ Gauloise
+5x1 >> 6x1
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+6x7 >> 6x6
+age: 1
+
+ Gaulois
+6x1 >> 7x1
+age: 1
+
+ Gaulois
+7x4 >> 7x3
+age: 1
+
+ Gaulois
+9x1 >> 8x1
+age: 1
+
+ Gauloise
+8x2 >> 8x3
+age: 1
+
+ Gaulois
+8x4 >> 8x4
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+10x3 >> 9x3
+age: 1
+
+Arbre -> 9x6
 -->>>>>>Jeu en mouvement: Tour 10
 -----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
-Arbre -> 10x1
-Gaulois 10x3 >> 10x4
-Gaulois 3x3 >> 2x3
-Arbre -> 2x4
-Gauloise 1x5 >> 2x5
-Gauloise 2x5 >> 2x6
-Arbre -> 2x7
-Arbre -> 3x2
-Gauloise 3x6 >> 3x6
-Gauloise 4x4 >> 4x5
-Arbre -> 4x6
-Gauloise 4x1 >> 5x1
-Gauloise 4x2 >> 5x2
-Gaulois 5x2 >> 6x2
-Arbre -> 6x6
-Gaulois 8x3 >> 7x3
-Arbre -> 7x5
-Gauloise 8x7 >> 7x7
-Gaulois 9x2 >> 8x2
-Gauloise 9x3 >> 9x2
-Gauloise 10x4 >> 9x4
-Arbre -> 9x5
+Arbre -> 10x5
+Arbre -> 10x7
+Arbre -> 1x1
+ Gaulois
+1x6 >> 1x5
+age: 1
+
+Arbre -> 2x1
+Arbre -> 2x3
+ Gauloise
+3x4 >> 2x4
+age: 1
+
+ Gauloise
+1x7 >> 2x7
+age: 1
+
+Arbre -> 3x3
+Arbre -> 4x1
+ Gauloise
+5x6 >> 4x6
+age: 1
+
+Arbre -> 4x7
+Arbre -> 5x3
+ Gauloise
+6x1 >> 6x2
+age: 1
+
+Arbre -> 6x4
+ Gauloise
+6x6 >> 6x5
+age: 1
+
+ Gaulois
+5x7 >> 6x7
+age: 1
+
+ Gauloise
+8x3 >> 7x3
+age: 1
+
+ Gaulois
+7x3 >> 7x4
+age: 1
+
+ Gaulois
+7x1 >> 8x1
+age: 1
+
+ Gaulois
+8x1 >> 8x2
+age: 1
+
+ Gaulois
+8x4 >> 8x5
+age: 1
+
+Arbre -> 8x7
+ Gaulois
+10x2 >> 9x2
+age: 1
+
+ Gaulois
+9x3 >> 9x3
+age: 1
+
+Arbre -> 9x6

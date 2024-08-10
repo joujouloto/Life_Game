@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include <ctime>
 
 
 #include "Jeu.h"
@@ -12,10 +13,22 @@
 
 using namespace std;
 
-using _it_map = map<string,shared_ptr<Objet>>::iterator;
-
 
 //Fonctions pour tester le code du projet
+
+//Afficher la date à chaque fois qu'il y a un test
+
+void afficher_date()
+{
+	time_t tmm = time(0);
+	// convertir en forme de chaîne
+	char* dt = ctime(&tmm);
+	//cout << "La date et l'heure locales sont: " << dt << endl;
+	// convertir en tm struct pour UTC
+	tm *g = gmtime(&tmm);
+	dt = asctime(g);
+	cout << endl << endl << "La date et l'heure UTC sont:"<< dt << endl << endl;
+}
 
 
 //meme_nombre_d_elements_a_la_creation
@@ -26,8 +39,12 @@ using _it_map = map<string,shared_ptr<Objet>>::iterator;
 
 void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE )
 {
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "meme_nombre_d_elements_a_la_creation/tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne.txt";
+	
+	
 	fstream file;
-    file.open("../../tests/meme_nombre_d_elements_a_la_creation/tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	
@@ -40,6 +57,11 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, uns
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	
+	
+	//
+	afficher_date();
 	
 	
 	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -72,17 +94,27 @@ void tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(unsigned NB_LIGNES, uns
 	
 	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 	
+	
+	
+	//On redirige la sortie standard vers la sortie normale et on ferme le fichier
 	cout.rdbuf(stream_buffer_cout);
 	
 	
 	file.close();
+	
+	
 }
 
 //Ici, on prévoit une grille de 10x10 juste pour simplifier. Quand le test sera bien établi, on modifiera la taille de la grille
 void tests_en_boucle_meme_nb_elts()
 {
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "meme_nombre_d_elements_a_la_creation/meme_nb_elts.txt";
+	
+	
+	
 	fstream file;
-    file.open("../../tests/meme_nombre_d_elements_a_la_creation/meme_nb_elts.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -94,6 +126,9 @@ void tests_en_boucle_meme_nb_elts()
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	
+	afficher_date();
 	
 	
 	//Variable aléatoire
@@ -116,9 +151,20 @@ void tests_en_boucle_meme_nb_elts()
 	int nb_tests_faux = 0;
 	
 	
+	//grille de 10x10
+	int nb_lignes = 20;
+	int nb_colonnes = 20;
+	
 	
 	cout << "tests en boucle pour verifier si on cree tel nombre d'elements, on a bien ce nombre d'elements a l'arrivee " << endl;
 	cout << "Nombre de tests réalisés: " << nb_tests << endl;
+	
+	
+	
+	
+	
+	cout << "Nombre de lignes: " << nb_lignes << endl;
+	cout << "Nombre de colonnes: " << nb_colonnes << endl;
 	
 	
 	while (num_test <= nb_tests)
@@ -127,22 +173,24 @@ void tests_en_boucle_meme_nb_elts()
 		
 		nb_elts_prevus_de_creer = dis(gen);
 		
-		//grille de 10x10
-		Jeu jeu = Jeu(10,10,nb_elts_prevus_de_creer);
 		
-		cout << "Nombre d'elements prevus a creer: " << nb_elts_prevus_de_creer * 10 << endl;
+		Jeu jeu = Jeu(nb_lignes,nb_colonnes,nb_elts_prevus_de_creer);
+		
+		cout << "Nombre d'elements prevus a creer: " << nb_elts_prevus_de_creer * nb_colonnes << endl;
 		cout << "Nombre reel d'elements crees : " << jeu.get_nb_total_elements_presents_dans_la_grille() << endl;
 		
 		
-		if(nb_elts_prevus_de_creer * 10 != jeu.get_nb_total_elements_presents_dans_la_grille())
+		if(nb_elts_prevus_de_creer * nb_colonnes != jeu.get_nb_total_elements_presents_dans_la_grille())
 		{
 			nb_tests_faux++;
 		}
 		num_test++;
 	}
 	
+	cout << "-----------------------------------Bilan----------------------------------------------" << endl;
 	cout << "nombre de tests où il n'y a pas le meme nombre d'elements prevus et reel:" << nb_tests_faux << endl;
 	cout <<  "Pourcentage de tests réussis:" << ((nb_tests - nb_tests_faux) / nb_tests)*100 << '%' <<endl;
+	cout << "--------------------------------------------------------------------------------------" << endl;
 	
 	
 	cout.rdbuf(stream_buffer_cout);
@@ -162,9 +210,12 @@ void tests_en_boucle_meme_nb_elts()
 
 void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 {
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "fonction_deplacement/tester_que_les_objets_se_deplacent_sans_collision.txt";
+	
 	
 	fstream file;
-    file.open("../../tests/fonction_deplacement/tester_que_les_objets_se_deplacent_sans_collision.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	
@@ -177,6 +228,9 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	
+	afficher_date();
 	
 	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 	
@@ -227,8 +281,15 @@ void tester_que_les_objets_se_deplacent_sans_collision(unsigned NB_LIGNES, unsig
 
 void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS)
 {
+	
+	
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "fonction_deplacement/tester_que_les_objets_se_deplacent_bien.txt";
+	
+	
+	
 	fstream file;
-    file.open("../../tests/fonction_deplacement/tester_que_les_objets_se_deplacent_bien.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	// Backup streambuffers of  cout
@@ -240,6 +301,8 @@ void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COL
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
 	
 	cout << "--------------------------------------------------------------------------------------------------------------------------------------------------" << endl;
 	
@@ -278,10 +341,11 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	int nb_elements_ou_on_applique_la_priorite = 0;
 	
 	
-	
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "fonction_deplacement/tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour.txt";
 	
 	fstream file;
-    file.open("../../tests/fonction_deplacement/tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -293,6 +357,8 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
 	
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
@@ -370,6 +436,17 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	file.close();
 }
 
+
+void tester_un_element_qui_se_deplace()
+{
+	
+}
+
+
+
+
+
+
 //----------------------------------------------------------------------------------------------------------------
 
 
@@ -379,8 +456,13 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 
 void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE)
 {
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "SDL/tester_la_SDL.txt";
+	
+	
+	
 	fstream file;
-    file.open("../../tests/SDL/tester_la_SDL.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -393,6 +475,8 @@ void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENT
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
 	
+	
+	afficher_date();
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
 	
@@ -415,8 +499,14 @@ void tester_la_SDL(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENT
 
 void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigned NB_ELEMENTS_INITIAUX_PAR_LIGNE, unsigned TOURS, unsigned age_de_deces_probable)
 {
+	
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "vieillissement/tester_le_nombre_de_morts.txt";
+	
+	
+	
 	fstream file;
-    file.open("../../tests/vieillissement/tester_le_nombre_de_morts.txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -428,6 +518,8 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
 	
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,NB_ELEMENTS_INITIAUX_PAR_LIGNE);
@@ -458,8 +550,14 @@ void tester_le_nombre_de_morts(unsigned NB_LIGNES, unsigned NB_COLONNES, unsigne
 
 void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsigned NB_LIGNES, unsigned NB_COLONNES)
 {
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "fonction_appliquer_les_regles_de_priorite/tester_la_fonction_priorite.txt";
+	
+	
+	
+	
 	fstream file;
-    file.open("../../tests/fonction_appliquer_les_regles_de_priorite/tester_de_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions().txt", ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -471,6 +569,8 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 	
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
 	
 	
 	Jeu jeu = Jeu(NB_LIGNES,NB_COLONNES,0);
@@ -577,22 +677,22 @@ void tester()
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(3,10,4);
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,5);
 	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,9);
-	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);*/
+	tester_qu_il_a_bien_tel_nombre_d_elements_par_ligne(7,10,10);
 	
-	//tester_que_les_objets_se_deplacent_sans_collision(3, 5, 2);
+	tester_que_les_objets_se_deplacent_sans_collision(3, 5, 2);
 	
 	
-	//tester_que_les_objets_se_deplacent_bien(10,7,3,10);
+	tester_que_les_objets_se_deplacent_bien(10,7,3,10);
 
-	//tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
+	tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(10,7,3,100);
 	
 	
-	//tester_la_SDL(10,7,3);
+	tester_la_SDL(10,7,3);
 	
-	//tester_le_nombre_de_morts(7,10,5,30,10);
+	tester_le_nombre_de_morts(7,10,5,30,10);
 	
-	//tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(10, 10);
-	
+	tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(10, 10);
+	*/
 	
 	tests_en_boucle_meme_nb_elts();
 	
