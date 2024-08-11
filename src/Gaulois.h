@@ -1,13 +1,32 @@
 #ifndef GAULOIS_H
 #define GAULOIS_H
 
-#include "Objet.h"
-
+//------------------------------------------------
 #include <iostream>
 
 #include <string>
 
+#include <memory>
+
+#include <random>
+
+#include <map>
+//------------------------------------------------
+
+
+//------------------------------------------------
+#include "Objet.h"
+
+
+
+//------------------------------------------------
+
+
 using namespace std;
+
+
+
+using _map = shared_ptr<map<string,shared_ptr<Objet>>>;
 
 class Gaulois : public Objet
 {
@@ -36,6 +55,8 @@ class Gaulois : public Objet
 	void seDeplacerA_Gauche();
 	void seDeplacerA_Droite();
 	void retournerAsonAnciennePosition();
+	
+	void seDeplacerAleatoirement(_map grille);
 	
 	
 	

@@ -46,6 +46,7 @@
 
 
 
+
 //-----------------------------------------------------------------------------------------------
 
 using namespace std;
@@ -284,6 +285,21 @@ unsigned Jeu::get_nb_elements_par_colonne(unsigned numero_colonne)
 	return nb_elements_par_la_colonne;
 }
 
+
+unsigned Jeu::get_nb_lignes_jeu()
+{
+	return nb_lignes;
+}
+
+unsigned Jeu::get_nb_colonnes_jeu()
+{
+	return nb_colonnes;
+}
+	
+	
+unsigned get_nb_colonnes_jeu();
+
+
 void Jeu::afficher_nb_elements_par_ligne()
 {
 	
@@ -404,20 +420,9 @@ void Jeu::faire_deplacer_objets_dans_grille_de_transition()
 	
 	shared_ptr<Objet> objet ;
 	
-	string numero_ligne_string = "0";
-	
-	string numero_colonne_string = "0";
-	
-	string cle = "0x0";
+	shared_ptr<Gaulois> gaulois_e;
 	
 	
-	
-	//bool si_un_objet_est_deja_dans_la_case = false;
-	
-	
-		
-	
-
 	for (_it_map it=grille->begin(); it!=grille->end(); ++it)
 	{
 		objet = it->second;
@@ -426,160 +431,24 @@ void Jeu::faire_deplacer_objets_dans_grille_de_transition()
 		{
 			arbre = dynamic_pointer_cast<Arbre> (objet);
 			
-			numero_ligne_string = to_string(arbre->getNumeroLigne());
-			numero_colonne_string = to_string(arbre->getNumeroColonne());
-			
-			cle = numero_ligne_string + "x" + numero_colonne_string;
-			//nouvelle_grille->insert(pair<string,shared_ptr<Objet>>(numero_ligne_string+"x"+numero_colonne_string,arbre));
-			
-			grille_de_transition->insert(pair<string,shared_ptr<Objet>>(cle,arbre));
+			grille_de_transition->insert(pair<string,shared_ptr<Objet>>(arbre->getPosition(),arbre));
 			
 		}
 		else if(objet->getNom()=="Gaulois"||objet->getNom()=="Gauloise")
 		{
 			
-			objet = faire_deplacer_un_gaulois_e_dans_grille(objet);
+			gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
 			
-			
-			numero_ligne_string = to_string(objet->getNumeroLigne());
-			numero_colonne_string = to_string(objet->getNumeroColonne());
-			
-			cle = numero_ligne_string + "x" + numero_colonne_string;
+			gaulois_e->seDeplacerAleatoirement(this->get_Map_normale());
 			
 			grille_de_transition->insert(
-			pair<string,shared_ptr<Objet>>(cle,objet));
+			pair<string,shared_ptr<Objet>>(gaulois_e->getPosition(),gaulois_e));
 			
 		}
 	}
 }
 
-shared_ptr<Objet> Jeu::faire_deplacer_un_gaulois_e_dans_grille(shared_ptr<Objet> objet)
-{
-	random_device rd;
-	
-	mt19937 gen(rd());
-	
-	int deplacement = 0 ;
-	
-	shared_ptr<Gaulois> gaulois_ou_gauloise;
-	 
-	uniform_int_distribution<> dis(1, 4);//uniform distribution between 1 and 4 
-	 
-	gaulois_ou_gauloise = dynamic_pointer_cast<Gaulois> (objet);
-	deplacement = dis(gen);
-			
-			
-			
-	if(deplacement==gauche)
-	{
-		
-		
-		if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise))
-		{
-			gaulois_ou_gauloise->seDeplacerA_Gauche();
-		}
-		else if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise))
-		{
-			gaulois_ou_gauloise->seDeplacerA_Droite();
-			
-		}
-		else if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
-			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise))
-		{
-			gaulois_ou_gauloise->seDeplacerEnBas();
-		}
-		
-		
-		
-		
-	}else if(deplacement==droite)
-	{
-		
-		if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise)  )
-		{
-			gaulois_ou_gauloise->seDeplacerA_Droite();
-			
-		} 
-		else if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise)	)	
-		{
-			gaulois_ou_gauloise->seDeplacerA_Gauche();
-		}
-		
-		else if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
-			 && case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise)	 	)			
-		{
-			gaulois_ou_gauloise->seDeplacerEnBas();
-		}
-		
-	}else if(deplacement==haut)
-	{
-		if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
-			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerEnBas();
-		}
-		else if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerA_Droite();
-			
-		} 
-		else if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )			
-		{
-			gaulois_ou_gauloise->seDeplacerA_Gauche();
-		}
-		
-	}else if(deplacement==bas)
-	{
-		if( ne_deborde_pas_par_le_bas(gaulois_ou_gauloise,nb_colonnes) 
-			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerEnBas();
-		}
-		else if( ne_deborde_pas_par_le_haut(gaulois_ou_gauloise) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise) )
-		{
-			gaulois_ou_gauloise->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_la_gauche(gaulois_ou_gauloise) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , gaulois_ou_gauloise))
-		{
-			gaulois_ou_gauloise->seDeplacerA_Gauche();
-		}
-		else if( ne_deborde_pas_par_la_droite(gaulois_ou_gauloise,nb_lignes) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , gaulois_ou_gauloise)  )
-		{
-			gaulois_ou_gauloise->seDeplacerA_Droite();
-			
-		} 
-	}
-	
-	return objet;
-}
+
 
 /*
 	On appelle collision lorsque 2 gaulois veulent aller sur la même case mais les gaulois peuvent se chevaucher, c'est à dire que si un gaulois est à 1x1 et veut aller

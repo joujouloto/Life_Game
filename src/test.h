@@ -34,7 +34,7 @@ void tester_que_les_objets_se_deplacent_bien(unsigned NB_LIGNES, unsigned NB_COL
 
 void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour();
 
-void tester_un_element_qui_se_deplace();
+void tester_un_element_qui_se_deplace_a_gauche();
 
 //----------------------------------------------------------------------------------------------------------------
 

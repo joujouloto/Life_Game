@@ -1,6 +1,10 @@
 #include "Gaulois.h"
 
 
+#include "constantes.h"
+
+
+
 //Constructeurs
 Gaulois::Gaulois(): Objet("Gaulois")
 {
@@ -92,11 +96,140 @@ string Gaulois::toString()
 
 void Gaulois::retournerAsonAnciennePosition()
 {
-	
-	
 	numero_ligne = ancienNumLigne;
 	numero_colonne = ancienNumColonne;
 }
+
+
+void Gaulois::seDeplacerAleatoirement(_map grille)
+{
+	random_device rd;
+	
+	mt19937 gen(rd());
+	
+	int deplacement = 0 ;
+	
+	
+	
+	
+	 
+	uniform_int_distribution<> dis(1, 4);//uniform distribution between 1 and 4 
+	 
+	
+	deplacement = dis(gen);
+			
+			
+			
+	if(deplacement==gauche)
+	{
+		if( ne_deborde_pas_par_la_gauche(this) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , this))
+		{
+			this->seDeplacerA_Gauche();
+		}/*
+		else if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this))
+		{
+			this->seDeplacerA_Droite();
+			
+		}
+		else if( ne_deborde_pas_par_le_haut(this) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre (grille , this) )
+		{
+			this->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
+			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this))
+		{
+			this->seDeplacerEnBas();
+		}
+		
+		
+		
+		*/
+	}/*else if(deplacement==droite)
+	{
+		
+		if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this)  )
+		{
+			this->seDeplacerA_Droite();
+			
+		} 
+		else if( ne_deborde_pas_par_la_gauche(this) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , this)	)	
+		{
+			this->seDeplacerA_Gauche();
+		}
+		
+		else if( ne_deborde_pas_par_le_haut(this) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
+		{
+			this->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
+			 && case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this)	 	)			
+		{
+			this->seDeplacerEnBas();
+		}
+		
+	}else if(deplacement==haut)
+	{
+		if( ne_deborde_pas_par_le_haut(this) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
+		{
+			this->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
+			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this) )
+		{
+			this->seDeplacerEnBas();
+		}
+		else if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this) )
+		{
+			this->seDeplacerA_Droite();
+			
+		} 
+		else if( ne_deborde_pas_par_la_gauche(this) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , this) )			
+		{
+			this->seDeplacerA_Gauche();
+		}
+		
+	}else if(deplacement==bas)
+	{
+		if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
+			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this) )
+		{
+			this->seDeplacerEnBas();
+		}
+		else if( ne_deborde_pas_par_le_haut(this) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
+		{
+			this->seDeplacerEnHaut();
+			
+		}
+		else if( ne_deborde_pas_par_la_gauche(this) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , this))
+		{
+			this->seDeplacerA_Gauche();
+		}
+		else if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this)  )
+		{
+			this->seDeplacerA_Droite();
+			
+		} 
+	}*/
+}
+
+
+
+
 
 //Incrémente l'âge
 void Gaulois::vieillir()

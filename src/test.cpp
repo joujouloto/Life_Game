@@ -11,6 +11,7 @@
 #include "constantes.h"
 
 
+
 using namespace std;
 
 
@@ -437,7 +438,7 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 }
 
 
-void tester_un_element_qui_se_deplace()
+void tester_un_element_qui_se_deplace_a_gauche()
 {
 	
 }
