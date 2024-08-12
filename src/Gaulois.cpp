@@ -59,24 +59,51 @@ void Gaulois::seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne)
 
 
 
-void Gaulois::seDeplacerEnHaut()
+void Gaulois::seDeplacerEnHaut(_map grille)
 {
-	seDeplacer(numero_ligne,numero_colonne-1);
+	if( ne_deborde_pas_par_le_haut(this) 
+			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
+	{
+		seDeplacer(numero_ligne,numero_colonne-1);
+	}
 }
 
-void Gaulois::seDeplacerEnBas()
+void Gaulois::seDeplacerEnBas(_map grille, int NB_COLONNES)
 {
-	seDeplacer(numero_ligne,numero_colonne+1);
+	if( ne_deborde_pas_par_le_bas(this,NB_COLONNES) 
+		&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this) )
+	{
+		seDeplacer(numero_ligne,numero_colonne+1);
+	}
+	
 }
 
-void Gaulois::seDeplacerA_Gauche()
+void Gaulois::seDeplacerA_Gauche(_map grille)
 {
-	seDeplacer(numero_ligne-1,numero_colonne);
+	
+	if( ne_deborde_pas_par_la_gauche(this) 
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , this))
+	{
+		seDeplacer(numero_ligne-1,numero_colonne);
+	}
+	
+	
+	
+	
+	
 }
 
-void Gaulois::seDeplacerA_Droite()
+void Gaulois::seDeplacerA_Droite(_map grille, int NB_LIGNES)
 {
-	seDeplacer(numero_ligne+1,numero_colonne);
+	
+	
+	if( ne_deborde_pas_par_la_droite(this,NB_LIGNES) 
+			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this)  )
+	{
+		seDeplacer(numero_ligne+1,numero_colonne);
+	}
+	
+	
 }
 
 //Retourne une description textuelle de gaulois
@@ -101,16 +128,13 @@ void Gaulois::retournerAsonAnciennePosition()
 }
 
 
-void Gaulois::seDeplacerAleatoirement(_map grille)
+void Gaulois::seDeplacerAleatoirement(_map grille, int NB_LIGNES, int NB_COLONNES)
 {
 	random_device rd;
 	
 	mt19937 gen(rd());
 	
 	int deplacement = 0 ;
-	
-	
-	
 	
 	 
 	uniform_int_distribution<> dis(1, 4);//uniform distribution between 1 and 4 
@@ -122,109 +146,23 @@ void Gaulois::seDeplacerAleatoirement(_map grille)
 			
 	if(deplacement==gauche)
 	{
-		if( ne_deborde_pas_par_la_gauche(this) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , this))
-		{
-			this->seDeplacerA_Gauche();
-		}/*
-		else if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this))
-		{
-			this->seDeplacerA_Droite();
-			
-		}
-		else if( ne_deborde_pas_par_le_haut(this) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre (grille , this) )
-		{
-			this->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
-			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this))
-		{
-			this->seDeplacerEnBas();
-		}
 		
+		this->seDeplacerA_Gauche(grille);
 		
-		
-		*/
-	}/*else if(deplacement==droite)
+
+	}else if(deplacement==droite)
 	{
-		
-		if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this)  )
-		{
-			this->seDeplacerA_Droite();
-			
-		} 
-		else if( ne_deborde_pas_par_la_gauche(this) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , this)	)	
-		{
-			this->seDeplacerA_Gauche();
-		}
-		
-		else if( ne_deborde_pas_par_le_haut(this) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
-		{
-			this->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
-			 && case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this)	 	)			
-		{
-			this->seDeplacerEnBas();
-		}
+
+		this->seDeplacerA_Droite(grille, NB_LIGNES);
 		
 	}else if(deplacement==haut)
 	{
-		if( ne_deborde_pas_par_le_haut(this) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
-		{
-			this->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
-			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this) )
-		{
-			this->seDeplacerEnBas();
-		}
-		else if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this) )
-		{
-			this->seDeplacerA_Droite();
-			
-		} 
-		else if( ne_deborde_pas_par_la_gauche(this) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , this) )			
-		{
-			this->seDeplacerA_Gauche();
-		}
+		this->seDeplacerEnHaut(grille);
 		
 	}else if(deplacement==bas)
 	{
-		if( ne_deborde_pas_par_le_bas(this,grille->get_nb_colonnes_jeu()) 
-			&& case_en_bas_n_est_pas_occupee_par_un_arbre (grille , this) )
-		{
-			this->seDeplacerEnBas();
-		}
-		else if( ne_deborde_pas_par_le_haut(this) 
-			&& case_en_haut_n_est_pas_occupee_par_un_arbre(grille , this) )
-		{
-			this->seDeplacerEnHaut();
-			
-		}
-		else if( ne_deborde_pas_par_la_gauche(this) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre(grille , this))
-		{
-			this->seDeplacerA_Gauche();
-		}
-		else if( ne_deborde_pas_par_la_droite(this,grille->get_nb_lignes_jeu()) 
-			&& case_a_droite_n_est_pas_occupee_par_un_arbre (grille , this)  )
-		{
-			this->seDeplacerA_Droite();
-			
-		} 
-	}*/
+		this->seDeplacerEnBas(grille, NB_COLONNES);	
+	}
 }
 
 

@@ -50,13 +50,13 @@ class Gaulois : public Objet
 	//Méthodes autres
 	string toString();
 	
-	void seDeplacerEnHaut();
-	void seDeplacerEnBas();
-	void seDeplacerA_Gauche();
-	void seDeplacerA_Droite();
+	void seDeplacerEnHaut(_map grille);
+	void seDeplacerEnBas(_map grille, int NB_COLONNES);
+	void seDeplacerA_Gauche(_map grille);
+	void seDeplacerA_Droite(_map grille, int NB_LIGNES);
 	void retournerAsonAnciennePosition();
 	
-	void seDeplacerAleatoirement(_map grille);
+	void seDeplacerAleatoirement(_map grille, int NB_LIGNES, int NB_COLONNES);
 	
 	
 	

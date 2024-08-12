@@ -1,0 +1,82 @@
+
+
+La date et l'heure UTC sont:Mon Aug 12 16:31:37 2024
+
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+1x5 >> 0x5
+age: 1
+
+
+
+La date et l'heure UTC sont:Mon Aug 12 16:47:01 2024
+
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+1x5 >> 0x5
+age: 1
+
+
+
+La date et l'heure UTC sont:Mon Aug 12 16:49:19 2024
+
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+0x0 >> 1x5
+age: 1
+
+
+
+La date et l'heure UTC sont:Mon Aug 12 16:52:24 2024
+
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+0x0 >> 1x5
+age: 1
+
+ Gaulois
+3x4 >> 2x4
+age: 1
+
+
+
+La date et l'heure UTC sont:Mon Aug 12 16:55:30 2024
+
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+0x0 >> 1x5
+age: 1
+
+ Gaulois
+3x4 >> 2x4
+age: 1
+
+La date et l'heure locales sont: Mon Aug 12 19:08:54 2024
+
+La date et l'heure UTC sont:Mon Aug 12 17:08:54 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+0x0 >> 1x5
+age: 1
+
+ Gaulois
+3x4 >> 2x4
+age: 1
+
+La date et l'heure locales sont: Mon Aug 12 19:09:42 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+0x0 >> 1x5
+age: 1
+
+ Gaulois
+3x4 >> 2x4
+age: 1
+

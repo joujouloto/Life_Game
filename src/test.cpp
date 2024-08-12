@@ -19,16 +19,22 @@ using namespace std;
 
 //Afficher la date à chaque fois qu'il y a un test
 
+
+
 void afficher_date()
 {
-	time_t tmm = time(0);
-	// convertir en forme de chaîne
-	char* dt = ctime(&tmm);
-	//cout << "La date et l'heure locales sont: " << dt << endl;
-	// convertir en tm struct pour UTC
-	tm *g = gmtime(&tmm);
-	dt = asctime(g);
-	cout << endl << endl << "La date et l'heure UTC sont:"<< dt << endl << endl;
+	// date / heure actuelle basée sur le système actuel
+   time_t tmm = time(0);
+   
+   // convertir en forme de chaîne
+   char* dt = ctime(&tmm);
+   cout << "La date et l'heure locales sont: " << dt << endl;
+   
+   
+   // convertir en tm struct pour UTC
+  /* tm *g = gmtime(&tmm);
+   dt = asctime(g);
+   cout << "La date et l'heure UTC sont:"<< dt << endl;*/
 }
 
 
@@ -437,11 +443,62 @@ void tester_qu_il_y_a_bien_le_meme_nombre_d_elements_apres_chaque_tour(unsigned 
 	file.close();
 }
 
-
 void tester_un_element_qui_se_deplace_a_gauche()
 {
 	
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "fonction_deplacement/tester_que_l_element_se_deplace_a_gauche.txt";
+	
+	fstream file;
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
+	
+	//---------------------------------------------------------------------------------------------------------------------------------
+	shared_ptr<Gaulois> gaulois_1;
+	shared_ptr<Gaulois> gaulois_2;
+	
+	Jeu jeu = Jeu(10,10,0);
+	
+	jeu.initialiser_map();
+	
+	
+	gaulois_1 = make_shared<Gaulois>(homme,1,5);
+	gaulois_1->seDeplacerA_Gauche(jeu.get_Map_normale());
+	jeu.ajouter_objet_dans_map_normale(gaulois_1);
+	
+	gaulois_2 = make_shared<Gaulois>(homme,3,4);
+	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
+	jeu.ajouter_objet_dans_map_normale(gaulois_2);
+	
+	
+	
+	jeu.afficher_contenu_de_la_grille();
+	
+	
+	//---------------------------------------------------------------------------------------------------------------------------------
+	
+	
+	
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
 }
+
 
 
 
@@ -695,8 +752,10 @@ void tester()
 	tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(10, 10);
 	*/
 	
-	tests_en_boucle_meme_nb_elts();
+	//tests_en_boucle_meme_nb_elts();
 	
+	
+	tester_un_element_qui_se_deplace_a_gauche();
 	
 }
 	

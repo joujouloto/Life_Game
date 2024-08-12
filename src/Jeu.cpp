@@ -297,9 +297,6 @@ unsigned Jeu::get_nb_colonnes_jeu()
 }
 	
 	
-unsigned get_nb_colonnes_jeu();
-
-
 void Jeu::afficher_nb_elements_par_ligne()
 {
 	
@@ -439,7 +436,7 @@ void Jeu::faire_deplacer_objets_dans_grille_de_transition()
 			
 			gaulois_e = dynamic_pointer_cast<Gaulois> (objet);
 			
-			gaulois_e->seDeplacerAleatoirement(this->get_Map_normale());
+			gaulois_e->seDeplacerAleatoirement(this->get_Map_normale(),this->get_nb_lignes_jeu(),this->get_nb_colonnes_jeu());
 			
 			grille_de_transition->insert(
 			pair<string,shared_ptr<Objet>>(gaulois_e->getPosition(),gaulois_e));
