@@ -80,3 +80,98 @@ age: 1
 3x4 >> 2x4
 age: 1
 
+La date et l'heure locales sont: Mon Aug 26 10:39:28 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois
+0x0 >> 1x4
+age: 1
+
+ Gaulois
+0x0 >> 1x5
+age: 1
+
+ Gaulois
+2x4 >> 1x4
+age: 1
+
+La date et l'heure locales sont: Mon Aug 26 11:03:04 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 -> 1x4
+Gaulois 1 -> 1x5
+Gaulois 2 -> 1x4
+La date et l'heure locales sont: Mon Aug 26 11:05:30 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois_3 -> 1x4
+Gaulois_1 -> 1x5
+Gaulois_2 -> 1x4
+La date et l'heure locales sont: Mon Aug 26 11:11:19 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 -> 1x4
+Gaulois 1 -> 1x5
+Gaulois 2 -> 1x4
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 11:16:28 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 -> 1x4
+Gaulois 1 -> 1x5
+Gaulois 2 -> 1x4
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 11:27:02 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 -> 1x4
+Gaulois 1 -> 1x5
+Gaulois 2 -> 1x4
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 11:27:45 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 -> 1x4
+Gaulois 1 -> 1x5
+Gaulois 2 -> 1x4
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 11:30:20 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 -> 1x4
+Gaulois 1 -> 1x5
+Gaulois 2 -> 1x4
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 11:55:09 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3
+Gaulois 1
+Gaulois 2
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 12:13:07 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 0x0 >> 1x4  age:1
+Gaulois 1 0x0 >> 1x5  age:1
+Gaulois 2 2x4 >> 1x4  age:1
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 12:14:03 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3 
+0x0 >> 1x4  age:1
+Gaulois 1 
+0x0 >> 1x5  age:1
+Gaulois 2 
+2x4 >> 1x4  age:1
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 12:15:27 2024
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+ Gaulois 3
+ 0x0 >> 1x4 age: 1
+ Gaulois 1
+ 0x0 >> 1x5 age: 1
+ Gaulois 2
+ 2x4 >> 1x4 age: 1

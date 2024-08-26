@@ -453,6 +453,9 @@ void tester_un_element_qui_se_deplace_a_gauche()
     file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
     string line;
 	
+	
+	
+	
 	 // Backup streambuffers of  cout
     streambuf* stream_buffer_cout = cout.rdbuf();
     streambuf* stream_buffer_cin = cin.rdbuf();
@@ -463,25 +466,41 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	// Redirect cout to file
     cout.rdbuf(stream_buffer_file);
 	
+	
+	cout << "Test de la fonction se deplacer a gauche " << endl;
+	
 	afficher_date();
 	
 	//---------------------------------------------------------------------------------------------------------------------------------
 	shared_ptr<Gaulois> gaulois_1;
 	shared_ptr<Gaulois> gaulois_2;
+	shared_ptr<Gaulois> gaulois_3;
 	
 	Jeu jeu = Jeu(10,10,0);
 	
 	jeu.initialiser_map();
 	
-	
+	//--------------------------------------------------------------
 	gaulois_1 = make_shared<Gaulois>(homme,1,5);
 	gaulois_1->seDeplacerA_Gauche(jeu.get_Map_normale());
 	jeu.ajouter_objet_dans_map_normale(gaulois_1);
 	
+	//--------------------------------------------------------------
 	gaulois_2 = make_shared<Gaulois>(homme,3,4);
 	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
 	jeu.ajouter_objet_dans_map_normale(gaulois_2);
 	
+	
+	//--------------------------------------------------------------
+	gaulois_3 = make_shared<Gaulois>(homme,1,4);
+	
+	jeu.ajouter_objet_dans_map_normale(gaulois_3);
+	
+	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
+	
+	
+	
+	//--------------------------------------------------------------
 	
 	
 	jeu.afficher_contenu_de_la_grille();

@@ -59,6 +59,8 @@ class Gaulois : public Objet
 	void seDeplacerAleatoirement(_map grille, int NB_LIGNES, int NB_COLONNES);
 	
 	
+	void setNom(string pNom);
+	
 	
 	
 	void vieillir();
@@ -71,6 +73,9 @@ class Gaulois : public Objet
 	char sexe;
 	unsigned ancienNumLigne;
 	unsigned ancienNumColonne;
+	
+	static int nb_gaulois ;
+	
 	
 	
 };

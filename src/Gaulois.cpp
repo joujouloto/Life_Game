@@ -1,9 +1,10 @@
 #include "Gaulois.h"
 
+#include <sstream>
 
 #include "constantes.h"
 
-
+int Gaulois::nb_gaulois = 0;
 
 //Constructeurs
 Gaulois::Gaulois(): Objet("Gaulois")
@@ -12,6 +13,16 @@ Gaulois::Gaulois(): Objet("Gaulois")
 	sexe = 'M';
 	ancienNumLigne = 0;
 	ancienNumColonne = 0;
+	
+	nb_gaulois++;
+	
+	
+	
+	setNom(nom+" "+to_string(nb_gaulois));
+	
+	setType("Gaulois");
+	
+	
 }
 
 
@@ -27,6 +38,12 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	{
 		nom = "Gauloise";
 	}
+	
+	nb_gaulois++;
+	
+	setNom(nom+" "+to_string(nb_gaulois));
+	
+	setType("Gaulois");
 }
 
 
@@ -43,6 +60,13 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 	{
 		nom = "Gauloise";
 	}
+	
+	
+	nb_gaulois++;
+	
+	setNom(nom+" "+to_string(nb_gaulois));
+	
+	setType("Gaulois");
 }
 
 
@@ -109,13 +133,32 @@ void Gaulois::seDeplacerA_Droite(_map grille, int NB_LIGNES)
 //Retourne une description textuelle de gaulois
 string Gaulois::toString()
 {
-	return " "+nom+
-	"\n"+to_string(getAncienneLigne())+"x"+to_string(getAncienneColonne())+
+
+	stringstream ss;
+	
+	ss << nom;
+	ss << "\n";
+	ss << getAncienneLigne();
+	ss << "x";
+	ss << getAncienneColonne();
+	ss << " >> ";
+	ss << numero_ligne;
+	ss << "x";
+	ss << numero_colonne;
+	ss << " ";
+	ss << "\nage:";
+	ss << age;
+
+	return ss.str();
+	
+	/*
+	return " "+nom+"\n"+
+	" "+to_string(getAncienneLigne())+"x"+to_string(getAncienneColonne())+
 	" >> "+
 	to_string(numero_ligne)+"x"+to_string(numero_colonne)+
-	"\nage: "+to_string(age)/*
+	" age: "+to_string(age)/*
 	"  || sexe: "+sexe+*/
-	+"\n";
+	;
 	
 	
 			
@@ -165,7 +208,10 @@ void Gaulois::seDeplacerAleatoirement(_map grille, int NB_LIGNES, int NB_COLONNE
 	}
 }
 
-
+void Gaulois::setNom(string pNom)
+{
+	nom = pNom;
+}
 
 
 

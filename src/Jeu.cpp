@@ -233,7 +233,9 @@ void Jeu::afficher_contenu_de_la_grille()
 	for ( _it_map it=grille->begin(); it!=grille->end(); ++it) 
 	{	
 
-		if(it->second->getNom()=="Gaulois"||it->second->getNom()=="Gauloise")
+		
+
+		if(it->second->getType()=="Gaulois")
 		{
 			gaulois = dynamic_pointer_cast<Gaulois> (it->second);
 			
@@ -242,6 +244,7 @@ void Jeu::afficher_contenu_de_la_grille()
 		}else
 		{
 			cout << it->second->getNom()<< " -> "<< it->second->getNumeroLigne() << "x" << it->second->getNumeroColonne()<<endl;
+			
 		}
 	}
 	
@@ -424,14 +427,14 @@ void Jeu::faire_deplacer_objets_dans_grille_de_transition()
 	{
 		objet = it->second;
 		
-		if(objet->getNom()=="Arbre")
+		if(objet->getType="Arbre")
 		{
 			arbre = dynamic_pointer_cast<Arbre> (objet);
 			
 			grille_de_transition->insert(pair<string,shared_ptr<Objet>>(arbre->getPosition(),arbre));
 			
 		}
-		else if(objet->getNom()=="Gaulois"||objet->getNom()=="Gauloise")
+		else if(objet->getType()=="Gaulois")
 		{
 			
 			gaulois_e = dynamic_pointer_cast<Gaulois> (objet);

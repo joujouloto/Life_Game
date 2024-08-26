@@ -9,6 +9,8 @@ Objet::Objet()
 	nom = "Objet";
 	numero_ligne = 0;
 	numero_colonne = 0;
+	
+	type = "Objet";
 }
 
 Objet::Objet(string pNom)
@@ -16,6 +18,8 @@ Objet::Objet(string pNom)
 	nom = pNom;
 	numero_ligne = 0;
 	numero_colonne = 0;
+	
+	type = "Objet";
 }
 
 Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
@@ -23,6 +27,8 @@ Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
 	nom = "Objet";
 	numero_ligne = pNumero_ligne;
 	numero_colonne = pNumero_colonne;
+	
+	type = "Objet";
 }
 
 Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
@@ -30,6 +36,8 @@ Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
 	nom = pNom;
 	numero_ligne = pNumero_ligne;
 	numero_colonne = pNumero_colonne;
+	
+	type = "Objet";
 }
 
 
@@ -48,6 +56,11 @@ unsigned Objet::getNumeroColonne()
 {
 	return numero_colonne;
 }
+
+string Objet::getType()
+{
+	return type;
+}
 	
 //Retourne une description de l'objet
 /*string Objet:: toString()
@@ -65,6 +78,10 @@ string Objet::getPosition()
 
 //Setters
 
+void Objet::setType(string pType)
+{
+	type = pType;
+}
 
 
 

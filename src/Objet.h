@@ -25,10 +25,11 @@ class Objet
 	unsigned getNumeroLigne();
 	unsigned getNumeroColonne();
 	string getPosition();
+	string getType();
 	
 	//Set
 	void setNom(string pNom);
-	
+	void setType(string pType);
 	
 	//Retourne une description de l'objet
 	virtual string toString() = 0;
@@ -39,6 +40,9 @@ class Objet
 	
 	
 	protected:
+	
+	
+	string type;
 	
 	string nom;
 	unsigned numero_ligne;
