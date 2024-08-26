@@ -467,7 +467,7 @@ void tester_un_element_qui_se_deplace_a_gauche()
     cout.rdbuf(stream_buffer_file);
 	
 	
-	cout << "Test de la fonction se deplacer a gauche " << endl;
+	cout << "-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------" << endl;
 	
 	afficher_date();
 	
@@ -486,7 +486,7 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	jeu.ajouter_objet_dans_map_normale(gaulois_1);
 	
 	//--------------------------------------------------------------
-	gaulois_2 = make_shared<Gaulois>(homme,3,4);
+	gaulois_2 = make_shared<Gaulois>(homme,4,4);
 	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
 	jeu.ajouter_objet_dans_map_normale(gaulois_2);
 	
@@ -494,9 +494,12 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	//--------------------------------------------------------------
 	gaulois_3 = make_shared<Gaulois>(homme,1,4);
 	
+	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
+	
 	jeu.ajouter_objet_dans_map_normale(gaulois_3);
 	
-	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
+	cout << "nombre de gaulois crees depuis l'instanciation du premier gaulois: " << gaulois_3->get_nb_gaulois_crees() << endl ;
+	
 	
 	
 	
@@ -508,11 +511,38 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	
 	//---------------------------------------------------------------------------------------------------------------------------------
 	
+	cout << " On regarde si les coordonnees dans gaulois ont changé " << endl;
+	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
+	jeu.ajouter_objet_dans_map_normale(gaulois_2);
+	cout << gaulois_2->toString() << endl;
 	
+	
+		
+	//---------------------------------------------------------------------------------------------------------------------------------
+	
+	jeu.afficher_contenu_de_la_grille();
+	
+	
+	//---------------------------------------------------------------------------------------------------------------------------------
 	
 	
 	
 	cout.rdbuf(stream_buffer_cout);
+	
+
+	
+	
+	/*
+		Les coordonnees changent dans gaulois mai spas dans jeu , c'est normal grill est de type map
+	
+	
+	
+	
+	*/
+	
+	
+	
+	
 	
 	
 	file.close();

@@ -239,6 +239,7 @@ void Jeu::afficher_contenu_de_la_grille()
 		{
 			gaulois = dynamic_pointer_cast<Gaulois> (it->second);
 			
+			cout << it->first << endl;
 			cout << gaulois->toString()<< endl;
 			
 		}else
@@ -427,7 +428,7 @@ void Jeu::faire_deplacer_objets_dans_grille_de_transition()
 	{
 		objet = it->second;
 		
-		if(objet->getType="Arbre")
+		if(objet->getType()=="Arbre")
 		{
 			arbre = dynamic_pointer_cast<Arbre> (objet);
 			

@@ -45,6 +45,7 @@ class Gaulois : public Objet
 	unsigned getAncienneLigne();
 	unsigned getAncienneColonne();
 	unsigned getAge();
+	int get_nb_gaulois_crees();
 	
 	
 	//Méthodes autres

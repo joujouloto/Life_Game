@@ -119,7 +119,7 @@ Gaulois * gaulois_ou_gauloise)
 		objet = it->second;
 	
 	
-		if( objet->getNom() == "Arbre" )
+		if( objet->getType() == "Arbre" )
 		{
 			case_vide = false;			
 		}
@@ -161,7 +161,7 @@ Gaulois * gaulois_ou_gauloise)
 		objet = it->second;
 	
 	
-		if( objet->getNom() == "Arbre" )
+		if( objet->getType() == "Arbre" )
 		{
 			case_vide = false;			
 		}
@@ -201,7 +201,7 @@ Gaulois * gaulois_ou_gauloise)
 		objet = it->second;
 	
 	
-		if( objet->getNom() == "Arbre" )
+		if( objet->getType() == "Arbre" )
 		{
 			case_vide = false;			
 		}
@@ -240,7 +240,7 @@ Gaulois * gaulois_ou_gauloise)
 		objet = it->second;
 	
 	
-		if( objet->getNom() == "Arbre" )
+		if( objet->getType() == "Arbre" )
 		{
 			case_vide = false;			
 		}

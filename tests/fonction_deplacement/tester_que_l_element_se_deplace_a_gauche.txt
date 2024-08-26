@@ -175,3 +175,437 @@ La date et l'heure locales sont: Mon Aug 26 12:15:27 2024
  0x0 >> 1x5 age: 1
  Gaulois 2
  2x4 >> 1x4 age: 1
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 13:23:02 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3
+0x0 >> 1x4 
+age:1
+Gaulois 1
+0x0 >> 1x5 
+age:1
+Gaulois 2
+2x4 >> 1x4 
+age:1
+Test de la fonction se deplacer a gauche 
+La date et l'heure locales sont: Mon Aug 26 13:24:28 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 13:25:33 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 13:30:33 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 13:53:39 2024
+
+emplacement deja pris 
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:01:14 2024
+
+----------------Place deja prise--------------------------------------------
+Gaulois 2 ne peut pas prendre la place car 
+Gaulois 2 occupe deja la place 
+-----------------------------------------------------------------------------
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:08:39 2024
+
+----------------Place deja prise--------------------------------------------
+Gaulois 2 ne peut pas prendre la place 2x4 car 
+Gaulois 2 occupe deja la place 
+-----------------------------------------------------------------------------
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:29:04 2024
+
+----------------Place deja prise--------------------------------------------
+Gaulois 2 ne peut pas prendre la place 2x4 car 
+Gaulois 2 occupe deja la place 
+-----------------------------------------------------------------------------
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:39:24 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:41:48 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:43:00 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:47:11 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+2x4
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+ On regarde si les coordonnees dans gaulois ont changé 
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:48:25 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+3x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+ On regarde si les coordonnees dans gaulois ont changé 
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:50:42 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+3x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+ On regarde si les coordonnees dans gaulois ont changé 
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:55:33 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+3x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+ On regarde si les coordonnees dans gaulois ont changé 
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+3x4
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-------------------------------------------Test de la fonction se deplacer a gauche--------------------------------------
+La date et l'heure locales sont: Mon Aug 26 14:56:35 2024
+
+nombre de gaulois crees depuis l'instanciation du premier gaulois: 3
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+3x4
+Gaulois 2
+3x4 >> 2x4 
+age:1
+
+ On regarde si les coordonnees dans gaulois ont changé 
+Gaulois 2
+2x4 >> 1x4 
+age:1
+
+-----------------------------------------------CONTENU_DE_LA_GRILLE---------------------------------
+1x4
+Gaulois 3
+0x0 >> 1x4 
+age:1
+
+1x5
+Gaulois 1
+0x0 >> 1x5 
+age:1
+
+3x4
+Gaulois 2
+2x4 >> 1x4 
+age:1
+

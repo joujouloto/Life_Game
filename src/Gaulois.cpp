@@ -104,12 +104,16 @@ void Gaulois::seDeplacerEnBas(_map grille, int NB_COLONNES)
 
 void Gaulois::seDeplacerA_Gauche(_map grille)
 {
+	shared_ptr<Objet> objet;
 	
 	if( ne_deborde_pas_par_la_gauche(this) 
-			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , this))
+			&& case_a_gauche_n_est_pas_occupee_par_un_arbre (grille , this)
+	)
 	{
 		seDeplacer(numero_ligne-1,numero_colonne);
+		
 	}
+	
 	
 	
 	
@@ -148,18 +152,9 @@ string Gaulois::toString()
 	ss << " ";
 	ss << "\nage:";
 	ss << age;
+	ss << "\n";
 
 	return ss.str();
-	
-	/*
-	return " "+nom+"\n"+
-	" "+to_string(getAncienneLigne())+"x"+to_string(getAncienneColonne())+
-	" >> "+
-	to_string(numero_ligne)+"x"+to_string(numero_colonne)+
-	" age: "+to_string(age)/*
-	"  || sexe: "+sexe+*/
-	;
-	
 	
 			
 }
@@ -237,6 +232,11 @@ unsigned Gaulois::getAge()
 	return age;
 }
 
+
+int Gaulois::get_nb_gaulois_crees()
+{
+	return nb_gaulois;
+}
 
 
 
