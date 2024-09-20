@@ -28,6 +28,7 @@ class Arbre : public Objet
 	
 	protected:
 	static int nb_arbres;
+	int age;
 	
 	
 };

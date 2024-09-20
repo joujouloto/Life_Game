@@ -1,17 +1,54 @@
-La date et l'heure locales sont: Fri Sep 20 15:07:01 2024
-
-La date et l'heure locales sont: Fri Sep 20 15:08:55 2024
-
-La date et l'heure locales sont: Fri Sep 20 15:14:19 2024
+La date et l'heure locales sont: Fri Sep 20 15:41:18 2024
 
 -------------------------Contenu de la grille---------------------------------------------------
+
 Gaulois 1
 0x0 >> 7x5 
 age:1
+
 Gaulois 2
 0x0 >> 10x3 
 age:1
-Gaulois 3
+
+Gauloise 3
 0x0 >> 4x3 
 age:1
 
+Arbre 1
+2x5
+age:1
+Arbre 2
+6x2
+age:1
+Arbre 3
+7x7
+age:1
+ La date et l'heure locales sont: Fri Sep 20 15:43:56 2024
+
+-------------------------Contenu de la grille---------------------------------------------------
+
+Gaulois 1
+0x0 >> 7x5 
+age:1
+
+Gaulois 2
+0x0 >> 10x3 
+age:1
+
+Gauloise 3
+0x0 >> 4x3 
+age:1
+
+Arbre 1
+2x5
+age:1
+
+Arbre 2
+6x2
+age:1
+
+Arbre 3
+7x7
+age:1
+
+ 

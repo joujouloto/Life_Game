@@ -77,6 +77,11 @@ void Jeu_v2::initialiser_grille()
 	gaulois_2,
 	gaulois_3;
 	
+	shared_ptr<Arbre> arbre_1,
+	arbre_2,
+	arbre_3;
+	
+	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
 	grille->insert(gaulois_1);
 	
@@ -84,8 +89,19 @@ void Jeu_v2::initialiser_grille()
 	gaulois_2 = make_shared<Gaulois>(homme,10,3);
 	grille->insert(gaulois_2);
 	
-	gaulois_3 = make_shared<Gaulois>(homme,4,3);
+	gaulois_3 = make_shared<Gaulois>(femme,4,3);
 	grille->insert(gaulois_3);
+	
+	
+	
+	arbre_1 = make_shared<Arbre>(2,5);
+	grille->insert(arbre_1);
+	
+	arbre_2 = make_shared<Arbre>(6,2);
+	grille->insert(arbre_2);
+	
+	arbre_3 = make_shared<Arbre>(7,7);
+	grille->insert(arbre_3);
 	
 	
 }
@@ -105,6 +121,8 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	{
 		 objet = *it;
 		
+		
+		ss << "\n";
 		
 		if(objet->getType()=="Gaulois")
 		{
@@ -128,7 +146,9 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	
 	
 	
-	ss << "\n";
+	ss << "\n ";
+	
+
 	
 	
 	
