@@ -2,6 +2,8 @@
 
 #include <sstream>
 
+#include <list>
+
 #include "constantes.h"
 
 int Gaulois::nb_gaulois = 0;
@@ -21,6 +23,8 @@ Gaulois::Gaulois(): Objet("Gaulois")
 	setNom(nom+" "+to_string(nb_gaulois));
 	
 	setType("Gaulois");
+	
+	coordonnees_par_ou_passait_gaulois.push_back(Position(0,0));
 	
 	
 }
@@ -44,6 +48,8 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	setNom(nom+" "+to_string(nb_gaulois));
 	
 	setType("Gaulois");
+	
+	coordonnees_par_ou_passait_gaulois.push_back(Position(0,0));
 }
 
 
@@ -67,6 +73,10 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 	setNom(nom+" "+to_string(nb_gaulois));
 	
 	setType("Gaulois");
+	
+	
+	coordonnees_par_ou_passait_gaulois.push_back(Position(0,0));
+	coordonnees_par_ou_passait_gaulois.push_back(Position(pNumero_ligne,pNumero_colonne));
 }
 
 
@@ -79,6 +89,9 @@ void Gaulois::seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne)
 	
 	numero_ligne = pNumero_ligne;
 	numero_colonne = pNumero_colonne;
+	
+	coordonnees_par_ou_passait_gaulois.push_back(Position(pNumero_ligne,pNumero_colonne));
+	
 }
 
 
@@ -237,6 +250,24 @@ int Gaulois::get_nb_gaulois_crees()
 {
 	return nb_gaulois;
 }
+
+string Gaulois::getDeplacements()
+{
+	stringstream ss;
+	Position p;
+	
+	for (list<Position>::iterator it=coordonnees_par_ou_passait_gaulois.begin(); it != coordonnees_par_ou_passait_gaulois.end(); ++it)
+	{
+		p = *it;
+		
+		
+		ss << ";" << p.toString();
+	}
+    
+	return ss.str();
+}
+
+
 
 
 

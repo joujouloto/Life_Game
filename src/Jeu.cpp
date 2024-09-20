@@ -365,6 +365,10 @@ void Jeu::ajouter_objet_dans_map_normale(shared_ptr<Objet> objet)
 	grille->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
 }
 
+
+
+
+
 void Jeu::ajouter_objet_dans_grille_de_transition(shared_ptr<Objet> objet)
 {
 	grille_de_transition->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
@@ -379,6 +383,12 @@ void Jeu::ajouter_objet_dans_map_contenant_que_les_elements_en_collision_ou_on_a
 {
 	map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite->insert(pair<string,shared_ptr<Objet>>(objet->getPosition(),objet));
 }
+
+//-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 //--------------------------------------------------------------------------------------------------
 

@@ -11,11 +11,15 @@
 #include <random>
 
 #include <map>
+
+#include <list>
 //------------------------------------------------
 
 
 //------------------------------------------------
 #include "Objet.h"
+
+#include "Position.h"
 
 
 
@@ -46,6 +50,7 @@ class Gaulois : public Objet
 	unsigned getAncienneColonne();
 	unsigned getAge();
 	int get_nb_gaulois_crees();
+	string getDeplacements();
 	
 	
 	//Méthodes autres
@@ -74,6 +79,9 @@ class Gaulois : public Objet
 	char sexe;
 	unsigned ancienNumLigne;
 	unsigned ancienNumColonne;
+	list<Position> coordonnees_par_ou_passait_gaulois;
+	
+	
 	
 	static int nb_gaulois ;
 	

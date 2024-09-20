@@ -478,7 +478,6 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	
 	Jeu jeu = Jeu(10,10,0);
 	
-	jeu.initialiser_map();
 	
 	//--------------------------------------------------------------
 	gaulois_1 = make_shared<Gaulois>(homme,1,5);
@@ -487,12 +486,13 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	
 	//--------------------------------------------------------------
 	gaulois_2 = make_shared<Gaulois>(homme,4,4);
+	jeu.get_Map_normale()->erase(gaulois_2->getPosition());
 	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
 	jeu.ajouter_objet_dans_map_normale(gaulois_2);
 	
 	
 	//--------------------------------------------------------------
-	gaulois_3 = make_shared<Gaulois>(homme,1,4);
+	gaulois_3 = make_shared<Gaulois>(homme,5,4);
 	
 	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
 	
@@ -512,8 +512,14 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	//---------------------------------------------------------------------------------------------------------------------------------
 	
 	cout << " On regarde si les coordonnees dans gaulois ont changé " << endl;
+	
+	
+	
+	
 	gaulois_2->seDeplacerA_Gauche(jeu.get_Map_normale());
+	
 	jeu.ajouter_objet_dans_map_normale(gaulois_2);
+	
 	cout << gaulois_2->toString() << endl;
 	
 	
@@ -533,7 +539,7 @@ void tester_un_element_qui_se_deplace_a_gauche()
 	
 	
 	/*
-		Les coordonnees changent dans gaulois mai spas dans jeu , c'est normal grill est de type map
+		Les coordonnees changent dans gaulois mais pas dans jeu , c'est normal grille est de type map
 	
 	
 	
@@ -773,6 +779,49 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 
 //----------------------------------------------------------------------------------------------------------------
 
+
+void tester_affichage_deplacements()
+{
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "affichage_deplacements.txt";
+	
+	
+	
+	
+	fstream file;
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
+	
+	shared_ptr<Gaulois> gaulois_1;
+	
+	gaulois_1 = make_shared<Gaulois>(homme,7,5);
+	gaulois_1->seDeplacer(2,5);
+	gaulois_1->seDeplacer(9,4);
+	gaulois_1->seDeplacer(1,1);
+	gaulois_1->seDeplacer(5,8);
+	
+	cout << gaulois_1->getDeplacements() << endl;
+	
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+}
+
 void tester()
 {
 	
@@ -804,7 +853,9 @@ void tester()
 	//tests_en_boucle_meme_nb_elts();
 	
 	
-	tester_un_element_qui_se_deplace_a_gauche();
+	//tester_un_element_qui_se_deplace_a_gauche();
+	
+	tester_affichage_deplacements();
 	
 }
 	

@@ -97,9 +97,6 @@ class Jeu
 	void ajouter_objet_dans_map_contenant_que_les_elements_en_collision_ou_on_applique_la_priorite(shared_ptr<Objet> objet);
 	
 	
-	
-	
-	
 	//méthodes pour faire correctement déplacer les objets sur la grille
 	void faire_deplacer_objets_dans_grille_de_transition();
 	//shared_ptr<Objet> faire_deplacer_un_gaulois_e_dans_grille(shared_ptr<Objet> objet);
