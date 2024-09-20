@@ -70,6 +70,9 @@ Jeu_v2::Jeu_v2()
 
 void Jeu_v2::initialiser_grille()
 {
+	grille = make_shared< set <shared_ptr<Objet> > > ();
+	
+	
 	shared_ptr<Gaulois> gaulois_1,
 	gaulois_2,
 	gaulois_3;
