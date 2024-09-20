@@ -20,9 +20,14 @@ class Arbre : public Objet
 	string  toString();
 	
 	
+	//set
+	void setNom(string pNom);
+	
+	
 	
 	
 	protected:
+	static int nb_arbres;
 	
 	
 };

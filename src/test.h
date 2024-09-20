@@ -64,7 +64,9 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 
 void tester_affichage_deplacements();
 
+//-----------------------------------------------------------------------------------------------------------------
 
+void tester_nouvelle_architecture_de_conception();
 
 
 

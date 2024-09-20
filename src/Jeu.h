@@ -39,6 +39,7 @@ class Jeu
 	public:
 	
 	//Constructeurs
+	Jeu();
 	Jeu(unsigned p_nb_lignes, unsigned p_nb_colonnes, unsigned p_nb_elements_a_mettre_par_ligne);
 	
 	

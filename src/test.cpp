@@ -9,6 +9,7 @@
 #include "Jeu.h"
 #include "Gaulois.h"
 #include "constantes.h"
+#include "Jeu_v2.h"
 
 
 
@@ -822,6 +823,55 @@ void tester_affichage_deplacements()
 	file.close();
 }
 
+void tester_nouvelle_architecture_de_conception()
+{
+	string chemin_dossier_tests = "../../tests/";
+	string chemin_fichier = "nouvelle_architecture/premier_test.txt";
+	
+	
+	
+	
+	fstream file;
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
+    string line;
+	
+	 // Backup streambuffers of  cout
+    streambuf* stream_buffer_cout = cout.rdbuf();
+    streambuf* stream_buffer_cin = cin.rdbuf();
+ 
+    // Get the streambuffer of the file
+    streambuf* stream_buffer_file = file.rdbuf();
+	
+	// Redirect cout to file
+    cout.rdbuf(stream_buffer_file);
+	
+	afficher_date();
+	
+	
+	Jeu_v2 jeu = Jeu_v2();
+	
+	string str_contenu_grille = jeu.afficher_dans_chaine_contenu_grille();
+	
+	cout << str_contenu_grille;
+	
+	
+	
+	cout.rdbuf(stream_buffer_cout);
+	
+	
+	file.close();
+	
+}
+
+
+
+
+
+
+
+
+
+
 void tester()
 {
 	
@@ -855,7 +905,9 @@ void tester()
 	
 	//tester_un_element_qui_se_deplace_a_gauche();
 	
-	tester_affichage_deplacements();
+	//tester_affichage_deplacements();
+	
+	tester_nouvelle_architecture_de_conception();
 	
 }
 	

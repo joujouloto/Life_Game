@@ -1,0 +1,4 @@
+La date et l'heure locales sont: Fri Sep 20 15:07:01 2024
+
+La date et l'heure locales sont: Fri Sep 20 15:08:55 2024
+
