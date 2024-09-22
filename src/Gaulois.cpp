@@ -18,7 +18,7 @@ Gaulois::Gaulois(): Objet("Gaulois")
 	
 	nb_gaulois++;
 	
-	
+	id_gaulois = nb_gaulois;
 	
 	setNom(nom+" "+to_string(nb_gaulois));
 	
@@ -45,6 +45,8 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	
 	nb_gaulois++;
 	
+	id_gaulois = nb_gaulois;
+	
 	setNom(nom+" "+to_string(nb_gaulois));
 	
 	setType("Gaulois");
@@ -69,6 +71,8 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 	
 	
 	nb_gaulois++;
+	
+	id_gaulois = nb_gaulois;
 	
 	setNom(nom+" "+to_string(nb_gaulois));
 	
@@ -153,17 +157,30 @@ string Gaulois::toString()
 
 	stringstream ss;
 	
+	ss << "id_objet:";
+	ss << id_objet;
+	ss << "\n";
+	
+	ss << "id_gaulois:";
+	ss << id_gaulois;
+	ss << "\n";
+	
+	
 	ss << nom;
 	ss << "\n";
+	
 	ss << getAncienneLigne();
 	ss << "x";
 	ss << getAncienneColonne();
+	
 	ss << " >> ";
+	
 	ss << numero_ligne;
 	ss << "x";
 	ss << numero_colonne;
-	ss << " ";
-	ss << "\nage:";
+	ss << "\n";
+	
+	ss << "age:";
 	ss << age;
 	ss << "\n";
 
@@ -265,6 +282,11 @@ string Gaulois::getDeplacements()
 	}
     
 	return ss.str();
+}
+
+int Gaulois::getIdGaulois()
+{
+	return id_gaulois;
 }
 
 

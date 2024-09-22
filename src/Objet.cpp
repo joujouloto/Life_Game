@@ -1,7 +1,7 @@
 #include "Objet.h"
 
 
-
+int Objet::nb_objets = 0;
 
 //Constructeurs
 Objet::Objet()
@@ -11,6 +11,12 @@ Objet::Objet()
 	numero_colonne = 0;
 	
 	type = "Objet";
+	
+	nb_objets++;
+	
+	id_objet = nb_objets;
+	
+	
 }
 
 Objet::Objet(string pNom)
@@ -20,6 +26,10 @@ Objet::Objet(string pNom)
 	numero_colonne = 0;
 	
 	type = "Objet";
+	
+	nb_objets++;
+	
+	id_objet = nb_objets;
 }
 
 Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
@@ -29,6 +39,10 @@ Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
 	numero_colonne = pNumero_colonne;
 	
 	type = "Objet";
+	
+	nb_objets++;
+	
+	id_objet = nb_objets;
 }
 
 Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
@@ -38,6 +52,10 @@ Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
 	numero_colonne = pNumero_colonne;
 	
 	type = "Objet";
+	
+	nb_objets++;
+	
+	id_objet = nb_objets;
 }
 
 
@@ -74,6 +92,16 @@ string Objet::getType()
 string Objet::getPosition()
 {
 	return to_string(numero_ligne)+"x"+to_string(numero_colonne);
+}
+
+int Objet::getNbObjets()
+{
+	return nb_objets;
+}
+
+int Objet::getIdObjet()
+{
+	return id_objet;
 }
 
 //Setters

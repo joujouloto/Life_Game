@@ -26,6 +26,8 @@ class Objet
 	unsigned getNumeroColonne();
 	string getPosition();
 	string getType();
+	int getNbObjets();
+	int getIdObjet();
 	
 	//Set
 	void setNom(string pNom);
@@ -47,6 +49,8 @@ class Objet
 	string nom;
 	unsigned numero_ligne;
 	unsigned numero_colonne;
+	int static nb_objets;
+	int id_objet;
 	
 };
 

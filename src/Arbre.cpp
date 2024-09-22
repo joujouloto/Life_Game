@@ -12,6 +12,8 @@ Arbre::Arbre(): Objet("Arbre")
 	
 	nb_arbres++;
 	
+	id_arbre = nb_arbres;
+	
 	setNom("Arbre "+to_string(nb_arbres));
 	
 	age=1;
@@ -30,6 +32,8 @@ Arbre::Arbre(int pNumero_ligne, int pNumero_colonne) : Objet("Arbre")
 	
 	nb_arbres++;
 	
+	id_arbre = nb_arbres;
+	
 	
 	setNom("Arbre "+to_string(nb_arbres));
 	
@@ -41,16 +45,35 @@ void Arbre::setNom(string pNom)
 		nom = pNom;
 }
 
+int Arbre::getIdArbre()
+{
+		return id_arbre;
+}
+
+
+
 string Arbre::toString()
 {
 	stringstream ss;
 	
+	ss << "id_objet:";
+	ss << id_objet;
+	ss << "\n";
+	
+	ss << "id_arbre:";
+	ss << id_arbre;
+	ss << "\n";
+	
+	
 	ss << nom;
 	ss << "\n";
+	
 	ss << to_string(numero_ligne);
 	ss << "x";
 	ss << to_string(numero_colonne);
-	ss << "\nage:";
+	ss << "\n";
+	
+	ss << "age:";
 	ss << age;
 	ss << "\n";
 

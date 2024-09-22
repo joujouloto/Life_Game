@@ -16,6 +16,12 @@ class Arbre : public Objet
 	Arbre(int pNumero_ligne, int pNumero_colonne);
 	
 	
+	
+	//Get
+	int getIdArbre();
+	
+	
+	
 	//Méthode qui renvoie une description de l'objet
 	string  toString();
 	
@@ -28,6 +34,7 @@ class Arbre : public Objet
 	
 	protected:
 	static int nb_arbres;
+	int id_arbre;
 	int age;
 	
 	

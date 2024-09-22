@@ -129,6 +129,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 			gaulois = dynamic_pointer_cast<Gaulois> (objet);
 			
 			ss << gaulois->toString();
+			
 		}
 		else if(objet->getType()=="Arbre")
 		{
@@ -136,6 +137,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 			arbre = dynamic_pointer_cast<Arbre> (objet);
 			
 			ss << arbre->toString();
+			
 		}
 		
 		

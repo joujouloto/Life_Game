@@ -51,6 +51,7 @@ class Gaulois : public Objet
 	unsigned getAge();
 	int get_nb_gaulois_crees();
 	string getDeplacements();
+	int getIdGaulois();
 	
 	
 	//Méthodes autres
@@ -84,6 +85,7 @@ class Gaulois : public Objet
 	
 	
 	static int nb_gaulois ;
+	int id_gaulois;
 	
 	
 	
