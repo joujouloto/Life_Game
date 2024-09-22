@@ -83,15 +83,22 @@ void Jeu_v2::initialiser_grille()
 	
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
-	Position position_objet;
+	grille->insert( { gaulois_1->getPosition(), gaulois_1} );
 	
+	gaulois_2 = make_shared<Gaulois>(homme,4,3);
+	grille->insert( { gaulois_2->getPosition(), gaulois_2} );
 	
-	position_objet = gaulois_1->getPosition();
-	grille->insert( {position_objet, gaulois_1} );
+	gaulois_3 = make_shared<Gaulois>(femme,8,9);
+	grille->insert( { gaulois_3->getPosition(), gaulois_3} );
 	
+	arbre_1 = make_shared<Arbre>(2,5);
+	grille->insert( { arbre_1->getPosition(), arbre_1} );
 	
+	arbre_2 = make_shared<Arbre>(1,6);
+	grille->insert( { arbre_2->getPosition(), arbre_2} );
 	
-	
+	arbre_3 = make_shared<Arbre>(10,7);
+	grille->insert( { arbre_3->getPosition(), arbre_3} );
 	
 }
 
