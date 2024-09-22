@@ -22,11 +22,8 @@ Arbre::Arbre(): Objet("Arbre")
 }
 
 
-Arbre::Arbre(int pNumero_ligne, int pNumero_colonne) : Objet("Arbre")
+Arbre::Arbre(int pNumero_ligne, int pNumero_colonne) : Objet("Arbre",pNumero_ligne, pNumero_colonne)
 {
-	numero_ligne = pNumero_ligne;
-	numero_colonne = pNumero_colonne;
-	
 	setType("Arbre");
 	
 	
@@ -68,9 +65,9 @@ string Arbre::toString()
 	ss << nom;
 	ss << "\n";
 	
-	ss << to_string(numero_ligne);
+	ss << to_string(this->getPosition().getAbscisse());
 	ss << "x";
-	ss << to_string(numero_colonne);
+	ss << to_string(this->getPosition().getOrdonnee());
 	ss << "\n";
 	
 	ss << "age:";

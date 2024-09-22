@@ -44,8 +44,6 @@
 
 #include "Jeu_v2.h"
 
-#include "constantes.h"
-
 
 
 //-----------------------------------------------------------------------------------------------
@@ -70,7 +68,7 @@ Jeu_v2::Jeu_v2()
 
 void Jeu_v2::initialiser_grille()
 {
-	grille = make_shared< set <shared_ptr<Objet> > > ();
+	grille = make_shared< map < Position, shared_ptr<Objet> > > ();
 	
 	
 	shared_ptr<Gaulois> gaulois_1,
@@ -83,26 +81,26 @@ void Jeu_v2::initialiser_grille()
 	
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
-	grille->insert(gaulois_1);
+	grille->insert( pair<Position,shared_ptr<Objet>>(gaulois_1->getPosition(), gaulois_1) );
 	
-	
+	/*
 	gaulois_2 = make_shared<Gaulois>(homme,10,3);
-	grille->insert(gaulois_2);
+	grille->insert(pair<Position,Objet>( gaulois_2->getPosition(),gaulois_2) );
 	
 	gaulois_3 = make_shared<Gaulois>(femme,4,3);
-	grille->insert(gaulois_3);
+	grille->insert(pair<Position,Objet>( gaulois_3->getPosition(),gaulois_3) );
 	
 	
 	
 	arbre_1 = make_shared<Arbre>(2,5);
-	grille->insert(arbre_1);
+	grille->insert( pair<Position,Objet>( (arbre_1->getPosition(),arbre_1) ) );
 	
 	arbre_2 = make_shared<Arbre>(6,2);
-	grille->insert(arbre_2);
+	grille->insert( pair<Position,Objet>( (arbre_2->getPosition(),arbre_2) ) );
 	
 	arbre_3 = make_shared<Arbre>(7,7);
-	grille->insert(arbre_3);
-	
+	grille->insert( pair<Position,Objet>( (arbre_3->getPosition(),arbre_3) ) );
+	*/
 	
 }
 
@@ -119,7 +117,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	
 	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
 	{
-		 objet = *it;
+		 objet = it->second;
 		
 		
 		ss << "\n";
@@ -156,6 +154,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	
 	return ss.str();
 }
+
 
 
 

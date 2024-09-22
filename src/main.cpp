@@ -3,8 +3,8 @@
 #include <SDL2/SDL.h>
 
 
-#include "test.h"
-#include "Jeu.h"
+#include "test_v2.h"
+#include "Jeu_v2.h"
 
 
 using namespace std;
@@ -36,7 +36,7 @@ int main( int argc, char *args[] ) {
 	
 	
 	
-	tester();
+	tester_v2();
 	
 	
 	

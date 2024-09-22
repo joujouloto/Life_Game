@@ -5,7 +5,7 @@
 
 #include <iostream>
 
-
+#include "Position.h"
 
 using namespace std;
 
@@ -22,9 +22,7 @@ class Objet
 	
 	//Méthodes d'accès aux atrributs
 	string getNom();
-	unsigned getNumeroLigne();
-	unsigned getNumeroColonne();
-	string getPosition();
+	Position getPosition();
 	string getType();
 	int getNbObjets();
 	int getIdObjet();
@@ -47,8 +45,7 @@ class Objet
 	string type;
 	
 	string nom;
-	unsigned numero_ligne;
-	unsigned numero_colonne;
+	Position position;
 	int static nb_objets;
 	int id_objet;
 	

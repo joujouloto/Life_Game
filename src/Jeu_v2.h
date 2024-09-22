@@ -4,11 +4,12 @@
 
 //------------------------------------------------
 
-#include <set>
+#include <map>
 
 #include <memory>
 
 #include <SDL2/SDL.h>
+
 
 
 
@@ -23,10 +24,10 @@
 //------------------------------------------------
 
 
-using _grille = shared_ptr< set < shared_ptr<Objet> > >;
+using _grille = shared_ptr< map < Position,shared_ptr<Objet>  > >;
 using _objet = shared_ptr<Objet>;
 
-using _it_grille = set < shared_ptr<Objet> >::iterator;
+using _it_grille = map < Position,shared_ptr<Objet>  >::iterator;
 
 
 class Jeu_v2
@@ -36,6 +37,8 @@ class Jeu_v2
 	
 	
 	void initialiser_grille();
+	
+	//void verifier_que_objets_se_deplacent_dans_les_limites_de_la_grille();
 	
 	
 	//toString

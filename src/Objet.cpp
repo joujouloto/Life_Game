@@ -7,8 +7,7 @@ int Objet::nb_objets = 0;
 Objet::Objet()
 {
 	nom = "Objet";
-	numero_ligne = 0;
-	numero_colonne = 0;
+	position = Position(0,0);
 	
 	type = "Objet";
 	
@@ -22,8 +21,7 @@ Objet::Objet()
 Objet::Objet(string pNom)
 {
 	nom = pNom;
-	numero_ligne = 0;
-	numero_colonne = 0;
+	position = Position(0,0);
 	
 	type = "Objet";
 	
@@ -35,10 +33,11 @@ Objet::Objet(string pNom)
 Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
 	nom = "Objet";
-	numero_ligne = pNumero_ligne;
-	numero_colonne = pNumero_colonne;
+	
 	
 	type = "Objet";
+	
+	position = Position(pNumero_ligne,pNumero_colonne);
 	
 	nb_objets++;
 	
@@ -48,14 +47,17 @@ Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
 Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
 	nom = pNom;
-	numero_ligne = pNumero_ligne;
-	numero_colonne = pNumero_colonne;
+	
+	position = Position(pNumero_ligne,pNumero_colonne);
 	
 	type = "Objet";
 	
 	nb_objets++;
 	
 	id_objet = nb_objets;
+	
+	
+	
 }
 
 
@@ -89,9 +91,9 @@ string Objet::getType()
 }*/
 
 
-string Objet::getPosition()
+Position Objet::getPosition()
 {
-	return to_string(numero_ligne)+"x"+to_string(numero_colonne);
+	return position;
 }
 
 int Objet::getNbObjets()

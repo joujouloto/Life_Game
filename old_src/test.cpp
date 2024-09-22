@@ -1,42 +1,5 @@
 
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <random>
-#include <ctime>
-
-
-#include "Jeu.h"
-#include "Gaulois.h"
-#include "constantes.h"
-#include "Jeu_v2.h"
-
-
-
-using namespace std;
-
-
-//Fonctions pour tester le code du projet
-
-//Afficher la date à chaque fois qu'il y a un test
-
-
-
-void afficher_date()
-{
-	// date / heure actuelle basée sur le système actuel
-   time_t tmm = time(0);
-   
-   // convertir en forme de chaîne
-   char* dt = ctime(&tmm);
-   cout << "La date et l'heure locales sont: " << dt << endl;
-   
-   
-   // convertir en tm struct pour UTC
-  /* tm *g = gmtime(&tmm);
-   dt = asctime(g);
-   cout << "La date et l'heure UTC sont:"<< dt << endl;*/
-}
+5
 
 
 //meme_nombre_d_elements_a_la_creation

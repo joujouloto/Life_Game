@@ -12,7 +12,7 @@
 
 #include <map>
 
-#include <list>
+
 //------------------------------------------------
 
 
@@ -52,18 +52,11 @@ class Gaulois : public Objet
 	int get_nb_gaulois_crees();
 	string getDeplacements();
 	int getIdGaulois();
+	Position getPosition_actuelle();
 	
 	
 	//Méthodes autres
 	string toString();
-	
-	void seDeplacerEnHaut(_map grille);
-	void seDeplacerEnBas(_map grille, int NB_COLONNES);
-	void seDeplacerA_Gauche(_map grille);
-	void seDeplacerA_Droite(_map grille, int NB_LIGNES);
-	void retournerAsonAnciennePosition();
-	
-	void seDeplacerAleatoirement(_map grille, int NB_LIGNES, int NB_COLONNES);
 	
 	
 	void setNom(string pNom);
@@ -80,7 +73,10 @@ class Gaulois : public Objet
 	char sexe;
 	unsigned ancienNumLigne;
 	unsigned ancienNumColonne;
-	list<Position> coordonnees_par_ou_passait_gaulois;
+	
+	
+	int nb_deplacements;
+	map< int, Position> coordonnees_par_ou_passait_gaulois;
 	
 	
 	
