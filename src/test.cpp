@@ -784,7 +784,7 @@ void tester_la_fonction_appliquer_les_regles_de_priorite_sur_les_collisions(unsi
 void tester_affichage_deplacements()
 {
 	string chemin_dossier_tests = "../../tests/";
-	string chemin_fichier = "affichage_deplacements.txt";
+	string chemin_fichier = "affichage_deplacements/affichage_deplacements.txt";
 	
 	
 	
