@@ -28,6 +28,7 @@ class Position
 	int getOrdonnee();
 	string toString();
 	
+	bool operator < (const Position &other) const ;
 	
 	
 };

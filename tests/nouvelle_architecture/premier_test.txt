@@ -38,4 +38,14 @@ Arbre 3
 7x7
 age:1
 
+ La date et l'heure locales sont: Sun Sep 22 20:35:57 2024
+
+-------------------------Contenu de la grille---------------------------------------------------
+
+id_objet:1
+id_gaulois:1
+Gaulois 1
+;0x0;7x5
+age:1
+
  

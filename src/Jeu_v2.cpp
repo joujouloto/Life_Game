@@ -52,6 +52,8 @@ using namespace std;
 
 
 
+enum sexe_gaulois { homme = 'M' , femme = 'F'};
+
 Jeu_v2::Jeu_v2()
 {
 	nb_lignes = 20 ;
@@ -81,26 +83,15 @@ void Jeu_v2::initialiser_grille()
 	
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
-	grille->insert( pair<Position,shared_ptr<Objet>>(gaulois_1->getPosition(), gaulois_1) );
+	Position position_objet;
 	
-	/*
-	gaulois_2 = make_shared<Gaulois>(homme,10,3);
-	grille->insert(pair<Position,Objet>( gaulois_2->getPosition(),gaulois_2) );
 	
-	gaulois_3 = make_shared<Gaulois>(femme,4,3);
-	grille->insert(pair<Position,Objet>( gaulois_3->getPosition(),gaulois_3) );
+	position_objet = gaulois_1->getPosition();
+	grille->insert( {position_objet, gaulois_1} );
 	
 	
 	
-	arbre_1 = make_shared<Arbre>(2,5);
-	grille->insert( pair<Position,Objet>( (arbre_1->getPosition(),arbre_1) ) );
 	
-	arbre_2 = make_shared<Arbre>(6,2);
-	grille->insert( pair<Position,Objet>( (arbre_2->getPosition(),arbre_2) ) );
-	
-	arbre_3 = make_shared<Arbre>(7,7);
-	grille->insert( pair<Position,Objet>( (arbre_3->getPosition(),arbre_3) ) );
-	*/
 	
 }
 

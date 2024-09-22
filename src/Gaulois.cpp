@@ -40,8 +40,6 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	
 	age = 1;
 	sexe = pSexe;
-	ancienNumLigne = 0;
-	ancienNumColonne = 0;
 	
 	if(pSexe == 'F')
 	{
@@ -73,8 +71,6 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 	age = 1 ;
 	sexe = pSexe;
 	
-	ancienNumLigne = 0;
-	ancienNumColonne = 0;
 	
 	if(pSexe == 'F')
 	{
@@ -110,12 +106,7 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 //Setters
 void Gaulois::seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne)
 {
-	ancienNumLigne = numero_ligne;
-	ancienNumColonne = numero_colonne;
 	
-	
-	numero_ligne = pNumero_ligne;
-	numero_colonne = pNumero_colonne;
 	
 	nb_deplacements++;
 	
@@ -145,15 +136,7 @@ string Gaulois::toString()
 	ss << nom;
 	ss << "\n";
 	
-	ss << getAncienneLigne();
-	ss << "x";
-	ss << getAncienneColonne();
-	
-	ss << " >> ";
-	
-	ss << numero_ligne;
-	ss << "x";
-	ss << numero_colonne;
+	ss << this->getDeplacements();
 	ss << "\n";
 	
 	ss << "age:";
@@ -165,7 +148,7 @@ string Gaulois::toString()
 			
 }
 
-5
+
 
 
 void Gaulois::setNom(string pNom)

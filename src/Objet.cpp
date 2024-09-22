@@ -67,16 +67,6 @@ string Objet::getNom()
 	return nom;
 }
 
-unsigned Objet::getNumeroLigne()
-{
-	return numero_ligne;
-}
-
-unsigned Objet::getNumeroColonne()
-{
-	return numero_colonne;
-}
-
 string Objet::getType()
 {
 	return type;

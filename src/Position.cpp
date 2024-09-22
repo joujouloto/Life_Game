@@ -40,3 +40,25 @@ string Position::toString()
 
 	return ss.str();
 }
+
+bool Position::operator < (const Position &other ) const
+{
+	
+	if(abscisse != other.abscisse )
+	{
+		return abscisse < other.abscisse;
+	}
+	else
+	{
+		return ordonnee < other.ordonnee;
+	}
+	
+	
+	
+	
+	
+}
+
+
+
+
