@@ -16,8 +16,8 @@ class Objet
 	//Constructeurs
 	Objet();
 	Objet(string pNom);
-	Objet(unsigned pNumero_ligne, unsigned pNumero_colonne);
-	Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne);
+	Objet(int pNumero_ligne, int pNumero_colonne);
+	Objet(string pNom, int pNumero_ligne, int pNumero_colonne);
 	
 	
 	//Méthodes d'accès aux atrributs

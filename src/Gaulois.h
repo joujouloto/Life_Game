@@ -30,7 +30,7 @@ using namespace std;
 
 
 
-using _map = shared_ptr<map<string,shared_ptr<Objet>>>;
+using _map = shared_ptr<map<Position,shared_ptr<Objet>>>;
 
 class Gaulois : public Objet
 {
@@ -39,16 +39,14 @@ class Gaulois : public Objet
 	//Contructeurs
 	Gaulois();
 	Gaulois(char pSexe);
-	Gaulois(char pSexe, unsigned pNumero_ligne, unsigned pNumero_colonne);
+	Gaulois(char pSexe, int pNumero_ligne, int pNumero_colonne);
 	
 	//Setters
-	void seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne);
+	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
 	
 	
 	//Getters
-	unsigned getAncienneLigne();
-	unsigned getAncienneColonne();
-	unsigned getAge();
+	int getAge();
 	int get_nb_gaulois_crees();
 	string getDeplacements();
 	int getIdGaulois();

@@ -100,6 +100,11 @@ void Jeu_v2::initialiser_grille()
 	arbre_3 = make_shared<Arbre>(10,7);
 	grille->insert( { arbre_3->getPosition(), arbre_3} );
 	
+	
+	
+	
+	
+	
 }
 
 

@@ -5,6 +5,10 @@
 #include <map>
 
 
+using _map = shared_ptr<map<Position,shared_ptr<Objet>>>;
+
+enum sexe_gaulois { homme = 'M' , femme = 'F'};
+
 int Gaulois::nb_gaulois = 0;
 
 //Constructeurs
@@ -65,7 +69,7 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 }
 
 
-Gaulois::Gaulois(char pSexe, unsigned pNumero_ligne, unsigned pNumero_colonne) : 
+Gaulois::Gaulois(char pSexe, int pNumero_ligne, int pNumero_colonne) : 
 Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 {
 	age = 1 ;
@@ -104,16 +108,22 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 
 
 //Setters
-void Gaulois::seDeplacer(unsigned pNumero_ligne, unsigned pNumero_colonne)
+void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 {
+	Position ancienne_position = this->getPosition_actuelle();
+	Position nouvelle_position = Position(pNumero_ligne,pNumero_colonne);
 	
+	shared_ptr<Gaulois> g = make_shared<Gaulois>(*this);
+	
+	grille->erase(ancienne_position);
+	
+	grille->insert( { nouvelle_position, g} );
 	
 	nb_deplacements++;
 	
 	int numero_deplacement = nb_deplacements ;
 	
-	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,Position(pNumero_ligne,pNumero_colonne)));
-	
+	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
 	
 	
 }
@@ -164,18 +174,8 @@ void Gaulois::vieillir()
 	age++;
 }
 
-unsigned Gaulois::getAncienneLigne()
-{
-	return ancienNumLigne;
-}
 
-
-unsigned Gaulois::getAncienneColonne()
-{
-	return ancienNumColonne;
-}
-
-unsigned Gaulois::getAge()
+int Gaulois::getAge()
 {
 	return age;
 }

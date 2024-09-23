@@ -30,7 +30,7 @@ Objet::Objet(string pNom)
 	id_objet = nb_objets;
 }
 
-Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
+Objet::Objet(int pNumero_ligne, int pNumero_colonne)
 {
 	nom = "Objet";
 	
@@ -44,7 +44,7 @@ Objet::Objet(unsigned pNumero_ligne, unsigned pNumero_colonne)
 	id_objet = nb_objets;
 }
 
-Objet::Objet(string pNom, unsigned pNumero_ligne, unsigned pNumero_colonne)
+Objet::Objet(string pNom, int pNumero_ligne, int pNumero_colonne)
 {
 	nom = pNom;
 	

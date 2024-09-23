@@ -45,7 +45,7 @@ void tester_nouvelle_architecture_de_conception()
 	
 	
 	fstream file;
-    file.open(chemin_dossier_tests+chemin_fichier, ios::out|ios::app);
+    file.open(chemin_dossier_tests+chemin_fichier, ios::out);
     string line;
 	
 	 // Backup streambuffers of  cout
@@ -65,7 +65,7 @@ void tester_nouvelle_architecture_de_conception()
 	
 	string str_contenu_grille = jeu.afficher_dans_chaine_contenu_grille();
 	
-	cout << str_contenu_grille;
+	//cout << str_contenu_grille;
 	
 	
 	
