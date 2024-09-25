@@ -1,4 +1,40 @@
-La date et l'heure locales sont: Mon Sep 23 14:28:22 2024
+La date et l'heure locales sont: Tue Sep 24 17:02:37 2024
+
+-------------------------Contenu de la grille---------------------------------------------------
+
+id_objet:5
+id_arbre:2
+Arbre 2
+1x6
+age:1
+
+id_objet:4
+id_arbre:1
+Arbre 1
+2x5
+age:1
+
+id_objet:2
+id_gaulois:2
+Gaulois 2
+;0x0;4x3
+age:1
+
+id_objet:1
+id_gaulois:1
+Gaulois 1
+;0x0;7x5
+age:1
+
+id_objet:3
+id_gaulois:3
+Gauloise 3
+;0x0;8x9
+age:1
+
+id_objet:7
+id_animal:1
+Animal 1
 
 id_objet:6
 id_arbre:3
@@ -6,3 +42,4 @@ Arbre 3
 10x7
 age:1
 
+ 

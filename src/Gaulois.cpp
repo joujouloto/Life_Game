@@ -16,8 +16,7 @@ Gaulois::Gaulois(): Objet("Gaulois")
 {
 	age = 1;
 	sexe = 'M';
-	ancienNumLigne = 0;
-	ancienNumColonne = 0;
+	
 	
 	nb_gaulois++;
 	
@@ -107,17 +106,24 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 }
 
 
+/*
+	Verifier que l'on donne pas une position d'un autre gaulois
+
+*/
+
+
+
 //Setters
 void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 {
 	Position ancienne_position = this->getPosition_actuelle();
 	Position nouvelle_position = Position(pNumero_ligne,pNumero_colonne);
 	
-	shared_ptr<Gaulois> g = make_shared<Gaulois>(*this);
+	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
 	
 	grille->erase(ancienne_position);
 	
-	grille->insert( { nouvelle_position, g} );
+	grille->insert( { nouvelle_position, gaulois} );
 	
 	nb_deplacements++;
 	
@@ -157,16 +163,6 @@ string Gaulois::toString()
 	
 			
 }
-
-
-
-
-void Gaulois::setNom(string pNom)
-{
-	nom = pNom;
-}
-
-
 
 //Incrémente l'âge
 void Gaulois::vieillir()

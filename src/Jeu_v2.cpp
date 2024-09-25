@@ -44,6 +44,8 @@
 
 #include "Jeu_v2.h"
 
+#include "Animal.h"
+
 
 
 //-----------------------------------------------------------------------------------------------
@@ -81,6 +83,8 @@ void Jeu_v2::initialiser_grille()
 	arbre_2,
 	arbre_3;
 	
+	shared_ptr<Animal> animal_1;
+	
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
 	grille->insert( { gaulois_1->getPosition(), gaulois_1} );
@@ -100,7 +104,8 @@ void Jeu_v2::initialiser_grille()
 	arbre_3 = make_shared<Arbre>(10,7);
 	grille->insert( { arbre_3->getPosition(), arbre_3} );
 	
-	
+	animal_1 = make_shared<Animal>(9,9);
+	grille->insert( {animal_1->getPosition(),animal_1});
 	
 	
 	
@@ -114,6 +119,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	shared_ptr<Gaulois> gaulois;
 	shared_ptr<Objet> objet;
 	shared_ptr<Arbre> arbre;
+	shared_ptr<Animal> animal;
 	
 	ss << "-------------------------Contenu de la grille---------------------------------------------------";
 	ss << "\n";
@@ -140,6 +146,12 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 			ss << arbre->toString();
 			
 		}
+		else if(objet->getType()=="Animal")
+		{
+			animal = dynamic_pointer_cast<Animal> (objet);
+			
+			ss << animal->toString();
+		}
 		
 		
 		
@@ -160,7 +172,10 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 
 
 
-
+void Jeu_v2::faire_deplacer_elements()
+{
+	
+}
 
 
 

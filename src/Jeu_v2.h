@@ -38,7 +38,7 @@ class Jeu_v2
 	
 	void initialiser_grille();
 	
-	//void verifier_que_objets_se_deplacent_dans_les_limites_de_la_grille();
+	void faire_deplacer_elements();
 	
 	
 	//toString

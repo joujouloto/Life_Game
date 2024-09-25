@@ -57,22 +57,14 @@ class Gaulois : public Objet
 	string toString();
 	
 	
-	void setNom(string pNom);
-	
-	
-	
 	void vieillir();
 	
 	
 	
 	protected:
 	
-	unsigned age;
+	int age;
 	char sexe;
-	unsigned ancienNumLigne;
-	unsigned ancienNumColonne;
-	
-	
 	int nb_deplacements;
 	map< int, Position> coordonnees_par_ou_passait_gaulois;
 	

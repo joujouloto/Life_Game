@@ -19,6 +19,7 @@ Arbre::Arbre(): Objet("Arbre")
 	age=1;
 	
 	
+	
 }
 
 
@@ -35,6 +36,7 @@ Arbre::Arbre(int pNumero_ligne, int pNumero_colonne) : Objet("Arbre",pNumero_lig
 	setNom("Arbre "+to_string(nb_arbres));
 	
 	age=1;
+	
 }
 
 void Arbre::setNom(string pNom)

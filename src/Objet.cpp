@@ -104,6 +104,12 @@ void Objet::setType(string pType)
 }
 
 
+void Objet::setNom(string pNom)
+{
+	nom = pNom;
+}
+
+
 
 //Destructeur
 Objet::~Objet()
