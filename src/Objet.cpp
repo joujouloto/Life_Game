@@ -109,6 +109,11 @@ void Objet::setNom(string pNom)
 	nom = pNom;
 }
 
+void Objet::setPosition(Position pPosition)
+{
+	position = pPosition;
+}
+
 
 
 //Destructeur

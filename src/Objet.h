@@ -30,6 +30,7 @@ class Objet
 	//Set
 	void setNom(string pNom);
 	void setType(string pType);
+	void setPosition(Position pPosition);
 	
 	//Retourne une description de l'objet
 	virtual string toString() = 0;

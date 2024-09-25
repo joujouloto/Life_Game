@@ -35,7 +35,7 @@ class Animal: public Objet
 	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
 	
 	string toString();
-	void setPosition();
+	
 	
 	
 	

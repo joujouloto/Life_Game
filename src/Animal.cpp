@@ -73,10 +73,7 @@ string Animal::toString()
 			
 }
 
-void Animal::setPosition(Position pPosition)
-{
-	position = pPosition;
-}
+
 
 
 

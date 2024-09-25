@@ -50,7 +50,6 @@ class Gaulois : public Objet
 	int get_nb_gaulois_crees();
 	string getDeplacements();
 	int getIdGaulois();
-	Position getPosition_actuelle();
 	
 	
 	//Méthodes autres

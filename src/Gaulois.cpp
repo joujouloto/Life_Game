@@ -116,7 +116,7 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 //Setters
 void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 {
-	Position ancienne_position = this->getPosition_actuelle();
+	Position ancienne_position = this->getPosition();
 	Position nouvelle_position = Position(pNumero_ligne,pNumero_colonne);
 	
 	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
@@ -128,6 +128,9 @@ void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 	nb_deplacements++;
 	
 	int numero_deplacement = nb_deplacements ;
+	
+	setPosition(nouvelle_position);
+	
 	
 	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
 	
@@ -204,17 +207,6 @@ int Gaulois::getIdGaulois()
 }
 
 
-Position Gaulois::getPosition_actuelle()
-{
-	map<int,Position>::iterator it = coordonnees_par_ou_passait_gaulois.end();
-	
-	Position position_actuelle = it->second;
-	
-	return position_actuelle;
-	
-	
-	
-}
 
 
 
