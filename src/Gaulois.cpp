@@ -119,20 +119,19 @@ void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 	Position ancienne_position = this->getPosition();
 	Position nouvelle_position = Position(pNumero_ligne,pNumero_colonne);
 	
-	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
-	
-	grille->erase(ancienne_position);
-	
-	grille->insert( { nouvelle_position, gaulois} );
+	setPosition(nouvelle_position);
 	
 	nb_deplacements++;
 	
 	int numero_deplacement = nb_deplacements ;
 	
-	setPosition(nouvelle_position);
-	
-	
 	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
+	
+	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
+	
+	grille->erase(ancienne_position);
+	
+	grille->insert( { nouvelle_position, gaulois} );
 	
 	
 }

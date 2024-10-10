@@ -67,7 +67,18 @@ void tester_nouvelle_architecture_de_conception()
 	
 	cout << str_contenu_grille;
 	
+	cout << endl;
 	
+	cout << "deplacement du 1er gaulois 7,5 à 7,6" << endl;
+	
+	jeu.faire_deplacer_elements();
+	
+	
+	cout << endl;
+	
+	str_contenu_grille = jeu.afficher_dans_chaine_contenu_grille();
+	
+	cout << str_contenu_grille;
 	
 	cout.rdbuf(stream_buffer_cout);
 	

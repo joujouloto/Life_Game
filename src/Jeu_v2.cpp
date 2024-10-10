@@ -88,7 +88,7 @@ void Jeu_v2::initialiser_grille()
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
 	grille->insert( { gaulois_1->getPosition(), gaulois_1} );
-	
+	/*
 	gaulois_2 = make_shared<Gaulois>(homme,4,3);
 	grille->insert( { gaulois_2->getPosition(), gaulois_2} );
 	
@@ -107,12 +107,13 @@ void Jeu_v2::initialiser_grille()
 	animal_1 = make_shared<Animal>(9,9);
 	grille->insert( {animal_1->getPosition(),animal_1});
 	
+	*/
 	
 	
 	
 }
 
-
+//ATTENTION le contenu n'est pas mis à jour quand on fait deplacer un element
 string Jeu_v2::afficher_dans_chaine_contenu_grille()
 {
 	stringstream ss;
@@ -174,6 +175,33 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 
 void Jeu_v2::faire_deplacer_elements()
 {
+	shared_ptr<Gaulois> gaulois;
+	
+	map< Position, shared_ptr<Objet> > :: iterator  it;
+	
+	Position position_1er_gaulois = Position(7,5);
+	
+	it = grille->find(position_1er_gaulois);
+	
+	gaulois = dynamic_pointer_cast<Gaulois> (it->second);
+	
+	
+	gaulois->seDeplacer(7,6,grille);
+	
+	cout << gaulois->toString();
+	
+	cout << endl;
+	
+	
+	Position nouvelle_position = Position(7,6);
+	
+	
+	it = grille->find(nouvelle_position);
+	
+	
+	gaulois = dynamic_pointer_cast<Gaulois> (it->second);
+	
+	cout << gaulois->toString();
 	
 }
 

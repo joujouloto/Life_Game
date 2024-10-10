@@ -72,15 +72,6 @@ string Objet::getType()
 	return type;
 }
 	
-//Retourne une description de l'objet
-/*string Objet:: toString()
-{
-	return "Nom: "+nom+
-	" || numero_ligne: "+to_string(numero_ligne)+	
-	" || numero_colonne: "+to_string(numero_colonne);
-}*/
-
-
 Position Objet::getPosition()
 {
 	return position;
