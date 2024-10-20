@@ -43,6 +43,7 @@ class Gaulois : public Objet
 	
 	//Setters
 	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
+	void seDeplacer(Position nouvelle_position, _map grille);
 	
 	
 	//Getters

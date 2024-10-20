@@ -87,13 +87,27 @@ void tester_nouvelle_architecture_de_conception()
 	
 }
 
+void tester_deplacements()
+{
+	Jeu_v2 jeu = Jeu_v2();
+	
+	
+	jeu.faire_deplacer_elements();
+	
+	cout << endl;
+}
+
+
+
 void tester_v2()
 {
 	
-	cout << " Tests_v2 " << endl;
+	cout << " Tests  " << endl;
 	
 	
 	
-	tester_nouvelle_architecture_de_conception();
+	//tester_nouvelle_architecture_de_conception();
 	
+	
+	tester_deplacements();
 }

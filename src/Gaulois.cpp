@@ -119,19 +119,73 @@ void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 	Position ancienne_position = this->getPosition();
 	Position nouvelle_position = Position(pNumero_ligne,pNumero_colonne);
 	
-	setPosition(nouvelle_position);
 	
-	nb_deplacements++;
+	if ( grille->find(nouvelle_position) == grille->end())
+	{
+		setPosition(nouvelle_position);
 	
-	int numero_deplacement = nb_deplacements ;
+		nb_deplacements++;
+		
+		int numero_deplacement = nb_deplacements ;
+		
+		coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
+		
+		shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
+		
 	
-	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
+		/*
+		
+			Mettre condition/test comme quoi la nouvelle position n'est pas occupée
+		
+		*/
+		
+		grille->erase(ancienne_position);
+		
+		
+		
+		grille->insert( { nouvelle_position, gaulois} );
+	}
 	
-	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
+}
+
+void Gaulois::seDeplacer(Position nouvelle_position, _map grille)
+{
 	
-	grille->erase(ancienne_position);
+	Position ancienne_position = this->getPosition();
 	
-	grille->insert( { nouvelle_position, gaulois} );
+	
+	if ( grille->find(nouvelle_position) == grille->end())
+	{
+		//Grand if
+		//-----------------------------------------------------------------------------
+		
+		setPosition(nouvelle_position);
+		
+		nb_deplacements++;
+		
+		int numero_deplacement = nb_deplacements ;
+		
+		coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
+		
+		shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
+		
+		
+		/*
+			Mettre condition/test comme quoi la nouvelle position n'est pas occupée
+		
+		*/
+		
+		
+		
+		
+		grille->erase(ancienne_position);
+		
+		grille->insert( { nouvelle_position, gaulois} );
+		
+		//Fin grand if---------------------------------------------------------------------------------
+	}
+	
+	
 	
 	
 }
