@@ -41,9 +41,18 @@ class Gaulois : public Objet
 	Gaulois(char pSexe);
 	Gaulois(char pSexe, int pNumero_ligne, int pNumero_colonne);
 	
-	//Setters
+	
+	//Fonctions mouvements
 	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
 	void seDeplacer(Position nouvelle_position, _map grille);
+	 
+	void seDeplacer_aleatoirement(_map grille);
+	void seDeplacer_a_gauche(_map grille);
+	void seDeplacer_a_droite(_map grille);
+	void seDeplacer_en_haut(_map grille);
+	void seDeplacer_en_bas(_map grille);
+	
+	
 	
 	
 	//Getters

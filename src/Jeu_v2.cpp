@@ -204,30 +204,24 @@ void Jeu_v2::faire_deplacer_elements()
 	shared_ptr<Gaulois> gaulois_2, gaulois_3, gaulois_4;
 	
 	
-	
+	cout << endl;
 	
 	gaulois_2 = make_shared<Gaulois>(homme,4,3);
 	grille->insert( { gaulois_2->getPosition(), gaulois_2} );
 	
-	
-	//nouvelle_position 7,6
-	
-	gaulois_2->seDeplacer(nouvelle_position,grille);
-	
-	
-	cout << endl;
-	
-	cout << gaulois_2->toString();
+	gaulois_2->seDeplacer_aleatoirement(grille);
+		
+	cout << gaulois_2->toString() << endl;
 	
 	
-	nouvelle_position = Position(7,1);
+	gaulois_2->seDeplacer_aleatoirement(grille);
+		
+	cout << gaulois_2->toString() << endl;
 	
-	gaulois_2->seDeplacer(nouvelle_position,grille);
 	
-	
-	cout << endl;
-	
-	cout << gaulois_2->toString();
+	gaulois_2->seDeplacer_aleatoirement(grille);
+		
+	cout << gaulois_2->toString() << endl;
 	
 	
 	

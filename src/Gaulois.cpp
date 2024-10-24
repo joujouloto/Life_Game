@@ -5,6 +5,11 @@
 #include <map>
 
 
+
+enum type_Deplacement { gauche = 1, droite = 2, haut = 3, bas = 4};
+
+
+
 using _map = shared_ptr<map<Position,shared_ptr<Objet>>>;
 
 enum sexe_gaulois { homme = 'M' , femme = 'F'};
@@ -182,13 +187,71 @@ void Gaulois::seDeplacer(Position nouvelle_position, _map grille)
 		
 		grille->insert( { nouvelle_position, gaulois} );
 		
+		
 		//Fin grand if---------------------------------------------------------------------------------
 	}
-	
-	
-	
-	
 }
+
+void Gaulois::seDeplacer_a_gauche(_map grille)
+{
+	
+	Position position_a_gauche = this->getPosition().a_gauche();
+	this->seDeplacer(position_a_gauche,grille);
+}
+
+void Gaulois::seDeplacer_a_droite(_map grille)
+{
+	Position position_a_droite = this->getPosition().a_droite();
+	this->seDeplacer(position_a_droite,grille);
+}
+
+void Gaulois::seDeplacer_en_haut(_map grille)
+{
+	Position position_en_haut = this->getPosition().en_haut();
+	this->seDeplacer(position_en_haut,grille);
+}
+
+void Gaulois::seDeplacer_en_bas(_map grille)
+{
+	Position position_en_bas = this->getPosition().en_bas();
+	this->seDeplacer(position_en_bas,grille);
+}
+
+
+void Gaulois::seDeplacer_aleatoirement(_map grille)
+{
+	random_device rd;
+	mt19937 gen(rd());
+	
+	uniform_int_distribution<> dis(1, 4);//uniform distribution between 1 and 4
+	
+	int deplacement = dis(gen);
+	
+	
+	if(deplacement == gauche)
+	{
+		this->seDeplacer_a_gauche(grille);
+	}
+	
+	else if(deplacement == droite)
+	{
+		this->seDeplacer_a_droite(grille);
+		
+	}
+	
+	else if( deplacement == haut )
+	{
+		this->seDeplacer_en_haut(grille);
+		
+	}
+	
+	else if( deplacement== bas )
+	{
+		this->seDeplacer_en_bas(grille);
+	}
+}
+
+
 
 //Retourne une description textuelle de gaulois
 string Gaulois::toString()

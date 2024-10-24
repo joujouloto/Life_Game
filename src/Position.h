@@ -28,6 +28,11 @@ class Position
 	int getOrdonnee();
 	string toString();
 	
+	Position a_gauche();
+	Position a_droite();
+	Position en_haut();
+	Position en_bas();
+	
 	bool operator < (const Position &other) const ;
 	
 	

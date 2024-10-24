@@ -41,6 +41,32 @@ string Position::toString()
 	return ss.str();
 }
 
+
+Position Position::a_gauche()
+{
+	return Position(abscisse-1,ordonnee);
+}
+
+Position Position::a_droite()
+{
+	return Position(abscisse+1,ordonnee);
+}
+
+Position Position::en_haut()
+{
+	return Position(abscisse,ordonnee-1);
+}
+
+Position Position::en_bas()
+{
+	return Position(abscisse,ordonnee+1);
+}
+
+
+
+
+
+
 bool Position::operator < (const Position &other ) const
 {
 	
