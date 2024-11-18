@@ -181,55 +181,12 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 
 void Jeu_v2::faire_deplacer_elements()
 {
-	shared_ptr<Gaulois> gaulois_1;
-	
-	map< Position, shared_ptr<Objet> > :: iterator  it;
-	
-	Position position_1er_gaulois = Position(7,5);
-	
-	it = grille->find(position_1er_gaulois);
-	
-	gaulois_1 = dynamic_pointer_cast<Gaulois> (it->second);
 	
 	
-	Position nouvelle_position = Position(7,6);
-	
-	gaulois_1->seDeplacer(nouvelle_position,grille);
-	
-	it = grille->find(nouvelle_position);
-	
-	
-	gaulois_1 = dynamic_pointer_cast<Gaulois> (it->second);
-	
-	cout << endl;
-	
-	cout << gaulois_1->toString();
-
-	//faire deplacer plusieurs objets
-	
-	shared_ptr<Gaulois> gaulois_2, gaulois_3, gaulois_4;
-	
-	
-	cout << endl;
-	
-	gaulois_2 = make_shared<Gaulois>(homme,4,3);
-	grille->insert( { gaulois_2->getPosition(), gaulois_2} );
-	
-	gaulois_2->seDeplacer_aleatoirement(grille);
+	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
+	{
 		
-	cout << gaulois_2->toString() << endl;
-	
-	
-	gaulois_2->seDeplacer_aleatoirement(grille);
-		
-	cout << gaulois_2->toString() << endl;
-	
-	
-	gaulois_2->seDeplacer_aleatoirement(grille);
-		
-	cout << gaulois_2->toString() << endl;
-	
-	
+	}
 	
 	
 	

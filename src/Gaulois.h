@@ -17,20 +17,18 @@
 
 
 //------------------------------------------------
-#include "Objet.h"
 
 #include "Position.h"
 
 
+#include "Objet.h"
+
 
 //------------------------------------------------
 
-
-using namespace std;
-
+using _map = shared_ptr< map < Position,shared_ptr<Objet>  > >;
 
 
-using _map = shared_ptr<map<Position,shared_ptr<Objet>>>;
 
 class Gaulois : public Objet
 {
@@ -41,6 +39,27 @@ class Gaulois : public Objet
 	Gaulois(char pSexe);
 	Gaulois(char pSexe, int pNumero_ligne, int pNumero_colonne);
 	
+	
+	
+	
+	
+	
+	
+	//Getters
+	char getSexe();
+	int getAge();
+	int get_nb_gaulois_crees();
+	
+	int getIdGaulois();
+	
+	
+	
+	
+	//Méthodes autres
+	string toString();
+	string getDeplacements();
+	
+	void vieillir();
 	
 	//Fonctions mouvements
 	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
@@ -54,35 +73,16 @@ class Gaulois : public Objet
 	
 	
 	
-	
-	//Getters
-	char getSexe();
-	int getAge();
-	int get_nb_gaulois_crees();
-	string getDeplacements();
-	int getIdGaulois();
-	
-	
-	//Méthodes autres
-	string toString();
-	
-	
-	void vieillir();
-	
-	
-	
 	protected:
 	
 	int age;
 	char sexe;
-	int nb_deplacements;
-	map< int, Position> coordonnees_par_ou_passait_gaulois;
-	
-	
 	
 	static int nb_gaulois ;
 	int id_gaulois;
 	
+	int nb_deplacements;
+	map< int, Position> coordonnees_par_ou_passait_gaulois;
 	
 	
 };

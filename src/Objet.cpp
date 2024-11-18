@@ -1,6 +1,7 @@
 #include "Objet.h"
 
 
+
 int Objet::nb_objets = 0;
 
 //Constructeurs
@@ -112,6 +113,10 @@ Objet::~Objet()
 {
 	
 }
+
+
+
+
 
 
 

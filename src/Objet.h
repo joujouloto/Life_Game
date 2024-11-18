@@ -7,7 +7,10 @@
 
 #include "Position.h"
 
+enum type_Deplacement { gauche = 1, droite = 2, haut = 3, bas = 4};
+
 using namespace std;
+
 
 class Objet
 {
@@ -40,6 +43,7 @@ class Objet
 	~Objet();
 	
 	
+	
 	protected:
 	
 	
@@ -49,6 +53,8 @@ class Objet
 	Position position;
 	int static nb_objets;
 	int id_objet;
+	
+	
 	
 };
 

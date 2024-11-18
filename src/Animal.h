@@ -11,6 +11,9 @@
 
 #include <string>
 
+#include <random>
+
+#include <memory>
 
 //----------------------------------------------------------------------------
 
@@ -20,10 +23,8 @@
 
 //----------------------------------------------------------------------------
 
+using _map = shared_ptr< map < Position,shared_ptr<Objet>  > >;
 
-using _map = shared_ptr< map <Position,shared_ptr<Objet> > >;
-
-using namespace std;
 
 
 class Animal: public Objet
@@ -32,16 +33,30 @@ class Animal: public Objet
 	Animal();
 	Animal(int pNumero_ligne, int pNumero_colonne);
 	
-	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
 	
 	string toString();
 	
+	string getDeplacements();
 	
+	//Fonctions mouvements
+	void seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille);
+	void seDeplacer(Position nouvelle_position, _map grille);
+	 
+	void seDeplacer_aleatoirement(_map grille);
+	void seDeplacer_a_gauche(_map grille);
+	void seDeplacer_a_droite(_map grille);
+	void seDeplacer_en_haut(_map grille);
+	void seDeplacer_en_bas(_map grille);
 	
 	
 	protected:
 	static int nb_animaux;
 	int id_animal;
+	
+	
+	int nb_deplacements;
+	map< int, Position> coordonnees_par_ou_passait_animal;
+	
 	
 };
 
