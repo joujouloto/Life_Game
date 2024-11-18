@@ -128,6 +128,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	shared_ptr<Arbre> arbre;
 	shared_ptr<Animal> animal;
 	
+	
 	ss << "-------------------------Contenu de la grille---------------------------------------------------";
 	ss << "\n";
 	
@@ -181,11 +182,28 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 
 void Jeu_v2::faire_deplacer_elements()
 {
-	
+	shared_ptr<Animal> animal;
+	shared_ptr<Objet> objet;
+	shared_ptr<Gaulois> gaulois;
 	
 	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
 	{
+		objet = it->second;
 		
+		if(objet->getType()=="Gaulois")
+		{
+			gaulois = dynamic_pointer_cast<Gaulois> (objet);
+			
+			gaulois->seDeplacer_aleatoirement(grille);
+			
+		}
+		else if(objet->getType()=="Animal")
+		{
+			animal = dynamic_pointer_cast<Animal> (objet);
+			
+			
+			animal->seDeplacer_aleatoirement(grille);
+		}
 	}
 	
 	

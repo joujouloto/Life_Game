@@ -46,12 +46,32 @@ void main_sdl()
 	
 	jeu.initialiser_grille();
 	
+	SDL_Event ev;
 	
-	afficher_grille_SDL(renderer,jeu.getGrille());
+	bool isRunning = true;
 	
 	
-	boucle_SDL(renderer,jeu);
 	
+	while(isRunning)
+	{
+		this_thread::sleep_for(chrono::milliseconds(800));
+		SDL_RenderClear(renderer);
+		jeu.faire_deplacer_elements();
+		afficher_grille_SDL(renderer,jeu.getGrille());
+		
+		
+		
+		while( SDL_PollEvent( &ev ) != 0 ) 
+		{
+			switch (ev.type) 
+			{
+				case SDL_QUIT:
+				isRunning = false;
+					
+			}
+		
+		}
+	}
 	
 	fermeture_SDL(win,renderer);
 	
@@ -151,32 +171,3 @@ void fermeture_SDL(SDL_Window *win, SDL_Renderer *renderer)
 	SDL_Quit();
 }
 
-void boucle_SDL(SDL_Renderer *renderer, Jeu_v2 jeu)
-{
-	
-	SDL_Event ev;
-	
-	bool isRunning = true;
-	
-	
-	
-	while(isRunning)
-	{
-		this_thread::sleep_for(chrono::milliseconds(800));
-		
-		SDL_RenderClear(renderer);
-		afficher_grille_SDL(renderer,jeu.getGrille());
-		
-		
-		while( SDL_PollEvent( &ev ) != 0 ) 
-		{
-			switch (ev.type) 
-			{
-				case SDL_QUIT:
-				isRunning = false;
-					
-			}
-		
-		}
-	}
-}
