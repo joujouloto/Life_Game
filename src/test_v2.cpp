@@ -8,6 +8,8 @@
 #include "Gaulois.h"
 #include "Jeu_v2.h"
 
+#include "main_sdl.h"
+
 
 
 using namespace std;
@@ -97,6 +99,10 @@ void tester_deplacements()
 	cout << endl;
 }
 
+void tester_sdl()
+{
+	main_sdl();
+}
 
 
 void tester_v2()
@@ -109,5 +115,7 @@ void tester_v2()
 	//tester_nouvelle_architecture_de_conception();
 	
 	
-	tester_deplacements();
+	//tester_deplacements();
+	
+	tester_sdl();
 }

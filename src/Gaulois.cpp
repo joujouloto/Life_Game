@@ -52,7 +52,11 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	if(pSexe == 'F')
 	{
 		nom = "Gauloise";
+		
 	}
+	
+	setType("Gaulois");
+	
 	
 	nb_gaulois++;
 	
@@ -60,7 +64,7 @@ Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 	
 	setNom(nom+" "+to_string(nb_gaulois));
 	
-	setType("Gaulois");
+	
 	
 	nb_deplacements = 0 ;
 	int numero_deplacement = nb_deplacements ;
@@ -86,6 +90,9 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 	}
 	
 	
+	
+	
+	
 	nb_gaulois++;
 	
 	id_gaulois = nb_gaulois;
@@ -109,6 +116,13 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 	
 	
 }
+
+char Gaulois::getSexe()
+{
+	return sexe;
+}
+
+
 
 
 /*

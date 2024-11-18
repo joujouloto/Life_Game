@@ -56,6 +56,7 @@ class Gaulois : public Objet
 	
 	
 	//Getters
+	char getSexe();
 	int getAge();
 	int get_nb_gaulois_crees();
 	string getDeplacements();

@@ -70,6 +70,12 @@ Jeu_v2::Jeu_v2()
 }
 
 
+_grille Jeu_v2::getGrille()
+{
+		return grille;
+}
+
+
 void Jeu_v2::initialiser_grille()
 {
 	grille = make_shared< map < Position, shared_ptr<Objet> > > ();
@@ -88,7 +94,7 @@ void Jeu_v2::initialiser_grille()
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
 	grille->insert( { gaulois_1->getPosition(), gaulois_1} );
-	/*
+	
 	gaulois_2 = make_shared<Gaulois>(homme,4,3);
 	grille->insert( { gaulois_2->getPosition(), gaulois_2} );
 	
@@ -107,7 +113,7 @@ void Jeu_v2::initialiser_grille()
 	animal_1 = make_shared<Animal>(9,9);
 	grille->insert( {animal_1->getPosition(),animal_1});
 	
-	*/
+	
 	
 	
 	
