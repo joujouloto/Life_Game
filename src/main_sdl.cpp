@@ -83,6 +83,8 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	SDL_Surface * image_gaulois = SDL_LoadBMP("../../images/gaulois.bmp");
 	
 	SDL_Surface * image_gauloise = SDL_LoadBMP("../../images/gauloise.bmp");
+	
+	SDL_Surface * image_animal = SDL_LoadBMP("../../images/animal.bmp");
 		
 		
 	//Textures
@@ -93,6 +95,8 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	SDL_Texture * texture_gaulois = SDL_CreateTextureFromSurface(renderer, image_gaulois);
 	
 	SDL_Texture * texture_gauloise = SDL_CreateTextureFromSurface(renderer, image_gauloise);
+	
+	SDL_Texture * texture_animal = SDL_CreateTextureFromSurface(renderer, image_animal);
 	
 	//169*221
 	
@@ -105,15 +109,15 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 		
 		
 		
-			if(it->second->getType()=="Arbre")
+		if(it->second->getType()=="Arbre")
+		{
+					SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
+		}
+		else if(it->second->getType()=="Gaulois")	
 			{
-				SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
-			}
-			else if(it->second->getType()=="Gaulois")	
-			{
-				
+					
 				gaulois = dynamic_pointer_cast<Gaulois> (it->second);
-				
+					
 				if(gaulois->getSexe()=='M')
 				{
 					SDL_RenderCopy(renderer, texture_gaulois, NULL, &single_rect);
@@ -123,7 +127,11 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 					SDL_RenderCopy(renderer, texture_gauloise, NULL, &single_rect);
 				}
 		
-		}else
+		}else if(it->second->getType()=="Animal")
+		{
+			SDL_RenderCopy(renderer, texture_animal, NULL, &single_rect);
+		}
+		else
 		{
 			//SDL_SetRenderDrawColor(renderer, 50, 205, 50, 255);
 			//SDL_RenderFillRect(renderer, &single_rect);
@@ -154,7 +162,7 @@ void boucle_SDL(SDL_Renderer *renderer, Jeu_v2 jeu)
 	
 	while(isRunning)
 	{
-		this_thread::sleep_for(chrono::milliseconds(1500));
+		this_thread::sleep_for(chrono::milliseconds(800));
 		
 		SDL_RenderClear(renderer);
 		afficher_grille_SDL(renderer,jeu.getGrille());
