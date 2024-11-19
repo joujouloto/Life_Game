@@ -123,62 +123,6 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	int pos_y = 40;
 	int espace = 20 ;
 	
-	single_rect.x = pos_x + espace ;
-	single_rect.y = pos_y;
-	
-	/*
-	for(int i = 1 ; i <= 20 ; i++)
-	{
-		
-		for( int j = 1 ; j <= 20 ; j++)
-		{
-			single_rect.x +=  pos_x + espace ;
-			
-			position = Position(i,j);
-			
-			it = grille->find(position);
-			
-			if(it!=grille->end())
-			{
-				if(it->second->getType()=="Arbre")
-				{
-							SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
-				}
-				else if(it->second->getType()=="Gaulois")	
-					{
-						
-						
-						gaulois = dynamic_pointer_cast<Gaulois> (it->second);
-							
-						if(gaulois->getSexe()=='M')
-						{
-							SDL_RenderCopy(renderer, texture_gaulois, NULL, &single_rect);
-						}
-						else
-						{
-							SDL_RenderCopy(renderer, texture_gauloise, NULL, &single_rect);
-						}
-				
-				}else if(it->second->getType()=="Animal")
-				{
-					SDL_RenderCopy(renderer, texture_animal, NULL, &single_rect);
-				}
-				
-			}else
-			{
-				//SDL_SetRenderDrawColor(renderer, 50, 205, 50, 255);
-				//SDL_RenderFillRect(renderer, &single_rect);
-				//SDL_RenderCopy(renderer, texture_vide, NULL, &single_rect);
-			}
-			
-		}
-		
-		single_rect.y += pos_y + espace;
-		single_rect.x =  pos_x + espace ;
-	}
-	
-	SDL_RenderPresent(renderer);
-	*/
 	
 	 for( set < shared_ptr<Objet> > ::iterator it = grille->begin(); it !=grille->end() ; it++ )
 	 {
@@ -193,7 +137,12 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 		}
 		else if((*it)->getType()=="Gaulois")	
 			{
+				
+				
 				gaulois = dynamic_pointer_cast<Gaulois> (*it);
+					
+					
+				cout << gaulois->getPosition().toString() << endl;
 					
 				if(gaulois->getSexe()=='M')
 				{
@@ -206,6 +155,8 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 		
 		}else if((*it)->getType()=="Animal")
 		{
+			cout << (*it)->getPosition().toString() << endl;
+			
 			SDL_RenderCopy(renderer, texture_animal, NULL, &single_rect);
 		}
 		 

@@ -44,7 +44,10 @@ string Position::toString()
 
 Position Position::a_gauche()
 {
-	return Position(abscisse-1,ordonnee);
+	if( abscisse-1 >= 0)
+	{
+		return Position(abscisse-1,ordonnee);
+	}
 }
 
 Position Position::a_droite()
@@ -54,7 +57,10 @@ Position Position::a_droite()
 
 Position Position::en_haut()
 {
-	return Position(abscisse,ordonnee-1);
+	if (  ordonnee-1 >= 0)
+	{
+		return Position(abscisse,ordonnee-1);
+	}
 }
 
 Position Position::en_bas()
