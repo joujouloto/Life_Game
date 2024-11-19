@@ -2,10 +2,10 @@
 
 #include <sstream>
 
-#include <map>
+#include <set>
 
 
-using _grille = shared_ptr< map < Position,shared_ptr<Objet>  > >;
+using _grille = shared_ptr< set < shared_ptr<Objet> > >;
 
 
 enum sexe_gaulois { homme = 'M' , femme = 'F'};
@@ -242,76 +242,27 @@ string Gaulois::getDeplacements()
 
 void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 {
-	Position ancienne_position = this->getPosition();
 	Position nouvelle_position = Position(pNumero_ligne,pNumero_colonne);
 	
-	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
-	
-	if ( grille->find(nouvelle_position) == grille->end())
-	{
-		setPosition(nouvelle_position);
-	
-		nb_deplacements++;
-		
-		int numero_deplacement = nb_deplacements ;
-		
-		coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
-		
-		
-	
-		/*
-		
-			Mettre condition/test comme quoi la nouvelle position n'est pas occupée
-		
-		*/
-		
-		grille->erase(ancienne_position);
-		
-		
-		
-		grille->insert( { nouvelle_position, gaulois} );
-	}
+	this->seDeplacer(nouvelle_position,grille);
 	
 }
 
 void Gaulois::seDeplacer(Position nouvelle_position, _map grille)
 {
 	
-	Position ancienne_position = this->getPosition();
-	
-	shared_ptr<Gaulois> gaulois = make_shared<Gaulois>(*this);
+	map<Position,shared_ptr<Objet>>::iterator it;
 	
 	
-	if ( grille->find(nouvelle_position) == grille->end())
-	{
-		//Grand if
-		//-----------------------------------------------------------------------------
-		
-		setPosition(nouvelle_position);
-		
-		nb_deplacements++;
-		
-		int numero_deplacement = nb_deplacements ;
-		
-		coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
-		
-		
-		
-		/*
-			Mettre condition/test comme quoi la nouvelle position n'est pas occupée
-		
-		*/
-		
-		
-		
-		
-		grille->erase(ancienne_position);
-		
-		grille->insert( { nouvelle_position, gaulois } );
-		
-		
-		//Fin grand if---------------------------------------------------------------------------------
-	}
+	setPosition(nouvelle_position);
+	
+	nb_deplacements++;
+	
+	int numero_deplacement = nb_deplacements ;
+	
+	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
+	
+	
 }
 
 void Gaulois::seDeplacer_a_gauche(_map grille)

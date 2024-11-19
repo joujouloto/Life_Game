@@ -14,7 +14,7 @@
 
 #include <string>
 
-#include <map>
+#include <set>
 
 #include <random>
 
@@ -78,7 +78,7 @@ _grille Jeu_v2::getGrille()
 
 void Jeu_v2::initialiser_grille()
 {
-	grille = make_shared< map < Position, shared_ptr<Objet> > > ();
+	grille = make_shared< set < shared_ptr<Objet> > > ();
 	
 	
 	shared_ptr<Gaulois> gaulois_1,
@@ -93,25 +93,25 @@ void Jeu_v2::initialiser_grille()
 	
 	
 	gaulois_1 = make_shared<Gaulois>(homme,7,5);
-	grille->insert( { gaulois_1->getPosition(), gaulois_1} );
+	grille->insert(  gaulois_1 );
 	
 	gaulois_2 = make_shared<Gaulois>(homme,4,3);
-	grille->insert( { gaulois_2->getPosition(), gaulois_2} );
+	grille->insert( gaulois_2 );
 	
 	gaulois_3 = make_shared<Gaulois>(femme,8,9);
-	grille->insert( { gaulois_3->getPosition(), gaulois_3} );
+	grille->insert( gaulois_3);
 	
 	arbre_1 = make_shared<Arbre>(2,5);
-	grille->insert( { arbre_1->getPosition(), arbre_1} );
+	grille->insert( arbre_1 );
 	
 	arbre_2 = make_shared<Arbre>(1,6);
-	grille->insert( { arbre_2->getPosition(), arbre_2} );
+	grille->insert(  arbre_2 );
 	
 	arbre_3 = make_shared<Arbre>(10,7);
-	grille->insert( { arbre_3->getPosition(), arbre_3} );
+	grille->insert( arbre_3);
 	
 	animal_1 = make_shared<Animal>(9,9);
-	grille->insert( {animal_1->getPosition(),animal_1});
+	grille->insert( animal_1);
 	
 	
 	
@@ -134,7 +134,7 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	
 	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
 	{
-		 objet = it->second;
+		 objet = *it;
 		
 		
 		ss << "\n";
@@ -188,7 +188,7 @@ void Jeu_v2::faire_deplacer_elements()
 	
 	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
 	{
-		objet = it->second;
+		objet = *it;
 		
 		if(objet->getType()=="Gaulois")
 		{

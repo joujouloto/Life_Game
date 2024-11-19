@@ -117,7 +117,7 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	
 	//169*221
 	
-	map<Position,shared_ptr<Objet>>::iterator it;
+	
 	
 	int pos_x = 40;
 	int pos_y = 40;
@@ -126,7 +126,7 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	single_rect.x = pos_x + espace ;
 	single_rect.y = pos_y;
 	
-	
+	/*
 	for(int i = 1 ; i <= 20 ; i++)
 	{
 		
@@ -146,7 +146,8 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 				}
 				else if(it->second->getType()=="Gaulois")	
 					{
-							
+						
+						
 						gaulois = dynamic_pointer_cast<Gaulois> (it->second);
 							
 						if(gaulois->getSexe()=='M')
@@ -167,7 +168,7 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 			{
 				//SDL_SetRenderDrawColor(renderer, 50, 205, 50, 255);
 				//SDL_RenderFillRect(renderer, &single_rect);
-				SDL_RenderCopy(renderer, texture_vide, NULL, &single_rect);
+				//SDL_RenderCopy(renderer, texture_vide, NULL, &single_rect);
 			}
 			
 		}
@@ -177,6 +178,42 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	}
 	
 	SDL_RenderPresent(renderer);
+	*/
+	
+	 for( set < shared_ptr<Objet> > ::iterator it = grille->begin(); it !=grille->end() ; it++ )
+	 {
+		 single_rect.x =  (pos_x + espace) * (*it)->getPosition().getAbscisse() ;
+		 single_rect.y = (pos_y + espace) * (*it)->getPosition().getOrdonnee();
+		 
+		 
+		 
+		if((*it)->getType()=="Arbre")
+		{
+					SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
+		}
+		else if((*it)->getType()=="Gaulois")	
+			{
+				gaulois = dynamic_pointer_cast<Gaulois> (*it);
+					
+				if(gaulois->getSexe()=='M')
+				{
+					SDL_RenderCopy(renderer, texture_gaulois, NULL, &single_rect);
+				}
+				else
+				{
+					SDL_RenderCopy(renderer, texture_gauloise, NULL, &single_rect);
+				}
+		
+		}else if((*it)->getType()=="Animal")
+		{
+			SDL_RenderCopy(renderer, texture_animal, NULL, &single_rect);
+		}
+		 
+	 }
+
+	 SDL_RenderPresent(renderer);
+	
+	
 	
 }
 

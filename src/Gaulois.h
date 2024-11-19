@@ -10,6 +10,8 @@
 
 #include <random>
 
+#include <set>
+
 #include <map>
 
 
@@ -26,7 +28,7 @@
 
 //------------------------------------------------
 
-using _map = shared_ptr< map < Position,shared_ptr<Objet>  > >;
+using _map = shared_ptr< set < shared_ptr<Objet> > >;
 
 
 

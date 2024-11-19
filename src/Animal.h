@@ -7,6 +7,8 @@
 
 #include <map>
 
+#include <set>
+
 #include <sstream>
 
 #include <string>
@@ -23,7 +25,7 @@
 
 //----------------------------------------------------------------------------
 
-using _map = shared_ptr< map < Position,shared_ptr<Objet>  > >;
+using _map = shared_ptr< set < shared_ptr<Objet>  > >;
 
 
 

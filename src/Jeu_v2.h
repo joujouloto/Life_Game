@@ -4,6 +4,8 @@
 
 //------------------------------------------------
 
+#include <set>
+
 #include <map>
 
 #include <memory>
@@ -24,10 +26,10 @@
 //------------------------------------------------
 
 
-using _grille = shared_ptr< map < Position,shared_ptr<Objet>  > >;
+using _grille = shared_ptr< set < shared_ptr<Objet> > >;
 using _objet = shared_ptr<Objet>;
 
-using _it_grille = map < Position,shared_ptr<Objet>  >::iterator;
+using _it_grille = set < shared_ptr<Objet> >::iterator;
 
 
 class Jeu_v2
