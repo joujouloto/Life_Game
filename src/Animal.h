@@ -22,6 +22,8 @@
 
 #include "Objet.h"
 
+#include "Position.h"
+
 
 //----------------------------------------------------------------------------
 
@@ -50,6 +52,7 @@ class Animal: public Objet
 	void seDeplacer_en_haut(_map grille);
 	void seDeplacer_en_bas(_map grille);
 	
+	bool estOccupe(Position position, _map grille); 
 	
 	protected:
 	static int nb_animaux;

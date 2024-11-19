@@ -86,5 +86,19 @@ bool Position::operator < (const Position &other ) const
 }
 
 
-
+bool Position::operator ==(const Position& p2) const
+{
+	
+	if(abscisse == p2.abscisse && ordonnee == p2.ordonnee)
+	{
+		return true;
+	}
+	else	
+	{
+		return false;
+	}
+	
+	
+	
+}
 

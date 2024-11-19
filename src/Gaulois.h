@@ -74,6 +74,7 @@ class Gaulois : public Objet
 	void seDeplacer_en_bas(_map grille);
 	
 	
+	bool estOccupe(Position position, _map grille); 
 	
 	protected:
 	

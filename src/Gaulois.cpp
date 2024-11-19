@@ -251,16 +251,21 @@ void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 void Gaulois::seDeplacer(Position nouvelle_position, _map grille)
 {
 	
-	map<Position,shared_ptr<Objet>>::iterator it;
+	set<Position,shared_ptr<Objet>>::iterator it;
 	
 	
-	setPosition(nouvelle_position);
 	
-	nb_deplacements++;
+	if(!estOccupe(nouvelle_position, grille))
+	{
+		setPosition(nouvelle_position);
 	
-	int numero_deplacement = nb_deplacements ;
+		nb_deplacements++;
+		
+		int numero_deplacement = nb_deplacements ;
+		
+		coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
+	}
 	
-	coordonnees_par_ou_passait_gaulois.insert(pair<int,Position> (numero_deplacement,nouvelle_position));
 	
 	
 }
@@ -291,4 +296,19 @@ void Gaulois::seDeplacer_en_bas(_map grille)
 }
 
 
-
+bool Gaulois::estOccupe(Position position, _map grille)
+{
+	
+	bool estOccupe = false;
+	
+	for( set < shared_ptr<Objet> > ::iterator it = grille->begin(); it !=grille->end() && !estOccupe ; it++ )
+	{
+		if( (*it)->getPosition() == position && this->getIdObjet() != (*it)->getIdObjet() )
+		{
+			estOccupe = true;
+		}
+	}
+	
+	return estOccupe;
+	
+}

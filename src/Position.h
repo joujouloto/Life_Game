@@ -34,6 +34,7 @@ class Position
 	Position en_bas();
 	
 	bool operator < (const Position &other) const ;
+	bool operator ==(const Position& p2) const ;
 	
 	
 };
