@@ -102,7 +102,7 @@ void Objet::setNom(string pNom)
 }
 
 void Objet::setPosition(Position pPosition)
-{
+{	
 	position = pPosition;
 }
 

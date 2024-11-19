@@ -22,7 +22,7 @@ void main_sdl()
         return;
     }
 
-    win = SDL_CreateWindow("Jeu de la vie!", 200, 50, 1300, 900, SDL_WINDOW_SHOWN);
+    win = SDL_CreateWindow("Jeu de la vie!", 200, 50, 1300, 800, SDL_WINDOW_SHOWN);
     if (win == NULL)
     {
        

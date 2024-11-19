@@ -253,8 +253,7 @@ void Gaulois::seDeplacer(Position nouvelle_position, _map grille)
 	
 	set<Position,shared_ptr<Objet>>::iterator it;
 	
-	
-	
+		
 	if(!estOccupe(nouvelle_position, grille))
 	{
 		setPosition(nouvelle_position);

@@ -58,8 +58,8 @@ enum sexe_gaulois { homme = 'M' , femme = 'F'};
 
 Jeu_v2::Jeu_v2()
 {
-	nb_lignes = 20 ;
-	nb_colonnes = 20;
+	nb_lignes = 15 ;
+	nb_colonnes = 10;
 	nb_elements_a_mettre_par_ligne_au_debut = 0;
 	
 	

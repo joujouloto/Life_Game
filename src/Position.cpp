@@ -44,28 +44,51 @@ string Position::toString()
 
 Position Position::a_gauche()
 {
-	if( abscisse-1 >= 0)
+	if( abscisse-1 > 0)
 	{
 		return Position(abscisse-1,ordonnee);
 	}
+	else
+	{
+		return Position(abscisse,ordonnee);
+	}
+	
+	
+	
 }
 
 Position Position::a_droite()
 {
-	return Position(abscisse+1,ordonnee);
+	if( abscisse+1 <= 15)
+	{
+		return Position(abscisse+1,ordonnee);
+	}else
+	{
+		return Position(abscisse,ordonnee);
+	}
 }
 
 Position Position::en_haut()
 {
-	if (  ordonnee-1 >= 0)
+	if( ordonnee-1 > 0)
 	{
 		return Position(abscisse,ordonnee-1);
+	}
+	else
+	{
+		return Position(abscisse,ordonnee);
 	}
 }
 
 Position Position::en_bas()
 {
-	return Position(abscisse,ordonnee+1);
+	if( ordonnee+1 <= 10)
+	{
+		return Position(abscisse,ordonnee+1);
+	}else
+	{
+		return Position(abscisse,ordonnee);
+	}
 }
 
 
