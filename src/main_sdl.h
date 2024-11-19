@@ -10,8 +10,8 @@ void main_sdl();
 
 void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille );
 
-void boucle_SDL(SDL_Renderer *renderer, Jeu_v2 jeu);
 
+void effacer_sdl(SDL_Window* window, SDL_Renderer * pRendu);
 
 void fermeture_SDL(SDL_Window *win, SDL_Renderer *renderer);
 

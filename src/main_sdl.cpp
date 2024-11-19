@@ -54,11 +54,11 @@ void main_sdl()
 	
 	while(isRunning)
 	{
+		
 		this_thread::sleep_for(chrono::milliseconds(800));
-		SDL_RenderClear(renderer);
 		jeu.faire_deplacer_elements();
 		afficher_grille_SDL(renderer,jeu.getGrille());
-		
+		SDL_RenderClear(renderer);
 		
 		
 		while( SDL_PollEvent( &ev ) != 0 ) 
@@ -80,16 +80,13 @@ void main_sdl()
 void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 {
 	shared_ptr<Gaulois> gaulois;
+	Position position ;
 	
 	
     SDL_Rect single_rect;
 	
 	/*int nb_lignes = 14 ;
 	int nb_cases_par_ligne = 18;*/
-	
-	int origine_pos_x = 40;
-	int origine_pos_y = 40;
-	int espace = 20 ;
 	
 	single_rect.w = 50;
 	single_rect.h = 50;
@@ -120,43 +117,63 @@ void afficher_grille_SDL(SDL_Renderer *renderer, _grille grille )
 	
 	//169*221
 	
-	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
-	{
+	map<Position,shared_ptr<Objet>>::iterator it;
 	
-		single_rect.x =  origine_pos_x + it->second->getPosition().getAbscisse() * (single_rect.w + espace) ;
-		single_rect.y = origine_pos_y + it->second->getPosition().getOrdonnee() * (single_rect.h + espace ) ; 
+	int pos_x = 40;
+	int pos_y = 40;
+	int espace = 20 ;
+	
+	single_rect.x = pos_x + espace ;
+	single_rect.y = pos_y;
+	
+	
+	for(int i = 1 ; i <= 20 ; i++)
+	{
 		
-		
-		
-		
-		if(it->second->getType()=="Arbre")
+		for( int j = 1 ; j <= 20 ; j++)
 		{
-					SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
-		}
-		else if(it->second->getType()=="Gaulois")	
+			single_rect.x +=  pos_x + espace ;
+			
+			position = Position(i,j);
+			
+			it = grille->find(position);
+			
+			if(it!=grille->end())
 			{
-					
-				gaulois = dynamic_pointer_cast<Gaulois> (it->second);
-					
-				if(gaulois->getSexe()=='M')
+				if(it->second->getType()=="Arbre")
 				{
-					SDL_RenderCopy(renderer, texture_gaulois, NULL, &single_rect);
+							SDL_RenderCopy(renderer, texture_arbre, NULL, &single_rect);
 				}
-				else
+				else if(it->second->getType()=="Gaulois")	
+					{
+							
+						gaulois = dynamic_pointer_cast<Gaulois> (it->second);
+							
+						if(gaulois->getSexe()=='M')
+						{
+							SDL_RenderCopy(renderer, texture_gaulois, NULL, &single_rect);
+						}
+						else
+						{
+							SDL_RenderCopy(renderer, texture_gauloise, NULL, &single_rect);
+						}
+				
+				}else if(it->second->getType()=="Animal")
 				{
-					SDL_RenderCopy(renderer, texture_gauloise, NULL, &single_rect);
+					SDL_RenderCopy(renderer, texture_animal, NULL, &single_rect);
 				}
+				
+			}else
+			{
+				//SDL_SetRenderDrawColor(renderer, 50, 205, 50, 255);
+				//SDL_RenderFillRect(renderer, &single_rect);
+				SDL_RenderCopy(renderer, texture_vide, NULL, &single_rect);
+			}
+			
+		}
 		
-		}else if(it->second->getType()=="Animal")
-		{
-			SDL_RenderCopy(renderer, texture_animal, NULL, &single_rect);
-		}
-		else
-		{
-			//SDL_SetRenderDrawColor(renderer, 50, 205, 50, 255);
-			//SDL_RenderFillRect(renderer, &single_rect);
-			SDL_RenderCopy(renderer, texture_vide, NULL, &single_rect);
-		}
+		single_rect.y += pos_y + espace;
+		single_rect.x =  pos_x + espace ;
 	}
 	
 	SDL_RenderPresent(renderer);

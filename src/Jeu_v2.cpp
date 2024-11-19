@@ -205,10 +205,6 @@ void Jeu_v2::faire_deplacer_elements()
 			animal->seDeplacer_aleatoirement(grille);
 		}
 	}
-	
-	
-	
-	
 }
 
 
