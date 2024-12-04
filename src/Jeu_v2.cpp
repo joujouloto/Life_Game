@@ -210,6 +210,13 @@ void Jeu_v2::faire_manger_gaulois()
 	shared_ptr<Objet> objet;
 	shared_ptr<Gaulois> gaulois;
 	
+	random_device rd;
+	mt19937 gen(rd());
+	
+	uniform_int_distribution<> dis(1, 15);//uniform distribution between 1 and 15
+	
+	
+	
 	
 	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
 	{
@@ -219,7 +226,14 @@ void Jeu_v2::faire_manger_gaulois()
 		{
 			gaulois = dynamic_pointer_cast<Gaulois> (objet);
 			
-			gaulois->manger(grille);
+			if ( dis(gen)==1)
+			{
+				gaulois->manger(grille);
+			}
+			
+			
+			
+			
 			
 		}
 	}

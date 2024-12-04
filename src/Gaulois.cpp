@@ -318,7 +318,9 @@ void Gaulois::manger(_map grille)
 	shared_ptr<Objet> objet;
 	shared_ptr<Objet> animal;
 	
-	for( set < shared_ptr<Objet> > ::iterator it = grille->begin(); it !=grille->end() ; it++ )
+	bool a_mange = false;
+	
+	for( set < shared_ptr<Objet> > ::iterator it = grille->begin(); it !=grille->end() && !a_mange ; it++ )
 	{
 		position_animal = (*it)->getPosition();
 		
@@ -332,6 +334,7 @@ void Gaulois::manger(_map grille)
 			animal = objet;
 			
 			grille->erase(animal);
+			a_mange = true;
 		}
 	}
 }
