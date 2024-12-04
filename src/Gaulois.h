@@ -76,6 +76,10 @@ class Gaulois : public Objet
 	
 	bool estOccupe(Position position, _map grille); 
 	
+	
+	void manger(_map grille);
+	
+	
 	protected:
 	
 	int age;

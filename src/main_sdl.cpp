@@ -56,7 +56,16 @@ void main_sdl()
 	{
 		
 		this_thread::sleep_for(chrono::milliseconds(800));
+		//------------------------------------------------
+		
+		
+		
 		jeu.faire_deplacer_elements();
+		
+		jeu.faire_manger_gaulois();
+		
+		
+		//------------------------------------------------
 		afficher_grille_SDL(renderer,jeu.getGrille());
 		SDL_RenderClear(renderer);
 		

@@ -5,8 +5,6 @@
 #include <set>
 
 
-using _grille = shared_ptr< set < shared_ptr<Objet> > >;
-
 
 enum sexe_gaulois { homme = 'M' , femme = 'F'};
 
@@ -311,3 +309,32 @@ bool Gaulois::estOccupe(Position position, _map grille)
 	return estOccupe;
 	
 }
+
+
+
+void Gaulois::manger(_map grille)
+{
+	Position position_animal;
+	shared_ptr<Objet> objet;
+	shared_ptr<Objet> animal;
+	
+	for( set < shared_ptr<Objet> > ::iterator it = grille->begin(); it !=grille->end() ; it++ )
+	{
+		position_animal = (*it)->getPosition();
+		
+		objet = *it;
+		
+		if( ( getPosition().a_droite() ==  position_animal || getPosition().a_gauche() == position_animal || getPosition().en_haut() == position_animal
+	
+		|| getPosition().en_bas() == position_animal) &&  objet->getType() == "Animal" )
+		
+		{
+			animal = objet;
+			
+			grille->erase(animal);
+		}
+	}
+}
+
+
+

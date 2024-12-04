@@ -167,8 +167,6 @@ string Jeu_v2::afficher_dans_chaine_contenu_grille()
 	
 	
 	
-	
-	
 	ss << "\n ";
 	
 
@@ -203,6 +201,26 @@ void Jeu_v2::faire_deplacer_elements()
 			
 			
 			animal->seDeplacer_aleatoirement(grille);
+		}
+	}
+}
+
+void Jeu_v2::faire_manger_gaulois()
+{
+	shared_ptr<Objet> objet;
+	shared_ptr<Gaulois> gaulois;
+	
+	
+	for (_it_grille it=grille->begin(); it != grille->end(); ++it)
+	{
+		objet = *it;
+		
+		if(objet->getType()=="Gaulois")
+		{
+			gaulois = dynamic_pointer_cast<Gaulois> (objet);
+			
+			gaulois->manger(grille);
+			
 		}
 	}
 }

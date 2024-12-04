@@ -41,6 +41,8 @@ class Jeu_v2
 	void initialiser_grille();
 
 	void faire_deplacer_elements();
+	
+	void faire_manger_gaulois();
 
 
 	//toString
