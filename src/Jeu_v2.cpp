@@ -213,7 +213,7 @@ void Jeu_v2::faire_manger_gaulois()
 	random_device rd;
 	mt19937 gen(rd());
 	
-	uniform_int_distribution<> dis(1, 15);//uniform distribution between 1 and 15
+	uniform_int_distribution<> dis(1, 7);//uniform distribution between 1 and 15
 	
 	
 	
