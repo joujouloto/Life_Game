@@ -64,6 +64,8 @@ void main_sdl()
 		
 		jeu.faire_manger_gaulois();
 		
+		jeu.faire_vieillir_population_gauloise();
+		
 		
 		//------------------------------------------------
 		afficher_grille_SDL(renderer,jeu.getGrille());

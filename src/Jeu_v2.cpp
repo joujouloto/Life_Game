@@ -240,7 +240,38 @@ void Jeu_v2::faire_manger_gaulois()
 }
 
 
-
+void Jeu_v2::faire_vieillir_population_gauloise()
+{
+	shared_ptr<Gaulois> gaulois;
+	shared_ptr<Objet> objet;
+	
+	random_device rd;
+	mt19937 gen(rd());
+	
+	uniform_int_distribution<> dis(1, 10);//uniform distribution between 1 and 15
+	
+	
+	
+	
+	for ( _it_grille it=grille->begin(); it!=grille->end(); ++it) 
+	{	
+		objet = *it;
+		if(objet->getType()=="Gaulois")
+		{
+			gaulois = dynamic_pointer_cast<Gaulois> (objet);
+			gaulois->vieillir();
+			
+			if(gaulois->getAge() > 50 && dis(gen) <= 3 )
+			{
+				grille->erase(gaulois);
+			}
+			
+			
+			
+			
+		}
+	}
+}
 
 
 

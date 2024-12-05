@@ -4,6 +4,8 @@
 
 #include <set>
 
+#include <memory>
+
 
 
 enum sexe_gaulois { homme = 'M' , femme = 'F'};
@@ -165,6 +167,7 @@ string Gaulois::toString()
 void Gaulois::vieillir()
 {
 	age++;
+	
 }
 
 

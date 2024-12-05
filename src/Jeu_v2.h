@@ -43,6 +43,9 @@ class Jeu_v2
 	void faire_deplacer_elements();
 	
 	void faire_manger_gaulois();
+	
+	
+	void faire_vieillir_population_gauloise();
 
 
 	//toString

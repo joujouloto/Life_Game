@@ -32,7 +32,7 @@ using _map = shared_ptr< set < shared_ptr<Objet> > >;
 
 
 
-class Gaulois : public Objet
+class Gaulois : public Objet, enable_shared_from_this<Gaulois>
 {
 	public:
 	
