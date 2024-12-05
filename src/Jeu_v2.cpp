@@ -250,7 +250,7 @@ void Jeu_v2::faire_vieillir_population_gauloise()
 	
 	uniform_int_distribution<> dis(1, 10);//uniform distribution between 1 and 15
 	
-	
+	int variable_qui_fait_mourir = 10;
 	
 	
 	for ( _it_grille it=grille->begin(); it!=grille->end(); ++it) 
@@ -261,8 +261,14 @@ void Jeu_v2::faire_vieillir_population_gauloise()
 			gaulois = dynamic_pointer_cast<Gaulois> (objet);
 			gaulois->vieillir();
 			
-			if(gaulois->getAge() > 50 && dis(gen) <= 3 )
+			variable_qui_fait_mourir = dis(gen);
+			
+			
+			if(gaulois->getAge() > 10 &&  variable_qui_fait_mourir <= 3 )
 			{
+				cout << variable_qui_fait_mourir << endl;
+				cout << gaulois->getAge() << endl;
+				
 				grille->erase(gaulois);
 			}
 			
