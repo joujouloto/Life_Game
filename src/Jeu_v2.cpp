@@ -266,8 +266,8 @@ void Jeu_v2::faire_vieillir_population_gauloise()
 			
 			if(gaulois->getAge() > 10 &&  variable_qui_fait_mourir <= 3 )
 			{
-				cout << variable_qui_fait_mourir << endl;
-				cout << gaulois->getAge() << endl;
+				//cout << variable_qui_fait_mourir << endl;
+				//cout << gaulois->getAge() << endl;
 				
 				grille->erase(gaulois);
 			}

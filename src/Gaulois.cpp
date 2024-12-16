@@ -17,7 +17,7 @@ Gaulois::Gaulois(): Objet("Gaulois")
 {
 	age = 1;
 	sexe = 'M';
-	
+	nb_animaux_manges = 0;
 	
 	nb_gaulois++;
 	
@@ -41,6 +41,7 @@ Gaulois::Gaulois(): Objet("Gaulois")
 
 Gaulois::Gaulois(char pSexe): Objet("Gaulois")
 {
+	nb_animaux_manges = 0;
 	
 	age = 1;
 	sexe = pSexe;
@@ -78,6 +79,8 @@ Objet("Gaulois",pNumero_ligne,pNumero_colonne)
 {
 	age = 1 ;
 	sexe = pSexe;
+	
+	nb_animaux_manges = 0;
 	
 	
 	if(pSexe == 'F')
@@ -157,6 +160,11 @@ string Gaulois::toString()
 	ss << "age:";
 	ss << age;
 	ss << "\n";
+	
+	ss << "animaux manges:";
+	ss << this->getAnimauxManges();
+	ss << "\n";
+	
 
 	return ss.str();
 	
@@ -240,6 +248,28 @@ string Gaulois::getDeplacements()
 	return ss.str();
 }
 
+string Gaulois::getAnimauxManges()
+{
+	stringstream ss;
+	shared_ptr<Animal> animal;
+	
+	
+	for(map< int, shared_ptr<Animal> >::iterator it=animaux_manges.begin(); it!=animaux_manges.end(); it++)
+	{
+		animal=it->second;
+		
+		ss << ";" << animal->getNom();
+	}
+	
+	
+	return ss.str();
+}
+
+int Gaulois::getNbAnimauxManges()
+{
+	return nb_animaux_manges;
+}
+
 
 void Gaulois::seDeplacer(int pNumero_ligne, int pNumero_colonne, _map grille)
 {
@@ -319,7 +349,7 @@ void Gaulois::manger(_map grille)
 {
 	Position position_animal;
 	shared_ptr<Objet> objet;
-	shared_ptr<Objet> animal;
+	shared_ptr<Animal> animal;
 	
 	bool a_mange = false;
 	
@@ -334,10 +364,17 @@ void Gaulois::manger(_map grille)
 		|| getPosition().en_bas() == position_animal) &&  objet->getType() == "Animal" )
 		
 		{
-			animal = objet;
+			animal = dynamic_pointer_cast<Animal> (objet);
 			
 			grille->erase(animal);
 			a_mange = true;
+			
+			
+			nb_animaux_manges++;
+			animaux_manges.insert(pair<int,shared_ptr<Animal>> (nb_animaux_manges,animal) );
+			
+			
+			
 		}
 	}
 }

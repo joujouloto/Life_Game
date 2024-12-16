@@ -25,6 +25,8 @@
 
 #include "Objet.h"
 
+#include "Animal.h"
+
 
 //------------------------------------------------
 
@@ -61,6 +63,10 @@ class Gaulois : public Objet, enable_shared_from_this<Gaulois>
 	string toString();
 	string getDeplacements();
 	
+	string getAnimauxManges();
+	int getNbAnimauxManges();
+	
+	
 	void vieillir();
 	
 	//Fonctions mouvements
@@ -90,6 +96,11 @@ class Gaulois : public Objet, enable_shared_from_this<Gaulois>
 	
 	int nb_deplacements;
 	map< int, Position> coordonnees_par_ou_passait_gaulois;
+	
+	int nb_animaux_manges;
+	map< int, shared_ptr<Animal> > animaux_manges;
+	
+	
 	
 	
 };
